@@ -299,6 +299,42 @@ body {
 .toast.show { transform: translateX(50%) translateY(0); }
 .toast .spark { display: block; font-size: 30px; margin-bottom: 4px; }
 
+/* ---------- stage celebration ---------- */
+.confetti-layer { position: fixed; inset: 0; pointer-events: none; z-index: 300; overflow: hidden; }
+.confetti {
+  position: absolute; width: 10px; height: 14px; border-radius: 2px;
+  animation: fall linear forwards;
+}
+@keyframes fall {
+  0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+}
+.stage-badge {
+  position: fixed; left: 50%; top: 42%; transform: translate(-50%, -50%) scale(0);
+  z-index: 310; text-align: center; pointer-events: none;
+  padding: 26px 40px; border-radius: 24px;
+  background: var(--panel-strong); border: 2px solid var(--gold);
+  box-shadow: 0 0 60px rgba(245, 197, 24, 0.5);
+}
+.stage-badge.show { animation: badgePop 2.6s cubic-bezier(0.2, 0.9, 0.3, 1.2) forwards; }
+.stage-badge .big { font-size: 56px; }
+.stage-badge h3 { font-family: 'El Messiri', sans-serif; font-size: 26px; margin-top: 6px; color: var(--gold2); }
+.stage-badge p { color: var(--muted); font-size: 14px; margin-top: 4px; }
+@keyframes badgePop {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  18% { transform: translate(-50%, -50%) scale(1.06); opacity: 1; }
+  30% { transform: translate(-50%, -50%) scale(1); }
+  78% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -110%) scale(0.85); opacity: 0; }
+}
+
+/* ---------- big TV-friendly controls ---------- */
+@media (min-width: 1000px) {
+  .btn { padding: 14px 28px; font-size: 16px; }
+  .nav-btn { padding: 11px 24px; }
+  .pcard { cursor: pointer; }
+}
+
 .empty { text-align: center; color: var(--muted); padding: 60px 0; font-size: 16px; }
 .empty i { display: block; font-size: 46px; margin-bottom: 12px; }
 

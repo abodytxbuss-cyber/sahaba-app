@@ -131,7 +131,7 @@ function card(m) {
   const genre = Array.isArray(m.genre) && m.genre[0] ? GENRE_AR[m.genre[0]] || m.genre[0] : 'فيلم';
   return (
     '<div class="pcard" data-id="' + m.id + '">' +
-    '<img loading="lazy" src="' + (m.poster || fallbackPoster()) + '" alt="' + esc(m.titleAr || m.title) + '" />' +
+    '<img loading="lazy" src="' + (m.poster || fallbackPoster()) + '" onerror="this.onerror=null;this.src=\'' + fallbackPoster() + '\'" alt="' + esc(m.titleAr || m.title) + '" />' +
     (done ? '<span class="fin">✅</span>' : '') +
     ((m.rating && Number(m.rating) > 0) ? '<span class="rad">★ ' + m.rating + '</span>' : '') +
     '<div class="meta"><div class="t">' + esc(m.titleAr || m.title) + '</div>' +
@@ -339,6 +339,7 @@ function openPlayer(id) {
       persist();
       showToast('🎉 أحسنت! +' + xpBoost() + ' نقاط — لمعت نجمتك', true);
       renderXP();
+      checkStageComplete(m.id);
     }
   };
   streams.forEach((s, i) => {
@@ -411,6 +412,47 @@ function showToast(txt, spark = false) {
   t.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => t.classList.remove('show'), 3800);
+}
+
+const CONFETTI_COLORS = ['#f5c518', '#7c5cff', '#38e1ff', '#ff5fa4', '#34e3a2', '#ffdf6b'];
+function celebrate(title, sub) {
+  const layer = document.getElementById('confetti');
+  layer.innerHTML = '';
+  for (let i = 0; i < 90; i++) {
+    const c = document.createElement('i');
+    c.className = 'confetti';
+    c.style.left = Math.random() * 100 + 'vw';
+    c.style.top = '-8vh';
+    c.style.background = CONFETTI_COLORS[i % CONFETTI_COLORS.length];
+    c.style.animationDuration = 2.2 + Math.random() * 2.2 + 's';
+    c.style.animationDelay = Math.random() * 0.7 + 's';
+    c.style.opacity = 0.65 + Math.random() * 0.35;
+    layer.appendChild(c);
+  }
+  const badge = document.getElementById('stageBadge');
+  document.getElementById('badgeTitle').textContent = title;
+  document.getElementById('badgeSub').textContent = sub || '';
+  badge.classList.remove('show');
+  void badge.offsetWidth;
+  badge.classList.add('show');
+  setTimeout(() => { layer.innerHTML = ''; badge.classList.remove('show'); }, 4200);
+}
+
+function checkStageComplete(itemId) {
+  const groups = buildJourney();
+  for (const name of Object.keys(groups)) {
+    const items = groups[name];
+    const mine = items.find((x) => x.id === itemId);
+    if (!mine) continue;
+    const all = items.every((x) => state.watched[x.id]);
+    if (all) {
+      celebrate('أتممت المرحلة: ' + name, items.length + ' عنوان — نجمة ذهبية ⭐');
+      state.xp += 120;
+      persist();
+      renderXP();
+    }
+    break;
+  }
 }
 
 function bindNav() {
