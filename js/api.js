@@ -63,7 +63,12 @@ export async function sources(item,id=item.id,force=false) {
   }));
   return {streams:results.flatMap(r=>r.status==='fulfilled'?r.value:[]),failed:results.filter(r=>r.status==='rejected').length,addons:addons.length};
 }
-export async function subtitles(item,id) {
-  const results=await Promise.allSettled(getAddons().filter(a=>supports(a,'subtitles',item.type,id)).map(a=>request(resourceURL(a.url,'subtitles',item.type,id),{ttl:300000})));
-  return results.flatMap(r=>r.status==='fulfilled'&&Array.isArray(r.value.subtitles)?r.value.subtitles:[]);
+export async function subtitles(item,id,force=false) {
+  const addons=getAddons().filter(a=>supports(a,'subtitles',item.type,id));
+  const results=await Promise.allSettled(addons.map(async a=>{
+    const data=await request(resourceURL(a.url,'subtitles',item.type,id),{force,ttl:300000,timeout:10000});
+    if(!Array.isArray(data.subtitles))throw Error('استجابة ترجمة غير صالحة');
+    return data.subtitles.filter(s=>s&&safeURL(s.url)).map(s=>({...s,provider:a.manifest.name}));
+  }));
+  return {subtitles:results.flatMap(r=>r.status==='fulfilled'?r.value:[]),failed:results.filter(r=>r.status==='rejected').length,addons:addons.length};
 }

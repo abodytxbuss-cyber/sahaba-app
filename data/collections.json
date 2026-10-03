@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-10-03T13:11:30.076Z",
-  "uniqueMovies": 2547,
-  "uniqueSeries": 349,
+  "updatedAt": "2026-10-03T20:20:05.775Z",
+  "uniqueMovies": 2592,
+  "uniqueSeries": 444,
   "collections": [
     {
       "slug": "popular",
@@ -10,7 +10,7 @@
       "id": "top",
       "icon": "✦",
       "key": "movie/top",
-      "count": 196,
+      "count": 301,
       "nextSkip": 400
     },
     {
@@ -33,7 +33,7 @@
       },
       "icon": "◷",
       "key": "movie/year/genre=2026",
-      "count": 169,
+      "count": 208,
       "nextSkip": 400
     },
     {
@@ -46,7 +46,7 @@
       },
       "icon": "◷",
       "key": "movie/year/genre=2025",
-      "count": 200,
+      "count": 208,
       "nextSkip": 400
     },
     {
@@ -59,7 +59,7 @@
       },
       "icon": "◷",
       "key": "movie/year/genre=2024",
-      "count": 199,
+      "count": 204,
       "nextSkip": 400
     },
     {
@@ -72,7 +72,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Action",
-      "count": 200,
+      "count": 236,
       "nextSkip": 400
     },
     {
@@ -85,7 +85,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Adventure",
-      "count": 200,
+      "count": 212,
       "nextSkip": 400
     },
     {
@@ -98,7 +98,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Animation",
-      "count": 200,
+      "count": 202,
       "nextSkip": 400
     },
     {
@@ -111,7 +111,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Comedy",
-      "count": 198,
+      "count": 216,
       "nextSkip": 400
     },
     {
@@ -124,7 +124,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Crime",
-      "count": 198,
+      "count": 210,
       "nextSkip": 400
     },
     {
@@ -137,7 +137,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Drama",
-      "count": 196,
+      "count": 244,
       "nextSkip": 400
     },
     {
@@ -150,7 +150,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Family",
-      "count": 200,
+      "count": 202,
       "nextSkip": 400
     },
     {
@@ -163,7 +163,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Fantasy",
-      "count": 200,
+      "count": 205,
       "nextSkip": 400
     },
     {
@@ -176,7 +176,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Horror",
-      "count": 198,
+      "count": 212,
       "nextSkip": 400
     },
     {
@@ -189,7 +189,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Mystery",
-      "count": 199,
+      "count": 203,
       "nextSkip": 400
     },
     {
@@ -202,7 +202,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Romance",
-      "count": 197,
+      "count": 204,
       "nextSkip": 400
     },
     {
@@ -215,7 +215,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Sci-Fi",
-      "count": 201,
+      "count": 209,
       "nextSkip": 400
     },
     {
@@ -228,7 +228,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Thriller",
-      "count": 197,
+      "count": 226,
       "nextSkip": 400
     },
     {
@@ -241,7 +241,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Documentary",
-      "count": 200,
+      "count": 205,
       "nextSkip": 400
     },
     {
@@ -264,7 +264,7 @@
       "id": "top",
       "icon": "▤",
       "key": "series/top",
-      "count": 197,
+      "count": 299,
       "nextSkip": 400
     },
     {
@@ -274,7 +274,7 @@
       "id": "imdbRating",
       "icon": "★",
       "key": "series/imdbRating",
-      "count": 200,
+      "count": 277,
       "nextSkip": 400
     }
   ]

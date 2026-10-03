@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const cache = new Map();
-const allowed = new Set(['v3-cinemeta.strem.io','cinemeta-catalogs.strem.io', ...(process.env.PROXY_HOSTS || '').split(',').map(s => s.trim()).filter(Boolean)]);
+const allowed = new Set(['v3-cinemeta.strem.io','cinemeta-catalogs.strem.io','opensubtitles-v3.strem.io', ...(process.env.PROXY_HOSTS || '').split(',').map(s => s.trim()).filter(Boolean)]);
 const proxyAllowed=target=>target.protocol==='https:'&&!target.port&&!target.username&&!target.password&&allowed.has(target.hostname)&&target.pathname.endsWith('.json');
 const mime = { '.html':'text/html; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.css':'text/css; charset=utf-8', '.json':'application/json; charset=utf-8', '.svg':'image/svg+xml', '.jpg':'image/jpeg', '.png':'image/png', '.woff2':'font/woff2', '.txt':'text/plain; charset=utf-8', '.vtt':'text/vtt; charset=utf-8' };
 const sendJSON = (res, status, obj) => { res.writeHead(status, { 'Content-Type':mime['.json'], 'Access-Control-Allow-Origin':'*' }); res.end(JSON.stringify(obj)); };

@@ -3,6 +3,7 @@ import {catalog,metadata,validateManifest,CINEMETA} from './js/api.js';
 import {$,esc,number,genreAR,title,year,genres,card,skeleton,empty,errorBox,toast,openModal,closeModal,imageURL,setTitles,setPosters} from './js/ui.js';
 import {openPlayer,trailer} from './js/player.js';
 import {renderCollection,collectionChips,dedupe} from './js/collections.js';
+import {initializeArabicSubtitles} from './js/subtitle-addon.js';
 
 const main=$('#main'),items=new Map();let featured=[],backup={},journeyBackup={},collections={collections:[]},stages=[],titles={},routeVersion=0,heroTimer,heroIndex=0,heroPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,searchTimer,searchVersion=0,currentItem,libraryTab='later';
 const key=m=>`${m.type||'movie'}:${m.id}`;
@@ -150,6 +151,7 @@ function connection(){ $('#connection').hidden=navigator.onLine; }
 window.addEventListener('offline',connection);window.addEventListener('online',()=>{connection();toast('عاد الاتصال. يمكنك تحديث المحتوى.');});
 window.addEventListener('hashchange',()=>void route());
 async function boot(){
+  initializeArabicSubtitles();
   connection();updateXP();
   try{
     const load=async name=>{try{const r=await fetch('data/'+name+'.json');if(!r.ok)throw Error();const data=await r.json();write('backup:'+name,data);return data;}catch{const data=read('backup:'+name,null);if(!data)throw Error();return data;}};
