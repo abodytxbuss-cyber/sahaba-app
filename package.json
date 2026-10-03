@@ -1,0 +1,12 @@
+{
+  "name": "sahaba-app",
+  "version": "2.0.0",
+  "description": "سحابة — تطبيق رحلة السينما بمراحل",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
