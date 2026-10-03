@@ -1,102 +1,60 @@
 import http from 'node:http';
-import fs from 'node:fs';
+import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PORT = Number(process.env.PORT || 8080);
-const SITE = process.env.SOURCE_SITE || 'https://sahaba.onrender.com';
-const MIME = {
-  '.html': 'text/html; charset=utf-8',
-  '.css': 'text/css; charset=utf-8',
-  '.js': 'text/javascript; charset=utf-8',
-  '.json': 'application/json; charset=utf-8',
-  '.svg': 'image/svg+xml',
-  '.png': 'image/png',
-  '.ico': 'image/x-icon',
-};
-
-let backupCache = null;
-function loadBackup() {
-  if (backupCache) return backupCache;
-  const p = path.join(__dirname, 'data', 'movies.json');
-  if (!fs.existsSync(p)) return [];
+const root = path.dirname(fileURLToPath(import.meta.url));
+const cache = new Map();
+const allowed = new Set(['v3-cinemeta.strem.io','cinemeta-catalogs.strem.io', ...(process.env.PROXY_HOSTS || '').split(',').map(s => s.trim()).filter(Boolean)]);
+const proxyAllowed=target=>target.protocol==='https:'&&!target.port&&!target.username&&!target.password&&allowed.has(target.hostname)&&target.pathname.endsWith('.json');
+const mime = { '.html':'text/html; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.css':'text/css; charset=utf-8', '.json':'application/json; charset=utf-8', '.svg':'image/svg+xml', '.jpg':'image/jpeg', '.png':'image/png', '.woff2':'font/woff2', '.txt':'text/plain; charset=utf-8', '.vtt':'text/vtt; charset=utf-8' };
+const sendJSON = (res, status, obj) => { res.writeHead(status, { 'Content-Type':mime['.json'], 'Access-Control-Allow-Origin':'*' }); res.end(JSON.stringify(obj)); };
+export const server = http.createServer(async (req, res) => {
   try {
-    backupCache = JSON.parse(fs.readFileSync(p, 'utf8'));
-  } catch {
-    backupCache = [];
-  }
-  return backupCache;
-}
-
-const server = http.createServer(async (req, res) => {
-  let url;
-  try {
-    url = new URL(req.url, 'http://localhost');
-  } catch {
-    res.writeHead(400);
-    return res.end('Bad Request');
-  }
-
-  if (url.pathname.startsWith('/api/')) {
-    const target = SITE + url.pathname + url.search;
+    const url = new URL(req.url, 'http://localhost');
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    if (req.method === 'OPTIONS') { res.writeHead(204, { 'Access-Control-Allow-Origin':'*', 'Access-Control-Allow-Methods':'GET, HEAD, OPTIONS' }); return res.end(); }
+    if (!['GET','HEAD'].includes(req.method)) return sendJSON(res, 405, {error:'طريقة الطلب غير مدعومة'});
+    if (url.pathname === '/health') return sendJSON(res, 200, {ok:true});
+    if (url.pathname === '/api/proxy') {
+      let target;
+      try { target = new URL(url.searchParams.get('url')); } catch { return sendJSON(res,400,{error:'رابط غير صالح'}); }
+      // يُفحص كل تحويل أيضاً؛ Cinemeta يحيل الكتالوجات إلى مضيفه الرسمي الثاني.
+      if (process.env.ENABLE_PROXY === 'false' || !proxyAllowed(target)) return sendJSON(res,403,{error:'هذا المضيف غير مفعّل في الوكيل. استخدم الاتصال المباشر أو أضفه إلى PROXY_HOSTS.'});
+      const key = target.href, cached = cache.get(key);
+      if (cached && cached.expires > Date.now()) return sendJSON(res,200,cached.value);
+      let upstream;
+      const signal=AbortSignal.timeout(10000);
+      for(let hop=0;hop<4;hop++){
+        upstream=await fetch(target.href,{signal,redirect:'manual',headers:{Accept:'application/json'}});
+        if(![301,302,303,307,308].includes(upstream.status))break;
+        const location=upstream.headers.get('location');await upstream.body?.cancel();
+        if(!location)return sendJSON(res,502,{error:'تحويل غير صالح من الإضافة'});
+        target=new URL(location,target);
+        if(!proxyAllowed(target))return sendJSON(res,403,{error:'تحويل الإضافة إلى مضيف غير مسموح'});
+      }
+      if (!upstream.ok) return sendJSON(res,502,{error:'تعذر الوصول إلى الإضافة'});
+      const reader = upstream.body.getReader(); let size = 0; const chunks = [];
+      while (true) { const {done,value} = await reader.read(); if (done) break; size += value.length; if (size > 5_000_000) { await reader.cancel(); return sendJSON(res,413,{error:'استجابة الإضافة كبيرة جداً'}); } chunks.push(Buffer.from(value)); }
+      const value = JSON.parse(Buffer.concat(chunks).toString('utf8'));
+      if (cache.size >= 100) cache.delete(cache.keys().next().value);
+      cache.set(key,{value,expires:Date.now()+300000});
+      return sendJSON(res,200,value);
+    }
+    let file;
+    try { file = decodeURIComponent(url.pathname).replace(/^\/+/, '') || 'index.html'; } catch { return sendJSON(res,400,{error:'مسار غير صالح'}); }
+    const full = path.resolve(root, file);
+    const publicFile = ['index.html','style.css','app.js','sw.js'].includes(file) || /^(js|data|assets)\/[a-zA-Z0-9_./-]+$/.test(file);
+    if (!publicFile || !full.startsWith(root + path.sep) || file.split('/').some(p => p.startsWith('.'))) return sendJSON(res,404,{error:'الصفحة غير موجودة'});
     try {
-      const upstream = await fetch(target, {
-        method: req.method,
-        headers: { ...req.headers, host: new URL(SITE).host },
-        body: ['GET', 'HEAD'].includes(req.method) ? undefined : req,
-        signal: AbortSignal.timeout(60000),
-      });
-      const buf = Buffer.from(await upstream.arrayBuffer());
-      let out = buf;
-      const ct = upstream.headers.get('content-type') || '';
-      if (url.pathname === '/api/content' && /json/.test(ct) && req.method === 'GET') {
-        try {
-          const j = JSON.parse(buf.toString('utf8'));
-          if (j && Array.isArray(j.data)) {
-            const known = new Set(j.data.map((x) => x.id));
-            const missing = loadBackup().filter((x) => !known.has(x.id));
-            if (missing.length) {
-              j.data = missing.concat(j.data);
-              j.total = j.data.length;
-              out = Buffer.from(JSON.stringify(j));
-            }
-          }
-        } catch {}
-      }
-      res.writeHead(upstream.status, {
-        'content-type': ct || 'application/json',
-        'access-control-allow-origin': '*',
-      });
-      return res.end(out);
-    } catch (e) {
-      res.writeHead(502, { 'content-type': 'application/json', 'access-control-allow-origin': '*' });
-      return res.end(JSON.stringify({ error: 'proxy failure', detail: e.message }));
-    }
-  }
-
-  let file = url.pathname === '/' ? '/index.html' : url.pathname;
-  const full = path.join(__dirname, file);
-  if (!full.startsWith(__dirname)) {
-    res.writeHead(403);
-    return res.end('Forbidden');
-  }
-  fs.readFile(full, (err, data) => {
-    if (err) {
-      if (url.pathname !== '/' && !path.extname(file)) {
-        return fs.readFile(path.join(__dirname, 'index.html'), (_, d) => {
-          res.writeHead(200, { 'content-type': MIME['.html'] });
-          res.end(d);
-        });
-      }
-      res.writeHead(404, { 'content-type': 'text/plain' });
-      return res.end('Not Found');
-    }
-    res.writeHead(200, { 'content-type': MIME[path.extname(file)] || 'application/octet-stream' });
-    res.end(data);
-  });
+      const body = await readFile(full);
+      res.writeHead(200, {'Content-Type':mime[path.extname(full)] || 'application/octet-stream','Cache-Control':file.startsWith('assets/') ? 'public, max-age=86400' : 'no-cache'});
+      res.end(req.method === 'HEAD' ? undefined : body);
+    } catch { sendJSON(res,404,{error:'الملف غير موجود'}); }
+  } catch { sendJSON(res,502,{error:'تعذر الاتصال حالياً. حاول مجدداً.'}); }
 });
-
-server.listen(PORT, () => {
-  console.log('سحابة متاحة على: http://localhost:' + PORT);
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  server.on('error', error => { console.error(error.code === 'EADDRINUSE' ? 'المنفذ مستخدم. أغلق النسخة السابقة أو اختر PORT آخر.' : 'تعذر بدء الخادم: ' + error.message); process.exitCode=1; });
+  server.listen(Number(process.env.PORT || 8080), process.env.HOST || undefined, () => console.log('سحابة متاحة على http://localhost:' + (process.env.PORT || 8080)));
+}

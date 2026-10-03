@@ -1,511 +1,163 @@
-const API = '/api';
+import {library,saveLibrary,xp,level,markWatched,getAddons,saveAddons,partition,stageStatus,read,write} from './js/store.js';
+import {catalog,metadata,validateManifest,CINEMETA} from './js/api.js';
+import {$,esc,number,genreAR,title,year,genres,card,skeleton,empty,errorBox,toast,openModal,closeModal,imageURL,setTitles,setPosters} from './js/ui.js';
+import {openPlayer,trailer} from './js/player.js';
+import {renderCollection,collectionChips,dedupe} from './js/collections.js';
 
-const state = {
-  items: [],
-  detail: {},
-  tab: 'home',
-  lib: 'watched',
-  journeyItems: {},
-  watched: {},
-  watchlist: {},
-  xp: 0,
-};
-
-const watchedKey = 'sahaba_watched_v1';
-const listKey = 'sahaba_watchlist_v1';
-const xpKey = 'sahaba_xp_v1';
-
-const GENRE_AR = {
-  action: 'أكشن',
-  adventure: 'مغامرة',
-  animation: 'أنميشن',
-  biography: 'سيرة ذاتية',
-  comedy: 'كوميديا',
-  crime: 'جريمة',
-  documentary: 'وثائقي',
-  drama: 'دراما',
-  family: 'عائلي',
-  fantasy: 'خيال',
-  history: 'تاريخي',
-  horror: 'رعب',
-  music: 'موسيقى',
-  mystery: 'غموض',
-  romance: 'رومانسي',
-  scifi: 'خيال علمي',
-  sport: 'رياضة',
-  thriller: 'إثارة',
-  war: 'حرب',
-  western: 'غربي',
-};
-
-function slugify(t) {
-  return String(t || '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '');
+const main=$('#main'),items=new Map();let featured=[],backup={},journeyBackup={},collections={collections:[]},stages=[],titles={},routeVersion=0,heroTimer,heroIndex=0,heroPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,searchTimer,searchVersion=0,currentItem,libraryTab='later';
+const key=m=>`${m.type||'movie'}:${m.id}`;
+function remember(list){for(const m of list){const known=items.get(key(m));items.set(key(m),{...known,...m,...(known?.localPoster?{localPoster:known.localPoster}:{}),...(known?.descriptionAr?{descriptionAr:known.descriptionAr}:{})});}return list.map(m=>items.get(key(m)));}
+const unique=list=>[...new Map(list.map(m=>[key(m),m])).values()];
+const header=(label,heading,desc)=>`<div class="page-head"><div><span class="eyebrow">${label}</span><h1>${heading}</h1><p>${desc}</p></div></div>`;
+const grid=list=>`<div class="grid">${list.map(m=>card(m,{badge:library.watched[m.id]?'✓ شاهدته':''})).join('')}</div>`;
+function profile(){return `<div class="profile-panel"><span class="big-star">✧</span><h2>${level()}</h2><p>كل حكاية تمنح رحلتك ضوءاً جديداً.</p><div class="track"><i style="width:${xp()>=1500?100:xp()<500?xp()/5:(xp()-500)/10}%"></i></div><div class="profile-numbers"><div><b>${number(xp())}</b><span>نقطة خبرة</span></div><div><b>${number(Object.keys(library.earned).length)}</b><span>نجمة</span></div></div>${achievements()}</div>`;}
+function achievements(){const watched=Object.values(library.watched).filter(m=>m.type==='movie').length,done=stages.some((_,i)=>stageStatus(stages,i).done);return [[watched>=1,'✦','أول حكاية','شاهد أول فيلم'],[watched>=10,'✧','عاشق السينما','شاهد عشرة أفلام'],[done,'♜','فاتح الآفاق','أكمل مرحلة من رحلتك']].map(([ok,icon,name,desc])=>`<div class="achievement ${ok?'':'locked'}"><span>${icon}</span><div><b>${name}</b><small>${ok?'تم الإنجاز · ':''}${desc}</small></div></div>`).join('');}
+function updateXP(){$('#xp-value').textContent=number(xp())+' XP';$('#xp-button').setAttribute('aria-label',`${number(xp())} نقطة خبرة، ${level()}`);}
+function completed(item,id=item.id){
+  const before=stages.map((_,i)=>stageStatus(stages,i).done);
+  let complete=item.type!=='series'||id===item.id;
+  if(!complete){const episodes=(item.videos||[]).filter(v=>v.season>0&&(!v.released||new Date(v.released)<=new Date()));complete=episodes.length>0&&episodes.every(v=>v.id===id||library.earned[v.id]);}
+  const result=markWatched(item,id,complete);updateXP();
+  const stage=stages.findIndex((_,i)=>!before[i]&&stageStatus(stages,i).done);
+  toast(!result.saved?'تم حفظ التقدم لهذه الجلسة؛ مساحة التخزين المحلي ممتلئة.':stage>=0?'🎉 اكتملت المرحلة! فُتحت محطتك التالية.':result.first?'✦ نجمة جديدة! أضفنا ٥٠ نقطة إلى رحلتك.':'هذه المشاهدة محسوبة بالفعل في رحلتك.');
+  if(location.hash.startsWith('#/details')){const b=$('[data-action="watched"]');if(b)b.textContent='✓ شاهدته';}
 }
-
-function xpBoost() {
-  const lvl = levelOf(state.xp);
-  return lvl * Math.round(lvl * 2.5) + 15;
-}
-
-function worth(m) {
-  let base = Number(m.rating || 0) * 1.5 + Number(m.year || 0) / 500;
-  if (/2026|2025/.test(String(m.year))) base += 6;
-  if (/^mov-/.test(m.id || '')) base += 3;
-  return Math.round(base * 10) / 10;
-}
-
-async function api(path, opts = {}) {
-  const r = await fetch(API + path, opts);
-  if (!r.ok) throw new Error('HTTP ' + r.status);
-  return r.json();
-}
-
-async function loadAll() {
-  const all = [];
-  for (let page = 1; page <= 4; page++) {
-    const j = await api('/content?page=' + page + '&limit=2000');
-    const rows = Array.isArray(j.data) ? j.data : [];
-    all.push(...rows);
-    if (rows.length < 2000) break;
+function buildStages(){
+  const frozen=[];
+  partition(featured).forEach((list,i)=>frozen.push({name:'إصدارات سحابة'+(i?' · '+number(i+1):''),items:list}));
+  const used=new Set(featured.map(m=>m.id));
+  for(const yr of [2026,2025,2024]){
+    const list=(journeyBackup['movie/year/genre='+yr]||[]).filter(m=>!used.has(m.id)).slice(0,30);list.forEach(m=>used.add(m.id));
+    partition(list).filter(p=>p.length>=10).forEach((p,i)=>frozen.push({name:'حكايات '+number(yr)+(i?' · '+number(i+1):''),items:remember(p.map(m=>({...m,type:'movie'})))}));
   }
-  state.items = all;
+  partition((journeyBackup['series/top']||[]).slice(0,30)).filter(p=>p.length>=10).forEach((p,i)=>frozen.push({name:'عوالم المسلسلات · '+number(i+1),items:remember(p.map(m=>({...m,type:'series'})))}));
+  stages=frozen;
 }
-
-function movies() {
-  return state.items.filter((x) => (x.type || 'movie') === 'movie');
+const heroIds=['tt16311594','tt26743210','tt4900148'];
+function renderHero(){
+  const m=items.get('movie:'+heroIds[heroIndex])||featured[0];if(!m||!$('#hero'))return;
+  const titleParts=title(m);$('#hero').innerHTML=`<div class="hero-art"><img src="assets/${esc(m.id)}-bg.jpg" alt="" fetchpriority="high"></div><div class="container"><div class="hero-content"><span class="feature-badge">✦ اختيار سحابة الليلة</span><h1>${esc(titleParts)}</h1><p class="original-title" lang="en" dir="ltr" style="text-align:right">${esc(m.name)}</p><div class="meta-line"><span class="gold">★ ${esc(m.imdbRating||'—')}</span><span class="separator">|</span><span>${esc(year(m))}</span><span>${esc(genres(m).slice(0,2).join(' · '))}</span><span class="pill">${esc((m.runtime||'').replace(/min/g,'دقيقة'))}</span></div><p class="description">${esc(m.descriptionAr||'حكاية تستحق أن تكون محطتك التالية في سحابة.')}</p><div class="actions"><button class="btn primary" data-play="${esc(key(m))}">▷ شاهد الآن</button><a class="btn secondary" href="#/details/movie/${m.id}">التفاصيل <span>ⓘ</span></a><button class="icon-button" data-later="${esc(key(m))}" aria-label="${library.later[m.id]?'إزالة من لاحقاً':'أضف إلى لاحقاً'}">${library.later[m.id]?'✓':'+'}</button></div></div></div><div class="hero-bottom"><span>حكايات تبقى معك، بعد المشهد الأخير.</span><div class="hero-controls">${heroIds.map((id,i)=>`<button class="hero-dot ${i===heroIndex?'active':''}" data-hero="${i}" aria-label="اختيار الفيلم ${number(i+1)}" aria-pressed="${i===heroIndex}"></button>`).join('')}<button class="pause" data-action="hero-pause" aria-label="${heroPaused?'تشغيل التبديل التلقائي':'إيقاف التبديل التلقائي'}">${heroPaused?'▷':'Ⅱ'}</button></div><div class="hero-count"><b class="gold">0${heroIndex+1}</b> / 03</div></div>`;
 }
-function series() {
-  return state.items.filter((x) => x.type === 'series');
+function shelfShell(id,name,link=''){return `<section class="shelf" id="${id}"><div class="section-title"><h2>${esc(name)}</h2><div class="section-tools">${link?`<a class="text-button" href="${esc(link)}">عرض الكل</a>`:''}<button class="scroll-btn" data-scroll="${id}" data-direction="1" aria-label="العناوين السابقة">›</button><button class="scroll-btn" data-scroll="${id}" data-direction="-1" aria-label="العناوين التالية">‹</button></div></div><div class="shelf-content">${skeleton()}</div></section>`;}
+function putShelf(id,list,message='') {const el=$('#'+id+' .shelf-content');if(!el)return;el.innerHTML=(message?errorBox(message,'shelf:'+id):'')+(list.length?`<div class="rail">${remember(list).slice(0,20).map(m=>card(m)).join('')}</div>`:empty('لا توجد عناوين في هذا الرف حالياً.',`<button class="text-button" data-action="shelf:${id}">إعادة المحاولة</button>`));}
+const shelfJobs=new Map();
+async function loadShelf(id,config,version,force=false){
+  if(!$('#'+id))return;if(config.fallback?.length)putShelf(id,config.fallback);else $('#'+id+' .shelf-content').innerHTML=skeleton();
+  try{const list=await catalog(config.type,config.id,config.extra||{},config.manifest||CINEMETA,force);if(version!==routeVersion)return;putShelf(id,dedupe([...list,...(config.fallback||[])]));}
+  catch(error){if(version!==routeVersion)return;putShelf(id,config.fallback||[],(config.fallback?.length?'نعرض النسخة المحفوظة. ':'')+error.message);}
 }
-
-function buildJourney() {
-  const groups = {};
-  const all = movies();
-  const mine = all.filter((m) => /^mov-/.test(m.id || '')).sort((a, b) => worth(b) - worth(a));
-  if (mine.length) groups['⭐ إصدارات سحابة'] = mine;
-  const years = [...new Set(all.map((m) => m.year))].sort((a, b) => b - a);
-  years.forEach((y) => {
-    const list = all.filter((m) => m.year === y && !/^mov-/.test(m.id || '')).sort((a, b) => worth(b) - worth(a));
-    if (list.length) groups['أفلام ' + y] = list;
-  });
-  const s = series().sort((a, b) => worth(b) - worth(a));
-  if (s.length) groups['مسلسلات'] = s;
-  const fav = all.filter((m) => Number(m.rating || 0) >= 8).slice(0, 12);
-  if (fav.length) groups['النجوم الكبيرة'] = fav;
-  return groups;
-}
-
-function levelOf(xp) {
-  return 1 + Math.floor(xp / 500);
-}
-function xpForLevel(l) {
-  return 500;
-}
-function levelCaption(l) {
-  const names = ['غيمة جديدة', 'سحابة صغيرة', 'سحابة فضية', 'سحابة ذهبية', 'عاصفة نجوم', 'سماء مفتوحة'];
-  return names[Math.min(l - 1, names.length - 1)];
-}
-
-function persist() {
-  try {
-    localStorage.setItem(watchedKey, JSON.stringify(state.watched));
-    localStorage.setItem(listKey, JSON.stringify(state.watchlist));
-    localStorage.setItem(xpKey, String(state.xp));
-  } catch (e) {}
-}
-function hydrate() {
-  try {
-    state.watched = JSON.parse(localStorage.getItem(watchedKey) || '{}');
-    state.watchlist = JSON.parse(localStorage.getItem(listKey) || '{}');
-    state.xp = Number(localStorage.getItem(xpKey) || 0);
-  } catch (e) {}
-}
-
-function card(m) {
-  const done = !!state.watched[m.id];
-  const year = m.year ? ' · ' + m.year : '';
-  const duration = m.duration ? ' · ' + m.duration.replace(/ ?min/, 'د') : '';
-  const genre = Array.isArray(m.genre) && m.genre[0] ? GENRE_AR[m.genre[0]] || m.genre[0] : 'فيلم';
-  return (
-    '<div class="pcard" data-id="' + m.id + '">' +
-    '<img loading="lazy" src="' + (m.poster || fallbackPoster()) + '" onerror="this.onerror=null;this.src=\'' + fallbackPoster() + '\'" alt="' + esc(m.titleAr || m.title) + '" />' +
-    (done ? '<span class="fin">✅</span>' : '') +
-    ((m.rating && Number(m.rating) > 0) ? '<span class="rad">★ ' + m.rating + '</span>' : '') +
-    '<div class="meta"><div class="t">' + esc(m.titleAr || m.title) + '</div>' +
-    '<div class="ty"><span>' + (m.type === 'series' ? 'مسلسل' : genre) + year + duration + '</span></div></div>' +
-    '</div>'
-  );
-}
-
-function fallbackPoster() {
-  return 'https://images.metahub.space/poster/small/tt0111161/img';
-}
-
-function esc(s) {
-  return String(s || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-}
-
-/* ---------- rendering ---------- */
-
-function renderXP() {
-  const bump = xpBoost();
-  document.getElementById('xpNum').textContent = state.xp;
-  const within = state.xp % 500;
-  document.getElementById('xpFill').style.width = (within / 500) * 100 + '%';
-}
-
-function renderHome() {
-  const m = movies().sort((a, b) => worth(b) - worth(a));
-  const hero = m[0] || {};
-  document.getElementById('heroTitle').textContent = hero.titleAr || hero.title || '';
-  document.getElementById('heroMeta').innerHTML =
-    (hero.year ? '<b>' + hero.year + '</b>' : '') +
-    (hero.rating ? '  ·  ★ <b>' + hero.rating + '</b>' : '') +
-    (hero.quality ? '  ·  ' + hero.quality : '');
-  document.getElementById('heroDesc').textContent = hero.description || '';
-  document.getElementById('heroBg').style.backgroundImage = 'url(' + (hero.poster || fallbackPoster()) + ')';
-  const play = document.querySelector('#heroCard [data-play]');
-  const info = document.querySelector('#heroCard [data-info]');
-  play.onclick = () => openPlayer(hero.id);
-  info.onclick = () => openDetail(hero.id);
-
-  const fillShelf = (el, title, items, cap) => {
-    const h = document.getElementById(el);
-    const list = items.slice(0, cap || 20);
-    h.innerHTML =
-      '<div class="shelf-head"><h3>' + title + '</h3><span>' + items.length + ' عنوان</span></div>' +
-      '<div class="rail">' + list.map(card).join('') + '</div>';
-  };
-
-  fillShelf('shelf-heroes', '🎖️ الأبطال', m.filter((x) => Number(x.rating || 0) >= 8), 24);
-  fillShelf('shelf-2025', '🎬 أفلام 2025', m.filter((x) => x.year === 2025), 24);
-  fillShelf('shelf-2024', '🌟 أفلام 2024', m.filter((x) => x.year === 2024), 24);
-  const classic = m.filter((x) => x.year <= 2010).slice(0, 20);
-  fillShelf('shelf-classic', '📼 كلاسيكيات', classic, 20);
-  bindCards(document.getElementById('app'));
-}
-
-function renderJourney() {
-  const groups = buildJourney();
-  state.journeyItems = groups;
-  const names = Object.keys(groups);
-  const j = document.getElementById('journey');
-  j.innerHTML = '';
-  names.forEach((name, idx) => {
-    const items = groups[name];
-    const doneCount = items.filter((x) => state.watched[x.id]).length;
-    const pct = items.length ? Math.round((doneCount / items.length) * 100) : 0;
-    const unlocked = idx === 0 || doneCount > 0 || state.watched[items[0] && items[0].id];
-    const isCurrent = unlocked && pct < 100 && pct > 0;
-    const cls = pct >= 100 ? 'done' : unlocked ? 'current' : 'locked';
-    const strip = items.slice(0, 6);
-
-    const node =
-      '<div class="stage-node ' + cls + '" data-stage="' + idx + '">' +
-      (pct >= 100 ? '<span class="s-star">⭐</span>' : '') +
-      '<span class="num">' + (idx + 1) + '</span>' +
-      (unlocked ? '' : '<span class="lock">🔒</span>') +
-      '</div>';
-
-    const cardz =
-      '<div class="stage-card glass ' + (unlocked ? '' : 'locked') + '" data-stage="' + idx + '">' +
-      '<h4>' + name + '<span class="st">' + doneCount + ' / ' + items.length + '</span></h4>' +
-      '<div class="stage-progress"><i style="width:' + pct + '%"></i></div>' +
-      '<div class="stage-strip">' +
-      strip
-        .map((it) => '<img src="' + (it.poster || fallbackPoster()) + '" alt="" data-open="' + it.id + '"' + (state.watched[it.id] ? ' style="filter:grayscale(0.4);opacity:.75"' : '') + '/>')
-        .join('') +
-      (items.length > 6 ? '<span class="more">+' + (items.length - 6) + '</span>' : '') +
-      '</div></div>';
-
-    j.innerHTML += '<div class="stage">' + node + cardz + '</div>';
-  });
-
-  j.querySelectorAll('[data-stage]').forEach((n) => {
-    n.addEventListener('click', () => {
-      const idx = Number(n.dataset.stage);
-      openStage(names[idx]);
-    });
-  });
-  j.querySelectorAll('[data-open]').forEach((img) => {
-    img.addEventListener('click', (e) => {
-      e.stopPropagation();
-      openDetail(img.dataset.open);
-    });
-  });
-}
-
-function openStage(name) {
-  const groups = buildJourney();
-  const items = groups[name] || [];
-  const grid = items
-    .map((m) => card(m))
-    .join('');
-  if (!grid) { showToast('🌙 لا عناوين في هذه المرحلة'); return; }
-  showToast('📚 ' + name + ' — ' + items.length + ' عنوان');
-  document.querySelector('.tab-view.active').classList.remove('active');
-  document.getElementById('view-library').classList.add('active');
-  document.getElementById('libStats').innerHTML = '<span>📚 ' + name + ': ' + items.length + ' عنوان</span>';
-  const gridEl = document.getElementById('libGrid');
-  gridEl.classList.add('grid');
-  gridEl.innerHTML = grid;
-  bindCards(gridEl);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-let detailOpen = null;
-async function openDetail(id) {
-  const overlay = document.getElementById('detailModal');
-  const close = document.getElementById('detailClose');
-  detailOpen = id;
-
-  const item = state.items.find((x) => x.id === id);
-  const meta = item || {};
-  const poster = meta.poster || fallbackPoster();
-  document.getElementById('detailBg').style.backgroundImage = 'url(' + poster + ')';
-  document.getElementById('detailBg').style.display = '';
-  document.getElementById('detailPoster').src = poster;
-  document.getElementById('detailPoster').style.display = '';
-  document.getElementById('detailTitle').textContent = meta.titleAr || meta.title || '';
-  document.getElementById('detailEn').textContent = meta.title || '';
-  document.getElementById('detailMeta').innerHTML =
-    (meta.year ? '<span>📅 ' + meta.year + '</span>' : '') +
-    (meta.quality ? ' <span>· ' + meta.quality + '</span>' : '') +
-    (meta.rating ? ' <span>· ★ <b>' + meta.rating + '</b></span>' : '') +
-    (meta.duration ? ' <span>· ' + meta.duration + '</span>' : '') +
-    (meta.language ? ' <span>· ' + meta.language + '</span>' : '');
-  document.getElementById('detailGenres').innerHTML = (Array.isArray(meta.genre) ? meta.genre : [])
-    .map((g) => '<i>' + (GENRE_AR[g] || g) + '</i>')
-    .join('');
-  document.getElementById('detailDesc').textContent = meta.description || 'لا يوجد وصف بعد.';
-
-  const cast = (Array.isArray(meta.cast) && meta.cast.length ? meta.cast : []).slice(0, 8);
-  document.getElementById('detailCast').innerHTML = cast.length
-    ? '🎭 ' + cast.join(' · ')
-    : '';
-
-  document.getElementById('detailPlay').onclick = () => { hideDetail(); openPlayer(id); };
-  document.getElementById('detailLater').onclick = () => {
-    if (state.watchlist[id]) { delete state.watchlist[id]; showToast('✨ أزيلت من لاحقاً'); }
-    else { state.watchlist[id] = 1; showToast('🔖 أضيفت إلى لاحقاً'); }
-    persist();
-  };
-  close.onclick = hideDetail;
-  overlay.classList.add('open');
-  overlay.onclick = (e) => { if (e.target === overlay) hideDetail(); };
-}
-
-function hideDetail() {
-  document.getElementById('detailModal').classList.remove('open');
-}
-
-/* ---------- player ---------- */
-
-function extractImdb(m) {
-  const s = (m.sourceUrl || m.id || '');
-  const hit = s.match(/tt\d+/);
-  return hit ? hit[0] : null;
-}
-
-function buildStreams(m) {
-  const imdb = extractImdb(m);
-  const list = [];
-  if (!imdb) return list;
-  list.push({
-    name: 'سحابة AutoEmbed',
-    url: 'https://autoembed.co/movie/imdb/' + imdb + '?lang=ar&sub_language=ara',
-  });
-  list.push({ name: 'سحابة EmbedSu', url: 'https://embed.su/embed/movie/' + imdb + '?ds_lang=ar' });
-  list.push({ name: 'سحابة 2Embed', url: 'https://2embed.cc/embed/movie/' + imdb });
-  list.push({ name: 'سحابة VidSrc', url: 'https://vidsrc.to/embed/movie/' + imdb });
-  return list;
-}
-
-function openPlayer(id) {
-  const m = state.items.find((x) => x.id === id);
-  if (!m) return;
-  const streams = buildStreams(m);
-  document.getElementById('playerTitle').textContent = m.titleAr || m.title || '';
-  const wrap = document.getElementById('playerServers');
-  wrap.innerHTML = '';
-  const frame = document.getElementById('playerFrame');
-  const markDone = () => {
-    if (!state.watched[m.id]) {
-      state.watched[m.id] = 1;
-      state.xp += xpBoost();
-      persist();
-      showToast('🎉 أحسنت! +' + xpBoost() + ' نقاط — لمعت نجمتك', true);
-      renderXP();
-      checkStageComplete(m.id);
-    }
-  };
-  streams.forEach((s, i) => {
-    const b = document.createElement('button');
-    b.className = 'server-btn' + (i === 0 ? ' active' : '');
-    b.textContent = s.name;
-    b.onclick = () => {
-      wrap.querySelectorAll('.server-btn').forEach((x) => x.classList.remove('active'));
-      b.classList.add('active');
-      frame.src = s.url;
-      markDone();
-    };
-    wrap.appendChild(b);
-  });
-  frame.src = streams[0] ? streams[0].url : 'about:blank';
-  markDone();
-  document.getElementById('playerClose').onclick = closePlayer;
-  document.getElementById('playerOverlay').classList.add('open');
-  document.querySelector('.player-overlay').onclick = (e) => { if (e.target === e.currentTarget) closePlayer(); };
-}
-
-function closePlayer() {
-  document.getElementById('playerOverlay').classList.remove('open');
-  document.getElementById('playerFrame').src = 'about:blank';
-}
-
-/* ---------- library ---------- */
-
-function renderLibrary() {
-  const watchedIds = Object.keys(state.watched);
-  const listIds = Object.keys(state.watchlist);
-  document.getElementById('libStats').innerHTML =
-    '<span>✅ شاهدتها: <b>' + watchedIds.length + '</b></span>' +
-    '<span>🔖 لاحقاً: <b>' + listIds.length + '</b></span>' +
-    '<span>🎖️ مستوى: <b>' + levelOf(state.xp) + '</b> — ' + levelCaption(levelOf(state.xp)) + '</span>';
-  const grid = document.getElementById('libGrid');
-  let items = [];
-  if (state.lib === 'watched') {
-    items = watchedIds.map((id) => state.items.find((x) => x.id === id)).filter(Boolean);
-  } else {
-    items = listIds.map((id) => state.items.find((x) => x.id === id)).filter(Boolean);
+function addonCatalogExtra(cat){const extras={};for(const field of cat.extra||[]){if(field.isRequired){if(field.options?.length)extras[field.name]=field.options[0];else return null;}}return extras;}
+function home(version){
+  const current=stages.findIndex((_,i)=>!stageStatus(stages,i).done),index=Math.max(0,current),s=stages[index],progress=s?stageStatus(stages,index).count:0;
+  main.innerHTML=`<section class="hero" id="hero" aria-label="اختيار الليلة"></section><div class="container home-content"><a class="journey-banner" href="#/journey"><div class="journey-emblem">✧</div><div><h2>رحلتك الكبيرة تبدأ بحكاية</h2><p>المرحلة ${number(index+1)} · ${esc(s?.name||'إصدارات سحابة')}</p></div><div class="banner-progress"><small>${number(progress)} من ${number(s?.items.length||0)} حكاية</small><div class="track"><i style="width:${s?progress/s.items.length*100:0}%"></i></div></div><span class="text-button">اكتشف رحلتك ✧</span></a><section class="catalog-intro"><div class="section-title"><h2>عالمك السينمائي <span class="sub">${number(collections.uniqueMovies)} فيلم · ${number(collections.collections.length)} كتالوج</span></h2><a class="text-button" href="#/catalog/all">تصفّح كل الأفلام</a></div>${collectionChips(collections.collections)}</section>${shelfShell('shelf-featured','إصدارات سحابة','#/catalog/featured')}${collections.collections.map(c=>shelfShell('shelf-'+c.slug,c.name,'#/catalog/'+c.slug)).join('')}<div id="addon-shelves"></div></div>`;
+  renderHero();putShelf('shelf-featured',featured);shelfJobs.clear();
+  for(const c of collections.collections){const config={...c,fallback:backup[c.key]||[]};shelfJobs.set('shelf-'+c.slug,config);putShelf('shelf-'+c.slug,config.fallback);}
+  // تبقى الأرفف معبأة فوراً، ويُحدّث الرائج والمسلسلات فقط عند فتح الرئيسية.
+  for(const slug of ['popular','series']){const config=shelfJobs.get('shelf-'+slug);if(config)void loadShelf('shelf-'+slug,config,version);}
+  let count=0;
+  for(const addon of getAddons().filter(a=>a.enabled))for(const cat of addon.manifest.catalogs){
+    const id='addon-shelf-'+count++,extra=addonCatalogExtra(cat);$('#addon-shelves').insertAdjacentHTML('beforeend',shelfShell(id,addon.manifest.name+' · '+(cat.name||'كتالوج الإضافة')));
+    if(extra===null){$('#'+id+' .shelf-content').innerHTML=empty('هذا الكتالوج يحتاج إلى بحث أو إعداد إضافي.', '<a class="btn secondary" href="#/search">انتقل إلى البحث</a>');continue;}
+    const config={type:cat.type,id:cat.id,extra,manifest:addon.url};shelfJobs.set(id,config);void loadShelf(id,config,version);
   }
-  grid.innerHTML = items.length ? items.map(card).join('') : '<div class="empty col" style="grid-column:1/-1"><i>' + (state.lib === 'watched' ? '🍿' : '🔖') + '</i>لا شيء هنا بعد</div>';
-  bindCards(grid);
+  if(!count)$('#addon-shelves').innerHTML=`<section class="shelf"><div class="section-title"><h2>من إضافاتك</h2></div>${empty('أضف عوالم جديدة إلى سمائك. تظهر كتالوجات إضافاتك هنا.', '<a class="btn secondary" href="#/addons">استكشف إضافاتي</a>')}</section>`;
+
+  heroTimer=setInterval(()=>{if(!heroPaused&&!document.hidden&&!$('#modal').open&&!$('#hero')?.matches(':hover, :focus-within')){heroIndex=(heroIndex+1)%heroIds.length;renderHero();}},8500);
 }
-
-function renderSearch(q) {
-  const grid = document.getElementById('searchGrid');
-  const t = (q || '').trim().toLowerCase();
-  if (!t) { grid.innerHTML = '<div class="empty col" style="grid-column:1/-1"><i>🔍</i>اكتب اسماً لتجد كنزك</div>'; return; }
-  const out = state.items
-    .filter((x) => (x.titleAr || x.title || '').toLowerCase().includes(t))
-    .slice(0, 30);
-  grid.innerHTML = out.length ? out.map(card).join('') : '<div class="empty col" style="grid-column:1/-1"><i>🌫️</i>لا نتائج… جرّب اسماً آخر</div>';
-  bindCards(grid);
+function journey(){main.innerHTML=`<div class="container">${header('خطوة نحو السماء','رحلة السحاب','شاهد، اجمع النجوم، وافتح آفاقاً جديدة. كل مرحلة تقرّبك من سمائك.')}<div class="journey-layout"><div class="journey-path">${stages.map((s,i)=>{const status=stageStatus(stages,i),cls=status.done?'done':status.unlocked?'current':'locked';return `<section class="stage ${cls}"><div class="stage-node" aria-label="${status.done?'منجزة':status.unlocked?'حالية':'مقفولة'}">${status.done?'✓':status.unlocked?'✦':'♙'}</div><div class="stage-body"><p class="stage-label">المرحلة ${number(i+1)} · ${status.done?'مكتملة':status.unlocked?'رحلتك الحالية':'🔒 مقفولة'}</p><h2>${esc(s.name)}</h2><div class="stage-stats"><span>${number(status.count)} / ${number(s.items.length)} حكاية</span><span>${number(s.items.length)} نجمة</span></div><div class="track" role="progressbar" aria-label="تقدم المرحلة ${i+1}" aria-valuemin="0" aria-valuemax="${s.items.length}" aria-valuenow="${status.count}"><i style="width:${status.count/s.items.length*100}%"></i></div><div class="stage-posters">${s.items.slice(0,5).map(m=>`<img src="${esc(imageURL(m))}" alt="${esc(title(m))}" loading="lazy">`).join('')}${status.unlocked?`<a class="btn small ${status.done?'secondary':'primary'}" href="#/stage/${i}">${status.done?'عرض المرحلة':'ابدأ المرحلة'}</a>`:'<button class="btn small" disabled>أكمل السابقة</button>'}</div></div></section>`;}).join('')}</div><aside>${profile()}</aside></div></div>`;}
+function stage(index){if(!Number.isInteger(index)||!stages[index])return notFound();const s=stages[index],status=stageStatus(stages,index);main.innerHTML=`<div class="container">${header('رحلة السحاب',esc(s.name),`${number(status.count)} من ${number(s.items.length)} حكاية مكتملة`)}<a class="back-link" href="#/journey">العودة إلى خريطة الرحلة</a>${status.unlocked?grid(s.items):empty('هذه المرحلة مقفولة. أكمل المراحل السابقة أولاً.', '<a class="btn primary" href="#/journey">تابع رحلتك</a>')}</div>`;}
+async function details(type,id,version,force=false){
+  let m=items.get(type+':'+id)||{id,type,name:'جارٍ تحميل التفاصيل…'};currentItem=m;renderDetail(m,true);
+  try{m=await metadata(m,force);if(version!==routeVersion)return;remember([m]);currentItem=m;renderDetail(m,false);}
+  catch(error){if(version!==routeVersion)return;renderDetail(m,false,error.message);}
 }
-
-/* ---------- binding ---------- */
-
-function bindCards(root) {
-  root.querySelectorAll('.pcard').forEach((c) => {
-    c.addEventListener('click', () => openDetail(c.dataset.id));
-  });
+function renderDetail(m,loading=false,error=''){
+  const list=(m.videos||[]).filter(v=>Number.isFinite(v.season)&&Number.isFinite(v.episode)),seasons=[...new Set(list.map(v=>v.season))].sort((a,b)=>a-b),hasTrailer=(m.trailerStreams||[]).some(t=>t.ytId)||(m.trailers||[]).some(t=>t.source);
+  main.innerHTML=`<article class="detail"><div class="detail-backdrop"><img src="${esc(m.featured&&heroIds.includes(m.id)?'assets/'+m.id+'-bg.jpg':m.background||imageURL(m))}" alt=""></div><div class="container"><a class="back-link" href="#/home">الرئيسية / ${m.type==='series'?'مسلسلات':'الأفلام'}</a>${error?errorBox(error,'detail-retry'):''}<div class="detail-layout"><img class="detail-poster" src="${esc(imageURL(m))}" alt="ملصق ${esc(title(m))}"><div class="detail-copy"><span class="eyebrow">${m.type==='series'?'عالم يستحق الاستكشاف':'حكايتك التالية'}</span><h1>${esc(title(m))}</h1><p class="original-title" dir="auto">${esc(titles[m.id]?.ar?m.name:'')}</p><div class="meta-line"><span class="gold">★ ${esc(m.imdbRating||'غير متاح')}</span><span>${esc(year(m))}</span><span>${esc((m.runtime||'').replace(/min/g,'دقيقة'))}</span></div><div class="detail-tags">${genres(m).map(g=>`<span>${esc(g)}</span>`).join('')}</div><p class="detail-description" dir="auto">${esc(m.descriptionAr||m.description||'لا يتوفر وصف لهذا العنوان حالياً.')}</p>${loading?'<p class="muted" role="status">جارٍ تحديث التفاصيل…</p>':''}<div class="actions"><button class="btn primary" data-action="detail-play">▷ شاهد الآن</button><button class="btn secondary" data-later="${esc(key(m))}">${library.later[m.id]?'✓ في قائمة لاحقاً':'＋ لاحقاً'}</button><button class="btn secondary" data-action="trailer" ${hasTrailer?'':'disabled'}>الإعلان الدعائي</button><button class="text-button" data-action="watched">${library.watched[m.id]?'✓ شاهدته':'✓ سجلته كمُشاهد'}</button></div><div class="cast"><p><b>الإخراج</b>${esc((m.director||[]).join('، ')||'غير متاح')}</p><p><b>طاقم العمل</b>${esc((m.cast||[]).slice(0,8).join('، ')||'غير متاح')}</p></div></div></div>${m.type==='series'?`<section class="episodes"><div class="section-title"><h2>المواسم والحلقات</h2>${seasons.length?`<label class="field">الموسم<select id="season-select">${seasons.map(s=>`<option value="${s}">${s===0?'حلقات خاصة':'الموسم '+number(s)}</option>`).join('')}</select></label>`:''}</div><div id="episodes-list">${loading?skeleton(3):empty('لا تتوفر معلومات الحلقات حالياً.', '<button class="text-button" data-action="detail-retry">إعادة المحاولة</button>')}</div></section>`:''}</div></article>`;
+  if(seasons.length){const initial=seasons.includes(1)?1:seasons[0];$('#season-select').value=initial;renderEpisodes(m,initial);$('#season-select').onchange=e=>renderEpisodes(m,Number(e.target.value));}
 }
-
-let toastTimer = null;
-function showToast(txt, spark = false) {
-  const t = document.getElementById('toast');
-  t.innerHTML = (spark ? '<span class="spark">⭐</span>' : '') + txt;
-  t.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('show'), 3800);
+function renderEpisodes(m,season){$('#episodes-list').innerHTML=`<div class="episodes-list">${(m.videos||[]).filter(v=>v.season===season).sort((a,b)=>a.episode-b.episode).map(v=>{const future=v.released&&new Date(v.released)>new Date();return `<button class="episode" data-episode="${esc(v.id)}" ${future?'disabled':''}><span class="episode-num">${number(v.episode)}</span><span>الحلقة ${number(v.episode)}<small dir="auto">${esc(v.name||v.title||'')}${future?' · لم تُعرض بعد':''}${library.earned[v.id]?' · ✓':''}</small></span></button>`;}).join('')}</div>`;}
+function libraryPage(){
+  const rows=libraryTab==='continue'?Object.values(library.positions).filter(p=>p?.item&&p.time>0).sort((a,b)=>b.updatedAt-a.updatedAt):Object.values(library[libraryTab]||{}).filter(m=>m?.id);
+  main.innerHTML=`<div class="container">${header('مساحتك الخاصة','مكتبتي','الحكايات التي عشتها… والتي تنتظرك.')}<div class="tabs">${[['later','🔖 لاحقاً'],['watched','✓ شاهدتها'],['continue','▷ متابعة المشاهدة']].map(([id,label])=>`<button class="chip ${libraryTab===id?'active':''}" data-library="${id}" aria-pressed="${libraryTab===id}">${label}</button>`).join('')}</div>${rows.length?`<div class="grid">${rows.map(row=>{const m=libraryTab==='continue'?row.item:row;remember([m]);return `<div>${card(m,{badge:libraryTab==='watched'?'✓ شاهدته':'',progress:row.time/row.duration*100})}${libraryTab==='continue'?`<button class="text-button" data-resume="${esc(row.videoId)}">متابعة من ${number(Math.floor(row.time/60))} دقيقة</button>`:libraryTab==='later'?`<button class="text-button" data-later="${esc(key(m))}">إزالة من لاحقاً</button>`:''}</div>`;}).join('')}</div>`:empty(libraryTab==='continue'?'ستظهر هنا المشاهدات التي لم تكملها بعد.':'مكتبتك تنتظر أول حكاية.', '<a class="btn secondary" href="#/search">اكتشف شيئاً جديداً</a>')}</div>`;
 }
-
-const CONFETTI_COLORS = ['#f5c518', '#7c5cff', '#38e1ff', '#ff5fa4', '#34e3a2', '#ffdf6b'];
-function celebrate(title, sub) {
-  const layer = document.getElementById('confetti');
-  layer.innerHTML = '';
-  for (let i = 0; i < 90; i++) {
-    const c = document.createElement('i');
-    c.className = 'confetti';
-    c.style.left = Math.random() * 100 + 'vw';
-    c.style.top = '-8vh';
-    c.style.background = CONFETTI_COLORS[i % CONFETTI_COLORS.length];
-    c.style.animationDuration = 2.2 + Math.random() * 2.2 + 's';
-    c.style.animationDelay = Math.random() * 0.7 + 's';
-    c.style.opacity = 0.65 + Math.random() * 0.35;
-    layer.appendChild(c);
+function addonsPage(){const addons=getAddons();main.innerHTML=`<div class="container">${header('وسّع آفاقك','إضافاتي','كتالوجات جديدة ومصادر مشاهدة تختارها بنفسك.')}<section class="addon-form"><h2>عالم جديد برابط واحد</h2><p>ألصق رابط manifest.json لإضافة Stremio. ستظهر كتالوجاتها في الرئيسية ومصادرها داخل المشغّل.</p><form id="addon-form"><label class="field">رابط الإضافة<input class="input" id="addon-url" type="text" inputmode="url" placeholder="https://example.com/manifest.json" autocomplete="off" required></label><button class="btn primary" type="submit">＋ إضافة إلى سحابة</button></form><div id="addon-message" role="status"></div></section><div class="section-title"><h2>الإضافات المثبتة <span class="sub">${number(addons.length+1)} إضافات</span></h2></div><div class="addon-list"><div class="addon-item"><div class="addon-icon">◈</div><div class="addon-info"><h2>الكتالوج السينمائي <span class="muted">Cinemeta</span></h2><p>المعلومات الأساسية للأفلام والمسلسلات</p><div class="tags"><span>كتالوجات</span><span>بيانات</span></div></div><span class="gold">إضافة أساسية</span></div>${addons.map((a,i)=>`<article class="addon-item"><div class="addon-icon">✧</div><div class="addon-info"><h2 dir="auto">${esc(a.manifest.name)}</h2><p dir="auto">${esc(a.manifest.description||'إضافة Stremio')}</p><div class="tags">${a.manifest.resources.map(r=>`<span>${esc(({catalog:'كتالوجات',meta:'بيانات',stream:'مصادر مشاهدة',subtitles:'ترجمات'})[typeof r==='string'?r:r.name]||'موارد إضافية')}</span>`).join('')}</div></div><div class="addon-actions"><button class="toggle ${a.enabled?'':'off'}" data-toggle-addon="${i}" aria-pressed="${a.enabled}">${a.enabled?'● مفعّلة':'غير مفعّلة'}</button><button class="danger" data-remove-addon="${i}">حذف</button></div></article>`).join('')}</div><aside class="help-panel"><h2>كيف تبدأ؟</h2><p>١. انسخ رابط الإضافة بعد إعدادها في صفحة مزوّدها.</p><p>٢. ألصقه أعلاه ثم اختر «إضافة إلى سحابة».</p><p>٣. افتح أي فيلم واختر «شاهد الآن»، ثم اختر مصدراً متاحاً.</p><p>يدعم المشغل روابط MP4 وبث HLS وترجمات VTT وSRT. مصادر التورنت والروابط التي تحتاج ترويسات خاصة قد تحتاج مشغلاً خارجياً. لا تأتي سحابة بمصادر مشاهدة مدمجة.</p></aside></div>`;
+  $('#addon-form').onsubmit=async e=>{e.preventDefault();const button=$('#addon-form button'),message=$('#addon-message'),input=$('#addon-url');button.disabled=true;message.textContent='جارٍ قراءة الإضافة…';try{const addon=await validateManifest(input.value);const list=getAddons(),index=list.findIndex(a=>a.url===addon.url);if(index<0)list.push(addon);else list[index]=addon;if(!saveAddons(list))throw Error('تعذّر حفظ الإضافة. اسمح بالتخزين المحلي أو وفر مساحة.');if(message.isConnected){addonsPage();toast('أُضيفت '+addon.manifest.name+' إلى سمائك.');}}catch(error){if(message.isConnected){message.innerHTML=errorBox(error.message,'addon-retry');$('#addon-message button').onclick=()=>$('#addon-form').requestSubmit();}}finally{button.disabled=false;}};
+}
+function searchPage(params){const query=params.get('q')||'',type=params.get('type')||'movie',selectedYear=params.get('year')||'',genre=params.get('genre')||'';
+  main.innerHTML=`<div class="container">${header('خلف كل عنوان، عالم','اكتشف حكايتك','ابحث بالعربية أو الإنجليزية، أو دع فضولك يختار.')}<p style="margin-bottom:20px"><a class="text-button" href="#/catalog/all">تصفّح جميع كتالوجات الأفلام</a></p><form id="search-form" class="search-form"><label class="input" style="display:flex;align-items:center;gap:14px;flex:1"><span aria-hidden="true">⌕</span><input id="search-input" type="search" aria-label="ابحث عن فيلم أو مسلسل" placeholder="عنوان، حكاية، عالم جديد…" value="${esc(query)}" style="border:0;background:none;color:inherit;width:100%;min-width:0"></label><button class="btn primary">بحث</button></form><div class="filters"><span class="filter-label">تصفية حسب</span><select id="type-filter" aria-label="نوع المحتوى"><option value="movie">أفلام</option><option value="series">مسلسلات</option></select><select id="genre-filter" aria-label="التصنيف"><option value="">كل الأنواع</option>${Object.entries(genreAR).map(([id,label])=>`<option value="${id}">${label}</option>`).join('')}</select><select id="year-filter" aria-label="سنة الإصدار"><option value="">كل السنوات</option>${Array.from({length:new Date().getFullYear()-1919},(_,i)=>new Date().getFullYear()-i).map(y=>`<option value="${y}">${number(y)}</option>`).join('')}</select></div><div id="search-status" role="status"></div><div id="search-results">${skeleton()}</div><div class="load-more"><button id="load-more" class="btn secondary" hidden>المزيد من العناوين</button></div></div>`;
+  $('#type-filter').value=type;$('#genre-filter').value=genre;$('#year-filter').value=selectedYear;
+  let skip=0,results=[];
+  const normalize=s=>String(s).toLowerCase().replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/[\u064B-\u065F]/g,'');
+  async function run(more=false,force=false){
+    const token=++searchVersion,version=routeVersion,q=$('#search-input').value.trim(),t=$('#type-filter').value,g=$('#genre-filter').value,y=$('#year-filter').value;
+    const resultEl=$('#search-results'),statusEl=$('#search-status'),moreButton=$('#load-more');if(!more){skip=0;results=[];resultEl.innerHTML=skeleton();}moreButton.disabled=true;moreButton.hidden=true;statusEl.textContent='جارٍ البحث…';
+    const matches=m=>(!q||[m.name,title(m)].some(s=>normalize(s).includes(normalize(q))))&&m.type===t&&(!y||year(m)===y)&&(!g||(m.genres||m.genre||[]).includes(g));
+    const local=unique([...items.values()]).filter(matches).slice(0,q?200:100);
+    const translated=Object.entries(titles).find(([,v])=>normalize(v.ar).includes(normalize(q))&&q);
+    const search=q&&translated&&/[\u0600-\u06ff]/.test(q)?translated[1].en:q;
+    const extra={...(q?{search}:{}),...(g&&!y?{genre:g}:{}),...(y&&!q?{genre:y}:{}),...(skip?{skip}:{})};
+    try{
+      const jobs=[catalog(t,y&&!q?'year':'top',extra,CINEMETA,force)];
+      if(q)for(const addon of getAddons().filter(a=>a.enabled))for(const cat of addon.manifest.catalogs.filter(c=>c.type===t&&(c.extra||[]).some(e=>e.name==='search'))){const extras={search, ...(skip?{skip}:{})};let valid=true;for(const e of cat.extra||[]){if(e.isRequired&&e.name!=='search'){if(e.options?.length)extras[e.name]=e.options[0];else valid=false;}}if(valid)jobs.push(catalog(t,cat.id,extras,addon.url,force));}
+      const responses=await Promise.allSettled(jobs);if(token!==searchVersion||version!==routeVersion)return;
+      const failed=responses.filter(r=>r.status==='rejected').length,received=responses.flatMap(r=>r.status==='fulfilled'?r.value:[]);remember(received);
+      const filtered=received.filter(m=>(!y||year(m)===y)&&(!g||(m.genres||m.genre||[]).includes(g)));
+      results=unique([...(more?results:local),...filtered]);resultEl.innerHTML=results.length?grid(results):empty('لم نعثر على نتائج. جرّب عنواناً آخر أو غيّر الفلاتر.', '<button class="text-button" data-action="search-retry">إعادة المحاولة</button>');
+      statusEl.innerHTML=failed?errorBox('تعذّر الوصول إلى '+number(failed)+' من مصادر البحث. نعرض النتائج المتاحة.','search-retry'):`<p class="muted" style="margin-bottom:20px;font-size:.85rem">${number(results.length)} حكاية بانتظارك</p>`;
+      moreButton.hidden=!received.length;moreButton.disabled=false;
+    }catch{if(token===searchVersion&&version===routeVersion){statusEl.innerHTML=errorBox('تعذّر البحث. حاول مجدداً.','search-retry');resultEl.innerHTML=local.length?grid(local):empty('لم تصل نتائج بعد.');}}
   }
-  const badge = document.getElementById('stageBadge');
-  document.getElementById('badgeTitle').textContent = title;
-  document.getElementById('badgeSub').textContent = sub || '';
-  badge.classList.remove('show');
-  void badge.offsetWidth;
-  badge.classList.add('show');
-  setTimeout(() => { layer.innerHTML = ''; badge.classList.remove('show'); }, 4200);
+  $('#search-form').onsubmit=e=>{e.preventDefault();clearTimeout(searchTimer);run();};$('#search-input').oninput=()=>{clearTimeout(searchTimer);searchVersion++;searchTimer=setTimeout(()=>run(),350);};
+  for(const selector of ['#type-filter','#genre-filter','#year-filter'])$(selector).onchange=()=>run();
+  $('#load-more').onclick=()=>{skip+=100;run(true);};
+  main.searchRetry=()=>run(false,true);void run();
 }
-
-function checkStageComplete(itemId) {
-  const groups = buildJourney();
-  for (const name of Object.keys(groups)) {
-    const items = groups[name];
-    const mine = items.find((x) => x.id === itemId);
-    if (!mine) continue;
-    const all = items.every((x) => state.watched[x.id]);
-    if (all) {
-      celebrate('أتممت المرحلة: ' + name, items.length + ' عنوان — نجمة ذهبية ⭐');
-      state.xp += 120;
-      persist();
-      renderXP();
-    }
-    break;
-  }
+function notFound(){main.innerHTML=`<div class="container">${header('خارج الخريطة','هذه الصفحة غير موجودة','دعنا نعود إلى الحكاية.')} ${empty('لم نتمكن من العثور على هذا المسار.', '<a class="btn primary" href="#/home">العودة للرئيسية</a>')}</div>`;}
+async function route(){
+  const version=++routeVersion;searchVersion++;clearInterval(heroTimer);clearTimeout(searchTimer);if($('#modal').open)closeModal();
+  const raw=location.hash.replace(/^#\/?/,'')||'home',parts=raw.split('?'),paths=parts[0].split('/');let page=paths[0];
+  document.querySelectorAll('[data-route]').forEach(n=>{const active=n.dataset.route===(page==='stage'?'journey':page==='details'?'home':page==='catalog'?'search':page);n.classList.toggle('active',active);if(active)n.setAttribute('aria-current','page');else n.removeAttribute('aria-current');});
+  document.title=({home:'الرئيسية',journey:'رحلتي',search:'اكتشف',library:'مكتبتي',addons:'إضافاتي',details:'التفاصيل',stage:'رحلة السحاب',catalog:'الكتالوجات'}[page]||'صفحة غير موجودة')+' — سحابة';
+  window.scrollTo(0,0);
+  try{switch(page){case 'home':home(version);break;case 'journey':journey();break;case 'stage':stage(Number(paths[1]));break;case 'library':libraryPage();break;case 'catalog':renderCollection({main,slug:decodeURIComponent(paths[1]||'all'),manifest:collections,featured,backup,remember,alive:()=>version===routeVersion});break;case 'search':searchPage(new URLSearchParams(parts[1]));break;case 'addons':addonsPage();break;case 'details':await details(decodeURIComponent(paths[1]||'movie'),decodeURIComponent(paths[2]||''),version);break;default:notFound();}}
+  catch{main.innerHTML=`<div class="container">${errorBox('تعذّر عرض هذه الصفحة. بيانات مكتبتك محفوظة؛ أعد المحاولة.')}</div>`;}
 }
-
-function bindNav() {
-  document.querySelectorAll('.nav-btn').forEach((b) => {
-    b.addEventListener('click', () => {
-      document.querySelectorAll('.nav-btn').forEach((x) => x.classList.remove('active'));
-      b.classList.add('active');
-      const tab = b.dataset.tab;
-      document.querySelectorAll('.tab-view').forEach((v) => v.classList.remove('active'));
-      const target = document.getElementById('view-' + tab);
-      target.classList.add('active');
-      if (tab === 'journey') renderJourney();
-      if (tab === 'library') renderLibrary();
-      if (tab === 'search') renderSearch(document.getElementById('searchInput').value);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-  document.getElementById('logo').addEventListener('click', () => {
-    document.querySelector('.nav-btn[data-tab=home]').click();
-  });
-  document.getElementById('xpBtn').addEventListener('click', () => {
-    const lvl = levelOf(state.xp);
-    showToast('🎖️ المستوى ' + lvl + ' — ' + levelCaption(lvl) + '<br><small>' + state.xp + ' نقطة إجمالاً</small>');
-  });
-  document.querySelectorAll('.lib-tab').forEach((b) => {
-    b.addEventListener('click', () => {
-      document.querySelectorAll('.lib-tab').forEach((x) => x.classList.remove('active'));
-      b.classList.add('active');
-      state.lib = b.dataset.lib;
-      renderLibrary();
-    });
-  });
-  const si = document.getElementById('searchInput');
-  si.addEventListener('input', () => renderSearch(si.value));
-  document.getElementById('searchBtn').addEventListener('click', () => renderSearch(si.value));
-  si.addEventListener('keydown', (e) => { if (e.key === 'Enter') renderSearch(si.value); });
+document.addEventListener('click',async e=>{
+  const button=e.target.closest('button');if(!button)return;
+  try{
+    if(button.dataset.play){const m=items.get(button.dataset.play);if(m)await openPlayer(m,m.id,completed);}
+    if(button.dataset.later){const m=items.get(button.dataset.later);if(!m)return;if(library.later[m.id])delete library.later[m.id];else library.later[m.id]=m;const saved=saveLibrary();toast(saved?(library.later[m.id]?'أُضيف إلى قائمة لاحقاً.':'أُزيل من قائمة لاحقاً.'):'تعذّر الحفظ الدائم؛ مكتبتك متاحة لهذه الجلسة.');if(location.hash.includes('library'))libraryPage();else if(location.hash.includes('details'))button.textContent=library.later[m.id]?'✓ في قائمة لاحقاً':'＋ لاحقاً';else renderHero();}
+    if(button.dataset.hero!==undefined){heroIndex=Number(button.dataset.hero);renderHero();$('#hero').querySelector(`[data-hero="${heroIndex}"]`)?.focus();}
+    if(button.dataset.scroll){const rail=$('#'+button.dataset.scroll+' .rail');rail?.scrollBy({left:Number(button.dataset.direction)*rail.clientWidth*.8,behavior:'smooth'});}
+    if(button.dataset.library){libraryTab=button.dataset.library;libraryPage();}
+    if(button.dataset.episode&&currentItem)await openPlayer(currentItem,button.dataset.episode,completed);
+    if(button.dataset.resume){const p=library.positions[button.dataset.resume];if(p)await openPlayer(p.item,p.videoId,completed);}
+    if(button.dataset.toggleAddon!==undefined||button.dataset.removeAddon!==undefined){const a=getAddons();if(button.dataset.toggleAddon!==undefined){const i=Number(button.dataset.toggleAddon);a[i].enabled=!a[i].enabled;}else a.splice(Number(button.dataset.removeAddon),1);if(!saveAddons(a))toast('تعذّر حفظ التغيير.');addonsPage();}
+    const action=button.dataset.action;
+    if(action==='retry'){if(!featured.length)location.reload();else route();}
+    if(action==='hero-pause'){heroPaused=!heroPaused;renderHero();$('[data-action="hero-pause"]')?.focus();}
+    if(action==='detail-retry')await details(currentItem.type,currentItem.id,routeVersion,true);
+    if(action==='trailer')trailer(currentItem);
+    if(action==='watched'){if(!library.watched[currentItem.id])completed(currentItem);else toast('هذا العنوان مسجل في قائمة شاهدتها.');}
+    if(action==='detail-play'){if(currentItem.type==='series'){const first=(currentItem.videos||[]).filter(v=>v.season>0&&(!v.released||new Date(v.released)<=new Date())).sort((a,b)=>a.season-b.season||a.episode-b.episode).find(v=>!library.earned[v.id]);if(!first)return toast('اختر حلقة من القائمة، أو أعد تحميل تفاصيل المسلسل.');await openPlayer(currentItem,first.id,completed);}else await openPlayer(currentItem,currentItem.id,completed);}
+    if(action==='search-retry')main.searchRetry?.();
+    if(action?.startsWith('shelf:')){const id=action.slice(6),config=shelfJobs.get(id);if(config)await loadShelf(id,config,routeVersion,true);else putShelf(id,featured);}
+  }catch{toast('تعذّر إتمام العملية. يرجى إعادة المحاولة.');}
+});
+$('#xp-button').onclick=()=>openModal('نجومك وإنجازاتك',`<div class="celebration"><span>✧</span><h3>${level()}</h3><p>${number(xp())} نقطة خبرة · ${number(Object.keys(library.earned).length)} نجمة</p><p class="muted">غيمة جديدة ← ٥٠٠ نقطة: سحابة ذهبية ← ١٥٠٠ نقطة: سماء مفتوحة</p></div><div class="achievement-grid">${achievements()}</div>`);
+function connection(){ $('#connection').hidden=navigator.onLine; }
+window.addEventListener('offline',connection);window.addEventListener('online',()=>{connection();toast('عاد الاتصال. يمكنك تحديث المحتوى.');});
+window.addEventListener('hashchange',()=>void route());
+async function boot(){
+  connection();updateXP();
+  try{
+    const load=async name=>{try{const r=await fetch('data/'+name+'.json');if(!r.ok)throw Error();const data=await r.json();write('backup:'+name,data);return data;}catch{const data=read('backup:'+name,null);if(!data)throw Error();return data;}};
+    const data=await Promise.all([load('movies'),load('ar-titles'),load('catalogs'),load('posters'),load('collections'),load('journey')]);
+    if(!Array.isArray(data[0])||!data[0].length)throw Error();titles=data[1];setTitles(titles);setPosters(data[3]);featured=remember(data[0]);backup=data[2];collections=data[4];journeyBackup=data[5];
+    for(const list of Object.values(backup))remember(list);
+    for(const list of [library.watched,library.later])remember(Object.values(list).filter(m=>m?.id));buildStages();await route();
+  }catch{main.innerHTML=`<div class="container">${header('سحابة','تعذّر تحميل المكتبة','تأكد أن ملفات data موجودة وأن الخادم يعمل.')} ${errorBox('لم تصل البيانات المحلية. أعد المحاولة بعد التحقق من الاتصال.')}</div>`;}
 }
-
-/* ---------- boot ---------- */
-
-async function boot() {
-  hydrate();
-  renderXP();
-  bindNav();
-  showToast('☁️ جارٍ تحميل السحابة…');
-  try {
-    await loadAll();
-    renderHome();
-    showToast('✨ أهلاً بك في سحابة، رحلتك بدأت!');
-  } catch (e) {
-    showToast('⚠️ تعذّر الاتصال، تأكد أن السيرفر يعمل', false);
-    document.getElementById('heroTitle').textContent = 'لا اتصال';
-  }
-}
-
-document.addEventListener('DOMContentLoaded', boot);
+void boot();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});

@@ -1,10 +1,10 @@
 [
   {
-    "id": "mov-elio-2025",
+    "id": "tt4900148",
     "title": "Elio",
     "titleAr": "إيليو",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.6,
     "genre": [
       "Animation",
@@ -12,21 +12,177 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt4900148/img",
-    "sourceUrl": "https://www.imdb.com/title/tt4900148/",
     "description": "Elio, a space fanatic with an active imagination, finds himself on a cosmic misadventure where he must form new bonds with alien lifeforms, navigate a crisis of intergalactic proportions and somehow discover who he is truly meant ...",
     "duration": "98 min",
     "cast": [
       "Yonas Kibreab",
       "Zoe Saldaña",
       "Remy Edgerly"
-    ]
+    ],
+    "imdb_id": "tt4900148",
+    "name": "Elio",
+    "awards": "Nominated for 1 Oscar. 1 win & 47 nominations total",
+    "country": "United States",
+    "director": [
+      "Adrian Molina",
+      "Madeline Sharafian",
+      "Domee Shi"
+    ],
+    "imdbRating": "6.6",
+    "released": "2025-06-20T00:00:00.000Z",
+    "slug": "movie/elio-4900148",
+    "writer": [
+      "Julia Cho",
+      "Mark Hammer",
+      "Mike Jones"
+    ],
+    "moviedb_id": 1022787,
+    "popularities": {
+      "moviedb": 12.1375,
+      "stremio": 0.4045833333333333,
+      "stremio_lib": 0,
+      "trakt": 30
+    },
+    "trailers": [
+      {
+        "source": "yH5zbV7eweM",
+        "type": "Trailer"
+      },
+      {
+        "source": "is2meozrnx0",
+        "type": "Trailer"
+      },
+      {
+        "source": "ETVi5_cnnaE",
+        "type": "Trailer"
+      },
+      {
+        "source": "8ocanbiSyV4",
+        "type": "Trailer"
+      },
+      {
+        "source": "2w_K3CB8PuE",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "98 min",
+    "background": "https://images.metahub.space/background/medium/tt4900148/img",
+    "logo": "https://images.metahub.space/logo/medium/tt4900148/img",
+    "popularity": 0.4045833333333333,
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Elio",
+        "ytId": "yH5zbV7eweM"
+      },
+      {
+        "title": "Elio",
+        "ytId": "is2meozrnx0"
+      },
+      {
+        "title": "Elio",
+        "ytId": "ETVi5_cnnaE"
+      },
+      {
+        "title": "Elio",
+        "ytId": "8ocanbiSyV4"
+      },
+      {
+        "title": "Elio",
+        "ytId": "2w_K3CB8PuE"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt4900148"
+      },
+      {
+        "name": "Elio",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/elio-4900148"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Yonas Kibreab",
+        "category": "Cast",
+        "url": "stremio:///search?search=Yonas%20Kibreab"
+      },
+      {
+        "name": "Zoe Saldaña",
+        "category": "Cast",
+        "url": "stremio:///search?search=Zoe%20Salda%C3%B1a"
+      },
+      {
+        "name": "Remy Edgerly",
+        "category": "Cast",
+        "url": "stremio:///search?search=Remy%20Edgerly"
+      },
+      {
+        "name": "Julia Cho",
+        "category": "Writers",
+        "url": "stremio:///search?search=Julia%20Cho"
+      },
+      {
+        "name": "Mark Hammer",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mark%20Hammer"
+      },
+      {
+        "name": "Mike Jones",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mike%20Jones"
+      },
+      {
+        "name": "Adrian Molina",
+        "category": "Directors",
+        "url": "stremio:///search?search=Adrian%20Molina"
+      },
+      {
+        "name": "Madeline Sharafian",
+        "category": "Directors",
+        "url": "stremio:///search?search=Madeline%20Sharafian"
+      },
+      {
+        "name": "Domee Shi",
+        "category": "Directors",
+        "url": "stremio:///search?search=Domee%20Shi"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt4900148",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "فتى يحلم بالفضاء يجد نفسه سفيراً للأرض في مغامرة بين النجوم.",
+    "localPoster": "assets/tt4900148.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-fantastic-four-first-steps-2025",
+    "id": "tt10676052",
     "title": "The Fantastic Four: First Steps",
     "titleAr": "أربعة المذهلون: الخطوات الأولى",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.8,
     "genre": [
       "Action",
@@ -34,41 +190,309 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt10676052/img",
-    "sourceUrl": "https://www.imdb.com/title/tt10676052/",
     "description": "Forced to balance their roles as heroes with the strength of their family bond, the Fantastic Four must defend Earth from a ravenous space god called Galactus and his enigmatic herald, the Silver Surfer.",
     "duration": "115 min",
     "cast": [
       "Pedro Pascal",
       "Vanessa Kirby",
       "Ebon Moss-Bachrach"
-    ]
+    ],
+    "imdb_id": "tt10676052",
+    "name": "The Fantastic Four: First Steps",
+    "country": "United Kingdom, United States, Canada, New Zealand",
+    "director": [
+      "Matt Shakman"
+    ],
+    "imdbRating": "6.8",
+    "released": "2025-07-25T00:00:00.000Z",
+    "slug": "movie/the-fantastic-four-first-steps-10676052",
+    "writer": [
+      "Josh Friedman",
+      "Eric Pearson",
+      "Jeff Kaplan"
+    ],
+    "moviedb_id": 617126,
+    "popularities": {
+      "moviedb": 37.032,
+      "stremio": 1.2344,
+      "stremio_lib": 0,
+      "trakt": 58
+    },
+    "background": "https://images.metahub.space/background/medium/tt10676052/img",
+    "logo": "https://images.metahub.space/logo/medium/tt10676052/img",
+    "trailers": [
+      {
+        "source": "LJa5wv93YGM",
+        "type": "Trailer"
+      },
+      {
+        "source": "b-WdRqzSJ9w",
+        "type": "Trailer"
+      },
+      {
+        "source": "18QQWa5MEcs",
+        "type": "Trailer"
+      },
+      {
+        "source": "YfXKYrE5yAw",
+        "type": "Trailer"
+      },
+      {
+        "source": "0uDUlDmGhUo",
+        "type": "Trailer"
+      },
+      {
+        "source": "pAsmrKyMqaA",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "115 min",
+    "awards": "4 wins & 48 nominations total",
+    "popularity": 1.2344,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Fantastic Four: First Steps",
+        "ytId": "LJa5wv93YGM"
+      },
+      {
+        "title": "The Fantastic Four: First Steps",
+        "ytId": "b-WdRqzSJ9w"
+      },
+      {
+        "title": "The Fantastic Four: First Steps",
+        "ytId": "18QQWa5MEcs"
+      },
+      {
+        "title": "The Fantastic Four: First Steps",
+        "ytId": "YfXKYrE5yAw"
+      },
+      {
+        "title": "The Fantastic Four: First Steps",
+        "ytId": "0uDUlDmGhUo"
+      },
+      {
+        "title": "The Fantastic Four: First Steps",
+        "ytId": "pAsmrKyMqaA"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.8",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt10676052"
+      },
+      {
+        "name": "The Fantastic Four: First Steps",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-fantastic-four-first-steps-10676052"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Pedro Pascal",
+        "category": "Cast",
+        "url": "stremio:///search?search=Pedro%20Pascal"
+      },
+      {
+        "name": "Vanessa Kirby",
+        "category": "Cast",
+        "url": "stremio:///search?search=Vanessa%20Kirby"
+      },
+      {
+        "name": "Ebon Moss-Bachrach",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ebon%20Moss-Bachrach"
+      },
+      {
+        "name": "Josh Friedman",
+        "category": "Writers",
+        "url": "stremio:///search?search=Josh%20Friedman"
+      },
+      {
+        "name": "Eric Pearson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Eric%20Pearson"
+      },
+      {
+        "name": "Jeff Kaplan",
+        "category": "Writers",
+        "url": "stremio:///search?search=Jeff%20Kaplan"
+      },
+      {
+        "name": "Matt Shakman",
+        "category": "Directors",
+        "url": "stremio:///search?search=Matt%20Shakman"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt10676052",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "عائلة من الأبطال تواجه تهديداً كونياً يختبر قوتها وروابطها.",
+    "localPoster": "assets/tt10676052.jpg",
+    "featured": true
   },
   {
-    "id": "mov-black-phone-2-2025",
+    "id": "tt29644189",
     "title": "Black Phone 2",
     "titleAr": "الهاتف الأسود 2",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.1,
     "genre": [
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt29644189/img",
-    "sourceUrl": "https://www.imdb.com/title/tt29644189/",
     "description": "As Finn, now 17, struggles with life after his captivity, his sister begins receiving calls in her dreams from the black phone and seeing disturbing visions of three boys being stalked at a winter camp known as Alpine Lake.",
     "duration": "114 min",
     "cast": [
       "Ethan Hawke",
       "Mason Thames",
       "Madeleine McGraw"
-    ]
+    ],
+    "imdb_id": "tt29644189",
+    "name": "Black Phone 2",
+    "country": "United States, Canada",
+    "director": [
+      "Scott Derrickson"
+    ],
+    "imdbRating": "6.1",
+    "released": "2025-10-17T00:00:00.000Z",
+    "slug": "movie/black-phone-2-29644189",
+    "writer": [
+      "Joe Hill",
+      "Scott Derrickson",
+      "C. Robert Cargill"
+    ],
+    "moviedb_id": 1197137,
+    "popularities": {
+      "moviedb": 19.8578,
+      "stremio": 0.6619266666666667,
+      "stremio_lib": 0,
+      "trakt": 50
+    },
+    "runtime": "114 min",
+    "trailers": [
+      {
+        "source": "pWNucAcRoBY",
+        "type": "Trailer"
+      },
+      {
+        "source": "ZlkGbu2IY1w",
+        "type": "Trailer"
+      },
+      {
+        "source": "FCHsEEen4HM",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt29644189/img",
+    "logo": "https://images.metahub.space/logo/medium/tt29644189/img",
+    "awards": "8 nominations total",
+    "popularity": 0.6619266666666667,
+    "genres": [
+      "Horror"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Black Phone 2",
+        "ytId": "pWNucAcRoBY"
+      },
+      {
+        "title": "Black Phone 2",
+        "ytId": "ZlkGbu2IY1w"
+      },
+      {
+        "title": "Black Phone 2",
+        "ytId": "FCHsEEen4HM"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.1",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt29644189"
+      },
+      {
+        "name": "Black Phone 2",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/black-phone-2-29644189"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Ethan Hawke",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ethan%20Hawke"
+      },
+      {
+        "name": "Mason Thames",
+        "category": "Cast",
+        "url": "stremio:///search?search=Mason%20Thames"
+      },
+      {
+        "name": "Madeleine McGraw",
+        "category": "Cast",
+        "url": "stremio:///search?search=Madeleine%20McGraw"
+      },
+      {
+        "name": "Joe Hill",
+        "category": "Writers",
+        "url": "stremio:///search?search=Joe%20Hill"
+      },
+      {
+        "name": "Scott Derrickson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Scott%20Derrickson"
+      },
+      {
+        "name": "C. Robert Cargill",
+        "category": "Writers",
+        "url": "stremio:///search?search=C.%20Robert%20Cargill"
+      },
+      {
+        "name": "Scott Derrickson",
+        "category": "Directors",
+        "url": "stremio:///search?search=Scott%20Derrickson"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt29644189",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "تعود كوابيس الماضي لتطارد الناجين من جديد.",
+    "localPoster": "assets/tt29644189.jpg",
+    "featured": true
   },
   {
-    "id": "mov-jurassic-world-rebirth-2025",
+    "id": "tt31036941",
     "title": "Jurassic World: Rebirth",
     "titleAr": "عالم الديناصورات: ولادة جديدة",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 5.8,
     "genre": [
       "Action",
@@ -76,21 +500,143 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt31036941/img",
-    "sourceUrl": "https://www.imdb.com/title/tt31036941/",
     "description": "Five years post-Jurassic World: Dominion (2022), an expedition braves isolated equatorial regions to extract DNA from three massive prehistoric creatures for a groundbreaking medical breakthrough.",
     "duration": "134 min",
     "cast": [
       "Scarlett Johansson",
       "Mahershala Ali",
       "Jonathan Bailey"
-    ]
+    ],
+    "imdb_id": "tt31036941",
+    "name": "Jurassic World: Rebirth",
+    "country": "United States, United Kingdom, Malta, India, Taiwan, Japan",
+    "director": [
+      "Gareth Edwards"
+    ],
+    "imdbRating": "5.8",
+    "released": "2025-07-02T00:00:00.000Z",
+    "slug": "movie/jurassic-world-rebirth-31036941",
+    "writer": [
+      "David Koepp",
+      "Michael Crichton"
+    ],
+    "moviedb_id": 1234821,
+    "popularities": {
+      "moviedb": 32.9355,
+      "stremio": 1.09785,
+      "stremio_lib": 0,
+      "trakt": 58
+    },
+    "background": "https://images.metahub.space/background/medium/tt31036941/img",
+    "logo": "https://images.metahub.space/logo/medium/tt31036941/img",
+    "trailers": [
+      {
+        "source": "2ZhB-YO5Tnk",
+        "type": "Trailer"
+      },
+      {
+        "source": "smavD1fopZ8",
+        "type": "Trailer"
+      },
+      {
+        "source": "jan5CFWs9ic",
+        "type": "Trailer"
+      }
+    ],
+    "awards": "Nominated for 1 Oscar. 3 wins & 14 nominations total",
+    "runtime": "134 min",
+    "popularity": 1.09785,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Jurassic World: Rebirth",
+        "ytId": "2ZhB-YO5Tnk"
+      },
+      {
+        "title": "Jurassic World: Rebirth",
+        "ytId": "smavD1fopZ8"
+      },
+      {
+        "title": "Jurassic World: Rebirth",
+        "ytId": "jan5CFWs9ic"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.8",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt31036941"
+      },
+      {
+        "name": "Jurassic World: Rebirth",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/jurassic-world-rebirth-31036941"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Scarlett Johansson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Scarlett%20Johansson"
+      },
+      {
+        "name": "Mahershala Ali",
+        "category": "Cast",
+        "url": "stremio:///search?search=Mahershala%20Ali"
+      },
+      {
+        "name": "Jonathan Bailey",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jonathan%20Bailey"
+      },
+      {
+        "name": "David Koepp",
+        "category": "Writers",
+        "url": "stremio:///search?search=David%20Koepp"
+      },
+      {
+        "name": "Michael Crichton",
+        "category": "Writers",
+        "url": "stremio:///search?search=Michael%20Crichton"
+      },
+      {
+        "name": "Gareth Edwards",
+        "category": "Directors",
+        "url": "stremio:///search?search=Gareth%20Edwards"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt31036941",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "رحلة إلى جزيرة معزولة تخفي أسرار الديناصورات ومخاطرها.",
+    "localPoster": "assets/tt31036941.jpg",
+    "featured": true
   },
   {
-    "id": "mov-nobody-2-2025",
+    "id": "tt28996126",
     "title": "Nobody 2",
     "titleAr": "لا أحد 2",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.3,
     "genre": [
       "Action",
@@ -98,21 +644,135 @@
       "Crime"
     ],
     "poster": "https://images.metahub.space/poster/small/tt28996126/img",
-    "sourceUrl": "https://www.imdb.com/title/tt28996126/",
     "description": "Suburban dad Hutch Mansell, a former lethal assassin, is pulled back into his violent past after thwarting a home invasion, setting off a chain of events.",
     "duration": "89 min",
     "cast": [
       "Bob Odenkirk",
       "Connie Nielsen",
       "Christopher Lloyd"
-    ]
+    ],
+    "imdb_id": "tt28996126",
+    "name": "Nobody 2",
+    "country": "United States, Canada",
+    "director": [
+      "Timo Tjahjanto"
+    ],
+    "imdbRating": "6.3",
+    "released": "2025-08-15T00:00:00.000Z",
+    "slug": "movie/nobody-2-28996126",
+    "writer": [
+      "Derek Kolstad",
+      "Aaron Rabin"
+    ],
+    "moviedb_id": 1007734,
+    "popularities": {
+      "moviedb": 12.4137,
+      "stremio": 0.41379,
+      "stremio_lib": 0,
+      "trakt": 71
+    },
+    "trailers": [
+      {
+        "source": "UGOvEad8qd4",
+        "type": "Trailer"
+      },
+      {
+        "source": "-5X2pt95cIo",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "89 min",
+    "background": "https://images.metahub.space/background/medium/tt28996126/img",
+    "logo": "https://images.metahub.space/logo/medium/tt28996126/img",
+    "awards": "3 nominations total",
+    "popularity": 0.41379,
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Nobody 2",
+        "ytId": "UGOvEad8qd4"
+      },
+      {
+        "title": "Nobody 2",
+        "ytId": "-5X2pt95cIo"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.3",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt28996126"
+      },
+      {
+        "name": "Nobody 2",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/nobody-2-28996126"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Crime",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Crime"
+      },
+      {
+        "name": "Bob Odenkirk",
+        "category": "Cast",
+        "url": "stremio:///search?search=Bob%20Odenkirk"
+      },
+      {
+        "name": "Connie Nielsen",
+        "category": "Cast",
+        "url": "stremio:///search?search=Connie%20Nielsen"
+      },
+      {
+        "name": "Christopher Lloyd",
+        "category": "Cast",
+        "url": "stremio:///search?search=Christopher%20Lloyd"
+      },
+      {
+        "name": "Derek Kolstad",
+        "category": "Writers",
+        "url": "stremio:///search?search=Derek%20Kolstad"
+      },
+      {
+        "name": "Aaron Rabin",
+        "category": "Writers",
+        "url": "stremio:///search?search=Aaron%20Rabin"
+      },
+      {
+        "name": "Timo Tjahjanto",
+        "category": "Directors",
+        "url": "stremio:///search?search=Timo%20Tjahjanto"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt28996126",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "رجل يحاول الابتعاد عن ماضيه العنيف، لكن المتاعب تجد طريقها إليه.",
+    "localPoster": "assets/tt28996126.jpg",
+    "featured": true
   },
   {
-    "id": "mov-five-nights-at-freddy-s-2-2025",
+    "id": "tt30274401",
     "title": "Five Nights at Freddy's 2",
     "titleAr": "خمس ليالٍ عند فريدي 2",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 5.1,
     "genre": [
       "Horror",
@@ -120,21 +780,129 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt30274401/img",
-    "sourceUrl": "https://www.imdb.com/title/tt30274401/",
     "description": "One year after the supernatural nightmare at Freddy Fazbear's Pizza, Abby runs away to reconnect with her animatronic friends, uncovering dark secrets about the true origins of Freddy's and unleashing a horror hidden for decades.",
     "duration": "104 min",
     "cast": [
       "Josh Hutcherson",
       "Piper Rubio",
       "Elizabeth Lail"
-    ]
+    ],
+    "imdb_id": "tt30274401",
+    "name": "Five Nights at Freddy's 2",
+    "country": "United States, Canada",
+    "director": [
+      "Emma Tammi"
+    ],
+    "imdbRating": "5.1",
+    "released": "2025-12-05T00:00:00.000Z",
+    "slug": "movie/five-nights-at-freddys-2-30274401",
+    "writer": [
+      "Scott Cawthon"
+    ],
+    "moviedb_id": 1228246,
+    "popularities": {
+      "moviedb": 21.3949,
+      "stremio": 0.7131633333333334,
+      "stremio_lib": 0,
+      "trakt": 50
+    },
+    "runtime": "104 min",
+    "background": "https://images.metahub.space/background/medium/tt30274401/img",
+    "logo": "https://images.metahub.space/logo/medium/tt30274401/img",
+    "trailers": [
+      {
+        "source": "NQypHE9_Fm4",
+        "type": "Trailer"
+      },
+      {
+        "source": "dSDpoobO6yM",
+        "type": "Trailer"
+      }
+    ],
+    "awards": "1 nomination total",
+    "popularity": 0.7131633333333334,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Five Nights at Freddy's 2",
+        "ytId": "NQypHE9_Fm4"
+      },
+      {
+        "title": "Five Nights at Freddy's 2",
+        "ytId": "dSDpoobO6yM"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.1",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt30274401"
+      },
+      {
+        "name": "Five Nights at Freddy's 2",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/five-nights-at-freddys-2-30274401"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Mystery",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Mystery"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Josh Hutcherson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Josh%20Hutcherson"
+      },
+      {
+        "name": "Piper Rubio",
+        "category": "Cast",
+        "url": "stremio:///search?search=Piper%20Rubio"
+      },
+      {
+        "name": "Elizabeth Lail",
+        "category": "Cast",
+        "url": "stremio:///search?search=Elizabeth%20Lail"
+      },
+      {
+        "name": "Scott Cawthon",
+        "category": "Writers",
+        "url": "stremio:///search?search=Scott%20Cawthon"
+      },
+      {
+        "name": "Emma Tammi",
+        "category": "Directors",
+        "url": "stremio:///search?search=Emma%20Tammi"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt30274401",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "عودة إلى عالم الدمى المتحركة وأسرار الليالي المرعبة.",
+    "localPoster": "assets/tt30274401.jpg",
+    "featured": true
   },
   {
-    "id": "mov-f1-2025",
+    "id": "tt16311594",
     "title": "F1: The Movie",
     "titleAr": "فورمولا 1",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.6,
     "genre": [
       "Action",
@@ -142,21 +910,167 @@
       "Sport"
     ],
     "poster": "https://images.metahub.space/poster/small/tt16311594/img",
-    "sourceUrl": "https://www.imdb.com/title/tt16311594/",
     "description": "A Formula One driver comes out of retirement to mentor and team up with a younger driver.",
     "duration": "156 min",
     "cast": [
       "Brad Pitt",
       "Damson Idris",
       "Javier Bardem"
-    ]
+    ],
+    "imdb_id": "tt16311594",
+    "name": "F1: The Movie",
+    "country": "United States",
+    "director": [
+      "Joseph Kosinski"
+    ],
+    "imdbRating": "7.6",
+    "released": "2025-06-27T00:00:00.000Z",
+    "slug": "movie/f1-the-movie-16311594",
+    "writer": [
+      "Joseph Kosinski",
+      "Ehren Kruger"
+    ],
+    "moviedb_id": 911430,
+    "popularities": {
+      "moviedb": 42.7188,
+      "stremio": 1.4239600000000001,
+      "stremio_lib": 0,
+      "trakt": 63
+    },
+    "background": "https://images.metahub.space/background/medium/tt16311594/img",
+    "logo": "https://images.metahub.space/logo/medium/tt16311594/img",
+    "trailers": [
+      {
+        "source": "ge_ABjtYx88",
+        "type": "Trailer"
+      },
+      {
+        "source": "8yh9BPUBbbQ",
+        "type": "Trailer"
+      },
+      {
+        "source": "txy5_jLbFX8",
+        "type": "Trailer"
+      },
+      {
+        "source": "bqUUGtFhoac",
+        "type": "Trailer"
+      },
+      {
+        "source": "CT2_P2DZBR0",
+        "type": "Trailer"
+      },
+      {
+        "source": "J-eZpA8DdAg",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "156 min",
+    "awards": "Won 1 Oscar. 31 wins & 129 nominations total",
+    "popularity": 1.4239600000000001,
+    "genres": [
+      "Action",
+      "Drama",
+      "Sport"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "F1: The Movie",
+        "ytId": "ge_ABjtYx88"
+      },
+      {
+        "title": "F1: The Movie",
+        "ytId": "8yh9BPUBbbQ"
+      },
+      {
+        "title": "F1: The Movie",
+        "ytId": "txy5_jLbFX8"
+      },
+      {
+        "title": "F1: The Movie",
+        "ytId": "bqUUGtFhoac"
+      },
+      {
+        "title": "F1: The Movie",
+        "ytId": "CT2_P2DZBR0"
+      },
+      {
+        "title": "F1: The Movie",
+        "ytId": "J-eZpA8DdAg"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt16311594"
+      },
+      {
+        "name": "F1: The Movie",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/f1-the-movie-16311594"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Sport",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sport"
+      },
+      {
+        "name": "Brad Pitt",
+        "category": "Cast",
+        "url": "stremio:///search?search=Brad%20Pitt"
+      },
+      {
+        "name": "Damson Idris",
+        "category": "Cast",
+        "url": "stremio:///search?search=Damson%20Idris"
+      },
+      {
+        "name": "Javier Bardem",
+        "category": "Cast",
+        "url": "stremio:///search?search=Javier%20Bardem"
+      },
+      {
+        "name": "Joseph Kosinski",
+        "category": "Writers",
+        "url": "stremio:///search?search=Joseph%20Kosinski"
+      },
+      {
+        "name": "Ehren Kruger",
+        "category": "Writers",
+        "url": "stremio:///search?search=Ehren%20Kruger"
+      },
+      {
+        "name": "Joseph Kosinski",
+        "category": "Directors",
+        "url": "stremio:///search?search=Joseph%20Kosinski"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt16311594",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "سائق مخضرم يعود إلى المضمار ليرشد موهبة شابة. سباق أخير، وفرصة لكتابة نهاية مختلفة.",
+    "localPoster": "assets/tt16311594.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-running-man-2025",
+    "id": "tt14107334",
     "title": "The Running Man",
     "titleAr": "الرجل الجاري",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.4,
     "genre": [
       "Action",
@@ -164,21 +1078,149 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14107334/img",
-    "sourceUrl": "https://www.imdb.com/title/tt14107334/",
     "description": "A man joins a game show in which contestants, allowed to flee anywhere in the world, are pursued by \"hunters\" hired to kill them.",
     "duration": "133 min",
     "cast": [
       "Glen Powell",
       "Alyssa Benn",
       "Sienna Benn"
-    ]
+    ],
+    "imdb_id": "tt14107334",
+    "name": "The Running Man",
+    "country": "United Kingdom, United States",
+    "director": [
+      "Edgar Wright"
+    ],
+    "imdbRating": "6.4",
+    "released": "2025-11-14T00:00:00.000Z",
+    "slug": "movie/the-running-man-14107334",
+    "writer": [
+      "Stephen King",
+      "Michael Bacall",
+      "Edgar Wright"
+    ],
+    "moviedb_id": 798645,
+    "popularities": {
+      "moviedb": 28.2345,
+      "stremio": 0.94115,
+      "stremio_lib": 0,
+      "trakt": 51
+    },
+    "trailers": [
+      {
+        "source": "_iHJHYjq7XI",
+        "type": "Trailer"
+      },
+      {
+        "source": "UsmiRIozzvw",
+        "type": "Trailer"
+      },
+      {
+        "source": "KD18ddeFuyM",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt14107334/img",
+    "logo": "https://images.metahub.space/logo/medium/tt14107334/img",
+    "runtime": "133 min",
+    "awards": "8 nominations total",
+    "popularity": 0.94115,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Running Man",
+        "ytId": "_iHJHYjq7XI"
+      },
+      {
+        "title": "The Running Man",
+        "ytId": "UsmiRIozzvw"
+      },
+      {
+        "title": "The Running Man",
+        "ytId": "KD18ddeFuyM"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.4",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt14107334"
+      },
+      {
+        "name": "The Running Man",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-running-man-14107334"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Glen Powell",
+        "category": "Cast",
+        "url": "stremio:///search?search=Glen%20Powell"
+      },
+      {
+        "name": "Alyssa Benn",
+        "category": "Cast",
+        "url": "stremio:///search?search=Alyssa%20Benn"
+      },
+      {
+        "name": "Sienna Benn",
+        "category": "Cast",
+        "url": "stremio:///search?search=Sienna%20Benn"
+      },
+      {
+        "name": "Stephen King",
+        "category": "Writers",
+        "url": "stremio:///search?search=Stephen%20King"
+      },
+      {
+        "name": "Michael Bacall",
+        "category": "Writers",
+        "url": "stremio:///search?search=Michael%20Bacall"
+      },
+      {
+        "name": "Edgar Wright",
+        "category": "Writers",
+        "url": "stremio:///search?search=Edgar%20Wright"
+      },
+      {
+        "name": "Edgar Wright",
+        "category": "Directors",
+        "url": "stremio:///search?search=Edgar%20Wright"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt14107334",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "رجل يدخل مسابقة خطرة تتحول إلى صراع من أجل البقاء.",
+    "localPoster": "assets/tt14107334.jpg",
+    "featured": true
   },
   {
-    "id": "mov-wake-up-dead-man-a-knives-out-mystery-2025",
+    "id": "tt14364480",
     "title": "Wake Up Dead Man",
     "titleAr": "استيقظ أيها الميت: لغز سكاكين خارج",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.3,
     "genre": [
       "Comedy",
@@ -186,21 +1228,121 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14364480/img",
-    "sourceUrl": "https://www.imdb.com/title/tt14364480/",
     "description": "Detective Benoit Blanc teams up with an earnest young priest to investigate a perfectly impossible crime at a small-town church with a dark history.",
     "duration": "145 min",
     "cast": [
       "Daniel Craig",
       "Josh O'Connor",
       "Glenn Close"
-    ]
+    ],
+    "imdb_id": "tt14364480",
+    "name": "Wake Up Dead Man",
+    "country": "United States",
+    "director": [
+      "Rian Johnson"
+    ],
+    "imdbRating": "7.3",
+    "released": "2025-12-12T00:00:00.000Z",
+    "slug": "movie/wake-up-dead-man-14364480",
+    "writer": [
+      "Rian Johnson"
+    ],
+    "moviedb_id": 812583,
+    "popularities": {
+      "moviedb": 20.2041,
+      "stremio": 0.67347,
+      "stremio_lib": 0,
+      "trakt": 54
+    },
+    "runtime": "145 min",
+    "background": "https://images.metahub.space/background/medium/tt14364480/img",
+    "logo": "https://images.metahub.space/logo/medium/tt14364480/img",
+    "trailers": [
+      {
+        "source": "0hc8yz5-d5Y",
+        "type": "Trailer"
+      }
+    ],
+    "awards": "8 wins & 54 nominations total",
+    "popularity": 0.67347,
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Wake Up Dead Man",
+        "ytId": "0hc8yz5-d5Y"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.3",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt14364480"
+      },
+      {
+        "name": "Wake Up Dead Man",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/wake-up-dead-man-14364480"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Crime",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Crime"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Daniel Craig",
+        "category": "Cast",
+        "url": "stremio:///search?search=Daniel%20Craig"
+      },
+      {
+        "name": "Josh O'Connor",
+        "category": "Cast",
+        "url": "stremio:///search?search=Josh%20O'Connor"
+      },
+      {
+        "name": "Glenn Close",
+        "category": "Cast",
+        "url": "stremio:///search?search=Glenn%20Close"
+      },
+      {
+        "name": "Rian Johnson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Rian%20Johnson"
+      },
+      {
+        "name": "Rian Johnson",
+        "category": "Directors",
+        "url": "stremio:///search?search=Rian%20Johnson"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt14364480",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "المحقق بينوا بلانك يتتبع خيوط لغز جديد مليء بالأسرار.",
+    "localPoster": "assets/tt14364480.jpg",
+    "featured": true
   },
   {
-    "id": "mov-how-to-train-your-dragon-2025",
+    "id": "tt26743210",
     "title": "How to Train Your Dragon",
     "titleAr": "كيف تدرّب تنينك",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.7,
     "genre": [
       "Action",
@@ -208,21 +1350,157 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt26743210/img",
-    "sourceUrl": "https://www.imdb.com/title/tt26743210/",
     "description": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.",
     "duration": "125 min",
     "cast": [
       "Mason Thames",
       "Nico Parker",
       "Gerard Butler"
-    ]
+    ],
+    "imdb_id": "tt26743210",
+    "name": "How to Train Your Dragon",
+    "country": "United States, United Kingdom, Ireland, Iceland, Canada",
+    "director": [
+      "Dean DeBlois"
+    ],
+    "imdbRating": "7.7",
+    "released": "2025-06-13T00:00:00.000Z",
+    "slug": "movie/how-to-train-your-dragon-26743210",
+    "writer": [
+      "Dean DeBlois",
+      "Cressida Cowell",
+      "William Davies"
+    ],
+    "moviedb_id": 1087192,
+    "popularities": {
+      "moviedb": 32.8072,
+      "stremio": 1.0935733333333333,
+      "stremio_lib": 0,
+      "trakt": 67
+    },
+    "trailers": [
+      {
+        "source": "OWEq2Pf8qpk",
+        "type": "Trailer"
+      },
+      {
+        "source": "YqXfPATcy7s",
+        "type": "Trailer"
+      },
+      {
+        "source": "22w7z_lT6YM",
+        "type": "Trailer"
+      },
+      {
+        "source": "5lzoxHSn0C0",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "125 min",
+    "background": "https://images.metahub.space/background/medium/tt26743210/img",
+    "logo": "https://images.metahub.space/logo/medium/tt26743210/img",
+    "awards": "Nominated for 1 BAFTA Award. 4 wins & 20 nominations total",
+    "popularity": 1.0935733333333333,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "How to Train Your Dragon",
+        "ytId": "OWEq2Pf8qpk"
+      },
+      {
+        "title": "How to Train Your Dragon",
+        "ytId": "YqXfPATcy7s"
+      },
+      {
+        "title": "How to Train Your Dragon",
+        "ytId": "22w7z_lT6YM"
+      },
+      {
+        "title": "How to Train Your Dragon",
+        "ytId": "5lzoxHSn0C0"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.7",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt26743210"
+      },
+      {
+        "name": "How to Train Your Dragon",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/how-to-train-your-dragon-26743210"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Mason Thames",
+        "category": "Cast",
+        "url": "stremio:///search?search=Mason%20Thames"
+      },
+      {
+        "name": "Nico Parker",
+        "category": "Cast",
+        "url": "stremio:///search?search=Nico%20Parker"
+      },
+      {
+        "name": "Gerard Butler",
+        "category": "Cast",
+        "url": "stremio:///search?search=Gerard%20Butler"
+      },
+      {
+        "name": "Dean DeBlois",
+        "category": "Writers",
+        "url": "stremio:///search?search=Dean%20DeBlois"
+      },
+      {
+        "name": "Cressida Cowell",
+        "category": "Writers",
+        "url": "stremio:///search?search=Cressida%20Cowell"
+      },
+      {
+        "name": "William Davies",
+        "category": "Writers",
+        "url": "stremio:///search?search=William%20Davies"
+      },
+      {
+        "name": "Dean DeBlois",
+        "category": "Directors",
+        "url": "stremio:///search?search=Dean%20DeBlois"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt26743210",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "صداقة غير متوقعة بين فتى وتنين تغيّر مصير عالمَيهما.",
+    "localPoster": "assets/tt26743210.jpg",
+    "featured": true
   },
   {
-    "id": "mov-moana-2-2024",
+    "id": "tt13622970",
     "title": "Moana 2",
     "titleAr": "موانا 2",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.3,
     "genre": [
       "Animation",
@@ -230,21 +1508,161 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13622970/img",
-    "sourceUrl": "https://www.imdb.com/title/tt13622970/",
     "description": "After receiving an unexpected call from her wayfinding ancestors, Moana must journey to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
     "duration": "100 min",
     "cast": [
       "Auli&apos;i Cravalho",
       "Dwayne Johnson",
       "Hualalai Chung"
-    ]
+    ],
+    "imdb_id": "tt13622970",
+    "name": "Moana 2",
+    "country": "United States, Canada",
+    "director": [
+      "David G. Derrick Jr.",
+      "Jason Hand",
+      "Dana Ledoux Miller"
+    ],
+    "imdbRating": "6.3",
+    "released": "2024-11-27T00:00:00.000Z",
+    "slug": "movie/moana-2-13622970",
+    "writer": [
+      "Jared Bush",
+      "Dana Ledoux Miller",
+      "Bek Smith"
+    ],
+    "moviedb_id": 1241982,
+    "popularities": {
+      "moviedb": 39.0456,
+      "stremio": 1.30152,
+      "stremio_lib": 0,
+      "trakt": 52
+    },
+    "trailers": [
+      {
+        "source": "JdSl4RMNtGE",
+        "type": "Trailer"
+      },
+      {
+        "source": "hDZ7y8RP5HE",
+        "type": "Trailer"
+      },
+      {
+        "source": "qkgkUCqEum4",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt13622970/img",
+    "logo": "https://images.metahub.space/logo/medium/tt13622970/img",
+    "runtime": "100 min",
+    "awards": "7 wins & 30 nominations total",
+    "popularity": 1.30152,
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Moana 2",
+        "ytId": "JdSl4RMNtGE"
+      },
+      {
+        "title": "Moana 2",
+        "ytId": "hDZ7y8RP5HE"
+      },
+      {
+        "title": "Moana 2",
+        "ytId": "qkgkUCqEum4"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.3",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt13622970"
+      },
+      {
+        "name": "Moana 2",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/moana-2-13622970"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Auli&apos;i Cravalho",
+        "category": "Cast",
+        "url": "stremio:///search?search=Auli%26apos%3Bi%20Cravalho"
+      },
+      {
+        "name": "Dwayne Johnson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Dwayne%20Johnson"
+      },
+      {
+        "name": "Hualalai Chung",
+        "category": "Cast",
+        "url": "stremio:///search?search=Hualalai%20Chung"
+      },
+      {
+        "name": "Jared Bush",
+        "category": "Writers",
+        "url": "stremio:///search?search=Jared%20Bush"
+      },
+      {
+        "name": "Dana Ledoux Miller",
+        "category": "Writers",
+        "url": "stremio:///search?search=Dana%20Ledoux%20Miller"
+      },
+      {
+        "name": "Bek Smith",
+        "category": "Writers",
+        "url": "stremio:///search?search=Bek%20Smith"
+      },
+      {
+        "name": "David G. Derrick Jr.",
+        "category": "Directors",
+        "url": "stremio:///search?search=David%20G.%20Derrick%20Jr."
+      },
+      {
+        "name": "Jason Hand",
+        "category": "Directors",
+        "url": "stremio:///search?search=Jason%20Hand"
+      },
+      {
+        "name": "Dana Ledoux Miller",
+        "category": "Directors",
+        "url": "stremio:///search?search=Dana%20Ledoux%20Miller"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt13622970",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "موانا تبحر بعيداً مع طاقم جديد في رحلة تستجيب فيها لنداء أسلافها.",
+    "localPoster": "assets/tt13622970.jpg",
+    "featured": true
   },
   {
-    "id": "mov-mickey-17-2025",
+    "id": "tt12299608",
     "title": "Mickey 17",
     "titleAr": "ميكي 17",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.7,
     "genre": [
       "Adventure",
@@ -252,21 +1670,135 @@
       "Fantasy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt12299608/img",
-    "sourceUrl": "https://www.imdb.com/title/tt12299608/",
     "description": "During a human expedition to colonize space, Mickey 17, a so-called \"expendable\" employee, is sent to explore an ice planet.",
     "duration": "137 min",
     "cast": [
       "Robert Pattinson",
       "Steven Yeun",
       "Michael Monroe"
-    ]
+    ],
+    "imdb_id": "tt12299608",
+    "name": "Mickey 17",
+    "country": "United States, South Korea",
+    "director": [
+      "Bong Joon Ho"
+    ],
+    "imdbRating": "6.7",
+    "released": "2025-03-07T00:00:00.000Z",
+    "slug": "movie/mickey-17-12299608",
+    "writer": [
+      "Bong Joon Ho",
+      "Edward Ashton"
+    ],
+    "moviedb_id": 696506,
+    "popularities": {
+      "moviedb": 24.614,
+      "stremio": 0.8204666666666667,
+      "stremio_lib": 0,
+      "trakt": 53
+    },
+    "runtime": "137 min",
+    "trailers": [
+      {
+        "source": "tA1s65o_kYM",
+        "type": "Trailer"
+      },
+      {
+        "source": "osYpGSz_0i4",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt12299608/img",
+    "logo": "https://images.metahub.space/logo/medium/tt12299608/img",
+    "awards": "3 wins & 19 nominations total",
+    "popularity": 0.8204666666666667,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Mickey 17",
+        "ytId": "tA1s65o_kYM"
+      },
+      {
+        "title": "Mickey 17",
+        "ytId": "osYpGSz_0i4"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.7",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt12299608"
+      },
+      {
+        "name": "Mickey 17",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/mickey-17-12299608"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Fantasy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Fantasy"
+      },
+      {
+        "name": "Robert Pattinson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Robert%20Pattinson"
+      },
+      {
+        "name": "Steven Yeun",
+        "category": "Cast",
+        "url": "stremio:///search?search=Steven%20Yeun"
+      },
+      {
+        "name": "Michael Monroe",
+        "category": "Cast",
+        "url": "stremio:///search?search=Michael%20Monroe"
+      },
+      {
+        "name": "Bong Joon Ho",
+        "category": "Writers",
+        "url": "stremio:///search?search=Bong%20Joon%20Ho"
+      },
+      {
+        "name": "Edward Ashton",
+        "category": "Writers",
+        "url": "stremio:///search?search=Edward%20Ashton"
+      },
+      {
+        "name": "Bong Joon Ho",
+        "category": "Directors",
+        "url": "stremio:///search?search=Bong%20Joon%20Ho"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt12299608",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "عامل قابل للاستبدال يكتشف معنى أن تكون نسخته التالية موجودة بالفعل.",
+    "localPoster": "assets/tt12299608.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-accountant-2-2025",
+    "id": "tt7068946",
     "title": "The Accountant 2",
     "titleAr": "المحاسب 2",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.6,
     "genre": [
       "Action",
@@ -274,42 +1806,296 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt7068946/img",
-    "sourceUrl": "https://www.imdb.com/title/tt7068946/",
     "description": "Christian Wolff applies his brilliant mind and illegal methods to reconstruct the unsolved puzzle of a Treasury chief's murder.",
     "duration": "133 min",
     "cast": [
       "Ben Affleck",
       "Jon Bernthal",
       "Cynthia Addai-Robinson"
-    ]
+    ],
+    "imdb_id": "tt7068946",
+    "country": "United States",
+    "director": [
+      "Gavin O&apos;Connor"
+    ],
+    "imdbRating": "6.6",
+    "name": "The Accountant 2",
+    "released": "2025-04-25T00:00:00.000Z",
+    "slug": "movie/the-accountant-2-7068946",
+    "writer": [
+      "Bill Dubuque"
+    ],
+    "moviedb_id": 870028,
+    "popularities": {
+      "moviedb": 11.4299,
+      "stremio": 0.38099666666666665,
+      "stremio_lib": 0,
+      "trakt": 26
+    },
+    "awards": "1 win & 6 nominations total",
+    "background": "https://images.metahub.space/background/medium/tt7068946/img",
+    "logo": "https://images.metahub.space/logo/medium/tt7068946/img",
+    "runtime": "133 min",
+    "trailers": [
+      {
+        "source": "RwXDphhQ9Tg",
+        "type": "Trailer"
+      },
+      {
+        "source": "eu1HJ73FQuY",
+        "type": "Trailer"
+      },
+      {
+        "source": "HPMh3AO4Gm0",
+        "type": "Trailer"
+      },
+      {
+        "source": "ju-KSxVlysw",
+        "type": "Trailer"
+      },
+      {
+        "source": "3wRCOqyDI6E",
+        "type": "Trailer"
+      }
+    ],
+    "popularity": 0.38099666666666665,
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Accountant 2",
+        "ytId": "RwXDphhQ9Tg"
+      },
+      {
+        "title": "The Accountant 2",
+        "ytId": "eu1HJ73FQuY"
+      },
+      {
+        "title": "The Accountant 2",
+        "ytId": "HPMh3AO4Gm0"
+      },
+      {
+        "title": "The Accountant 2",
+        "ytId": "ju-KSxVlysw"
+      },
+      {
+        "title": "The Accountant 2",
+        "ytId": "3wRCOqyDI6E"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt7068946"
+      },
+      {
+        "name": "The Accountant 2",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-accountant-2-7068946"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Crime",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Crime"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Ben Affleck",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ben%20Affleck"
+      },
+      {
+        "name": "Jon Bernthal",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jon%20Bernthal"
+      },
+      {
+        "name": "Cynthia Addai-Robinson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Cynthia%20Addai-Robinson"
+      },
+      {
+        "name": "Bill Dubuque",
+        "category": "Writers",
+        "url": "stremio:///search?search=Bill%20Dubuque"
+      },
+      {
+        "name": "Gavin O&apos;Connor",
+        "category": "Directors",
+        "url": "stremio:///search?search=Gavin%20O%26apos%3BConnor"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt7068946",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "مهمة جديدة تجمع المحاسب وشقيقه وسط شبكة من الخطر.",
+    "localPoster": "assets/tt7068946.jpg",
+    "featured": true
   },
   {
-    "id": "mov-now-you-see-me-now-you-don-t-2025",
+    "id": "tt4712810",
     "title": "Now You See Me: Now You Don't",
     "titleAr": "الآن تراني: الآن لا تراني",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 5.9,
     "genre": [
       "Crime",
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt4712810/img",
-    "sourceUrl": "https://www.imdb.com/title/tt4712810/",
     "description": "The Four Horsemen reunite and team up with a new generation of young illusionists to expose a diamond heiress's global money laundering scheme for criminals.",
     "duration": "113 min",
     "cast": [
       "Jesse Eisenberg",
       "Woody Harrelson",
       "Dave Franco"
-    ]
+    ],
+    "imdb_id": "tt4712810",
+    "country": "United States, United Arab Emirates, Canada, Hungary",
+    "director": [
+      "Ruben Fleischer"
+    ],
+    "imdbRating": "5.9",
+    "name": "Now You See Me: Now You Don't",
+    "released": "2025-11-14T00:00:00.000Z",
+    "slug": "movie/now-you-see-me-now-you-dont-4712810",
+    "writer": [
+      "Michael Lesslie",
+      "Paul Wernick",
+      "Rhett Reese"
+    ],
+    "moviedb_id": 425274,
+    "popularities": {
+      "moviedb": 30.5545,
+      "stremio": 1.0184833333333334,
+      "stremio_lib": 0,
+      "trakt": 67
+    },
+    "trailers": [
+      {
+        "source": "lLWESUfW-0A",
+        "type": "Trailer"
+      },
+      {
+        "source": "uogrgIasYcA",
+        "type": "Trailer"
+      },
+      {
+        "source": "-E3lMRx7HRQ",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt4712810/img",
+    "logo": "https://images.metahub.space/logo/medium/tt4712810/img",
+    "runtime": "113 min",
+    "awards": "2 nominations total",
+    "popularity": 1.0184833333333334,
+    "genres": [
+      "Crime",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Now You See Me: Now You Don't",
+        "ytId": "lLWESUfW-0A"
+      },
+      {
+        "title": "Now You See Me: Now You Don't",
+        "ytId": "uogrgIasYcA"
+      },
+      {
+        "title": "Now You See Me: Now You Don't",
+        "ytId": "-E3lMRx7HRQ"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.9",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt4712810"
+      },
+      {
+        "name": "Now You See Me: Now You Don't",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/now-you-see-me-now-you-dont-4712810"
+      },
+      {
+        "name": "Crime",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Crime"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Jesse Eisenberg",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jesse%20Eisenberg"
+      },
+      {
+        "name": "Woody Harrelson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Woody%20Harrelson"
+      },
+      {
+        "name": "Dave Franco",
+        "category": "Cast",
+        "url": "stremio:///search?search=Dave%20Franco"
+      },
+      {
+        "name": "Michael Lesslie",
+        "category": "Writers",
+        "url": "stremio:///search?search=Michael%20Lesslie"
+      },
+      {
+        "name": "Paul Wernick",
+        "category": "Writers",
+        "url": "stremio:///search?search=Paul%20Wernick"
+      },
+      {
+        "name": "Rhett Reese",
+        "category": "Writers",
+        "url": "stremio:///search?search=Rhett%20Reese"
+      },
+      {
+        "name": "Ruben Fleischer",
+        "category": "Directors",
+        "url": "stremio:///search?search=Ruben%20Fleischer"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt4712810",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "السحرة يعودون بخدع جديدة ومهمة تتجاوز حدود الوهم.",
+    "localPoster": "assets/tt4712810.jpg",
+    "featured": true
   },
   {
-    "id": "mov-mission-impossible-the-final-reckoning-2025",
+    "id": "tt9603208",
     "title": "Mission: Impossible - The Final Reckoning",
     "titleAr": "المهمة المستحيلة: الحساب الأخير",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.1,
     "genre": [
       "Action",
@@ -317,21 +2103,157 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt9603208/img",
-    "sourceUrl": "https://www.imdb.com/title/tt9603208/",
     "description": "Hunt and the IMF pursue a dangerous AI called the Entity that's infiltrated global intelligence. With governments and a figure from his past in pursuit, Hunt races to stop it from forever changing the world.",
     "duration": "170 min",
     "cast": [
       "Tom Cruise",
       "Hayley Atwell",
       "Ving Rhames"
-    ]
+    ],
+    "imdb_id": "tt9603208",
+    "country": "United States, Norway",
+    "director": [
+      "Christopher McQuarrie"
+    ],
+    "imdbRating": "7.1",
+    "name": "Mission: Impossible - The Final Reckoning",
+    "released": "2025-05-23T00:00:00.000Z",
+    "slug": "movie/mission-impossible-the-final-reckoning-9603208",
+    "writer": [
+      "Bruce Geller",
+      "Christopher McQuarrie",
+      "Erik Jendresen"
+    ],
+    "moviedb_id": 575265,
+    "popularities": {
+      "moviedb": 35.511,
+      "stremio": 1.1837000000000002,
+      "stremio_lib": 0,
+      "trakt": 58
+    },
+    "trailers": [
+      {
+        "source": "G1VBfMCZVkw",
+        "type": "Trailer"
+      },
+      {
+        "source": "GXfl6nyltRo",
+        "type": "Trailer"
+      },
+      {
+        "source": "fsQgc9pCyDU",
+        "type": "Trailer"
+      },
+      {
+        "source": "NOhDyUmT9z0",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "170 min",
+    "background": "https://images.metahub.space/background/medium/tt9603208/img",
+    "logo": "https://images.metahub.space/logo/medium/tt9603208/img",
+    "awards": "38 wins & 42 nominations total",
+    "popularity": 1.1837000000000002,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Mission: Impossible - The Final Reckoning",
+        "ytId": "G1VBfMCZVkw"
+      },
+      {
+        "title": "Mission: Impossible - The Final Reckoning",
+        "ytId": "GXfl6nyltRo"
+      },
+      {
+        "title": "Mission: Impossible - The Final Reckoning",
+        "ytId": "fsQgc9pCyDU"
+      },
+      {
+        "title": "Mission: Impossible - The Final Reckoning",
+        "ytId": "NOhDyUmT9z0"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.1",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt9603208"
+      },
+      {
+        "name": "Mission: Impossible - The Final Reckoning",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/mission-impossible-the-final-reckoning-9603208"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Tom Cruise",
+        "category": "Cast",
+        "url": "stremio:///search?search=Tom%20Cruise"
+      },
+      {
+        "name": "Hayley Atwell",
+        "category": "Cast",
+        "url": "stremio:///search?search=Hayley%20Atwell"
+      },
+      {
+        "name": "Ving Rhames",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ving%20Rhames"
+      },
+      {
+        "name": "Bruce Geller",
+        "category": "Writers",
+        "url": "stremio:///search?search=Bruce%20Geller"
+      },
+      {
+        "name": "Christopher McQuarrie",
+        "category": "Writers",
+        "url": "stremio:///search?search=Christopher%20McQuarrie"
+      },
+      {
+        "name": "Erik Jendresen",
+        "category": "Writers",
+        "url": "stremio:///search?search=Erik%20Jendresen"
+      },
+      {
+        "name": "Christopher McQuarrie",
+        "category": "Directors",
+        "url": "stremio:///search?search=Christopher%20McQuarrie"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt9603208",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "إيثان هانت وفريقه يخوضون سباقاً حاسماً لإنقاذ العالم.",
+    "localPoster": "assets/tt9603208.jpg",
+    "featured": true
   },
   {
-    "id": "mov-wicked-for-good-2025",
+    "id": "tt19847976",
     "title": "Wicked: For Good",
     "titleAr": "شريرة: للأبد",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.6,
     "genre": [
       "Drama",
@@ -339,21 +2261,141 @@
       "Fantasy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt19847976/img",
-    "sourceUrl": "https://www.imdb.com/title/tt19847976/",
     "description": "Elphaba, the future Wicked Witch of the West and her relationship with Glinda, the Good Witch of the North. The second of a two-part feature film adaptation of the Broadway musical.",
     "duration": "137 min",
     "cast": [
       "Cynthia Erivo",
       "Ariana Grande",
       "Jeff Goldblum"
-    ]
+    ],
+    "imdb_id": "tt19847976",
+    "name": "Wicked: For Good",
+    "country": "United States, Canada, Australia",
+    "director": [
+      "Jon M. Chu"
+    ],
+    "imdbRating": "6.6",
+    "released": "2025-11-21T00:00:00.000Z",
+    "slug": "movie/wicked-for-good-19847976",
+    "writer": [
+      "Winnie Holzman",
+      "Dana Fox",
+      "Stephen Schwartz"
+    ],
+    "moviedb_id": 967941,
+    "popularities": {
+      "moviedb": 9.3909,
+      "stremio": 0.31303000000000003,
+      "stremio_lib": 0,
+      "trakt": 51
+    },
+    "background": "https://images.metahub.space/background/medium/tt19847976/img",
+    "logo": "https://images.metahub.space/logo/medium/tt19847976/img",
+    "trailers": [
+      {
+        "source": "R2Xubj7lazE",
+        "type": "Trailer"
+      },
+      {
+        "source": "vt98AlBDI9Y",
+        "type": "Trailer"
+      }
+    ],
+    "awards": "Nominated for 2 BAFTA Awards. 27 wins & 143 nominations total",
+    "runtime": "137 min",
+    "popularity": 0.31303000000000003,
+    "genres": [
+      "Drama",
+      "Family",
+      "Fantasy"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Wicked: For Good",
+        "ytId": "R2Xubj7lazE"
+      },
+      {
+        "title": "Wicked: For Good",
+        "ytId": "vt98AlBDI9Y"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt19847976"
+      },
+      {
+        "name": "Wicked: For Good",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/wicked-for-good-19847976"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Family",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Family"
+      },
+      {
+        "name": "Fantasy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Fantasy"
+      },
+      {
+        "name": "Cynthia Erivo",
+        "category": "Cast",
+        "url": "stremio:///search?search=Cynthia%20Erivo"
+      },
+      {
+        "name": "Ariana Grande",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ariana%20Grande"
+      },
+      {
+        "name": "Jeff Goldblum",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jeff%20Goldblum"
+      },
+      {
+        "name": "Winnie Holzman",
+        "category": "Writers",
+        "url": "stremio:///search?search=Winnie%20Holzman"
+      },
+      {
+        "name": "Dana Fox",
+        "category": "Writers",
+        "url": "stremio:///search?search=Dana%20Fox"
+      },
+      {
+        "name": "Stephen Schwartz",
+        "category": "Writers",
+        "url": "stremio:///search?search=Stephen%20Schwartz"
+      },
+      {
+        "name": "Jon M. Chu",
+        "category": "Directors",
+        "url": "stremio:///search?search=Jon%20M.%20Chu"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt19847976",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "تتقاطع مصائر ساحرتين وصداقة تغيّر أرض أوز.",
+    "localPoster": "assets/tt19847976.jpg",
+    "featured": true
   },
   {
-    "id": "mov-tron-ares-2025",
+    "id": "tt6604188",
     "title": "Tron: Ares",
     "titleAr": "ترون: آريس",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.2,
     "genre": [
       "Action",
@@ -361,21 +2403,173 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt6604188/img",
-    "sourceUrl": "https://www.imdb.com/title/tt6604188/",
     "description": "A highly sophisticated program, Ares, is sent from the digital world into the real world on a dangerous mission.",
     "duration": "119 min",
     "cast": [
       "Jared Leto",
       "Greta Lee",
       "Jeff Bridges"
-    ]
+    ],
+    "imdb_id": "tt6604188",
+    "country": "United States, Canada, New Zealand",
+    "director": [
+      "Joachim Rønning"
+    ],
+    "imdbRating": "6.2",
+    "name": "Tron: Ares",
+    "released": "2025-10-10T00:00:00.000Z",
+    "slug": "movie/tron-ares-6604188",
+    "writer": [
+      "Jesse Wigutow",
+      "David DiGilio",
+      "Steven Lisberger"
+    ],
+    "moviedb_id": 533533,
+    "popularities": {
+      "moviedb": 15.1846,
+      "stremio": 0.5061533333333333,
+      "stremio_lib": 0,
+      "trakt": 53
+    },
+    "trailers": [
+      {
+        "source": "gNa0j4mQo1k",
+        "type": "Trailer"
+      },
+      {
+        "source": "YCSdZBvtPek",
+        "type": "Trailer"
+      },
+      {
+        "source": "W_bVkV1gbCA",
+        "type": "Trailer"
+      },
+      {
+        "source": "h8VJ0LSi5gQ",
+        "type": "Trailer"
+      },
+      {
+        "source": "YShVEXb7-ic",
+        "type": "Trailer"
+      },
+      {
+        "source": "9KVG_X_7Naw",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt6604188/img",
+    "logo": "https://images.metahub.space/logo/medium/tt6604188/img",
+    "runtime": "119 min",
+    "awards": "3 wins & 19 nominations total",
+    "popularity": 0.5061533333333333,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Tron: Ares",
+        "ytId": "gNa0j4mQo1k"
+      },
+      {
+        "title": "Tron: Ares",
+        "ytId": "YCSdZBvtPek"
+      },
+      {
+        "title": "Tron: Ares",
+        "ytId": "W_bVkV1gbCA"
+      },
+      {
+        "title": "Tron: Ares",
+        "ytId": "h8VJ0LSi5gQ"
+      },
+      {
+        "title": "Tron: Ares",
+        "ytId": "YShVEXb7-ic"
+      },
+      {
+        "title": "Tron: Ares",
+        "ytId": "9KVG_X_7Naw"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.2",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt6604188"
+      },
+      {
+        "name": "Tron: Ares",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/tron-ares-6604188"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Jared Leto",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jared%20Leto"
+      },
+      {
+        "name": "Greta Lee",
+        "category": "Cast",
+        "url": "stremio:///search?search=Greta%20Lee"
+      },
+      {
+        "name": "Jeff Bridges",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jeff%20Bridges"
+      },
+      {
+        "name": "Jesse Wigutow",
+        "category": "Writers",
+        "url": "stremio:///search?search=Jesse%20Wigutow"
+      },
+      {
+        "name": "David DiGilio",
+        "category": "Writers",
+        "url": "stremio:///search?search=David%20DiGilio"
+      },
+      {
+        "name": "Steven Lisberger",
+        "category": "Writers",
+        "url": "stremio:///search?search=Steven%20Lisberger"
+      },
+      {
+        "name": "Joachim Rønning",
+        "category": "Directors",
+        "url": "stremio:///search?search=Joachim%20R%C3%B8nning"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt6604188",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "تتلاشى الحدود بين العالم الرقمي والواقع.",
+    "localPoster": "assets/tt6604188.jpg",
+    "featured": true
   },
   {
-    "id": "mov-captain-america-brave-new-world-2025",
+    "id": "tt14513804",
     "title": "Captain America: Brave New World",
     "titleAr": "كابتن أمريكا: العالم الجديد الشجاع",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 5.6,
     "genre": [
       "Action",
@@ -383,21 +2577,149 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14513804/img",
-    "sourceUrl": "https://www.imdb.com/title/tt14513804/",
     "description": "Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan.",
     "duration": "119 min",
     "cast": [
       "Anthony Mackie",
       "Harrison Ford",
       "Danny Ramirez"
-    ]
+    ],
+    "imdb_id": "tt14513804",
+    "name": "Captain America: Brave New World",
+    "country": "United States, Canada",
+    "director": [
+      "Julius Onah"
+    ],
+    "imdbRating": "5.6",
+    "released": "2025-02-14T00:00:00.000Z",
+    "slug": "movie/captain-america-brave-new-world-14513804",
+    "writer": [
+      "Rob Edwards",
+      "Malcolm Spellman",
+      "Dalan Musson"
+    ],
+    "moviedb_id": 822119,
+    "popularities": {
+      "moviedb": 16.7877,
+      "stremio": 0.55959,
+      "stremio_lib": 0,
+      "trakt": 50
+    },
+    "background": "https://images.metahub.space/background/medium/tt14513804/img",
+    "logo": "https://images.metahub.space/logo/medium/tt14513804/img",
+    "trailers": [
+      {
+        "source": "5PSzFLV-EyQ",
+        "type": "Trailer"
+      },
+      {
+        "source": "QUYZjYULUAA",
+        "type": "Trailer"
+      },
+      {
+        "source": "1pHDWnXmK7Y",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "119 min",
+    "awards": "2 wins & 17 nominations total",
+    "popularity": 0.55959,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Captain America: Brave New World",
+        "ytId": "5PSzFLV-EyQ"
+      },
+      {
+        "title": "Captain America: Brave New World",
+        "ytId": "QUYZjYULUAA"
+      },
+      {
+        "title": "Captain America: Brave New World",
+        "ytId": "1pHDWnXmK7Y"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt14513804"
+      },
+      {
+        "name": "Captain America: Brave New World",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/captain-america-brave-new-world-14513804"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Anthony Mackie",
+        "category": "Cast",
+        "url": "stremio:///search?search=Anthony%20Mackie"
+      },
+      {
+        "name": "Harrison Ford",
+        "category": "Cast",
+        "url": "stremio:///search?search=Harrison%20Ford"
+      },
+      {
+        "name": "Danny Ramirez",
+        "category": "Cast",
+        "url": "stremio:///search?search=Danny%20Ramirez"
+      },
+      {
+        "name": "Rob Edwards",
+        "category": "Writers",
+        "url": "stremio:///search?search=Rob%20Edwards"
+      },
+      {
+        "name": "Malcolm Spellman",
+        "category": "Writers",
+        "url": "stremio:///search?search=Malcolm%20Spellman"
+      },
+      {
+        "name": "Dalan Musson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Dalan%20Musson"
+      },
+      {
+        "name": "Julius Onah",
+        "category": "Directors",
+        "url": "stremio:///search?search=Julius%20Onah"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt14513804",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "سام ويلسون يحمل الدرع ويواجه أزمة دولية معقدة.",
+    "localPoster": "assets/tt14513804.jpg",
+    "featured": true
   },
   {
-    "id": "mov-thunderbolts--2025",
+    "id": "tt20969586",
     "title": "Thunderbolts*",
     "titleAr": "الرعد*",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.1,
     "genre": [
       "Action",
@@ -405,21 +2727,181 @@
       "Crime"
     ],
     "poster": "https://images.metahub.space/poster/small/tt20969586/img",
-    "sourceUrl": "https://www.imdb.com/title/tt20969586/",
     "description": "After finding themselves ensnared in a death trap, an unconventional team of antiheroes must go on a dangerous mission that will force them to confront the darkest corners of their pasts.",
     "duration": "127 min",
     "cast": [
       "Florence Pugh",
       "Sebastian Stan",
       "Julia Louis-Dreyfus"
-    ]
+    ],
+    "imdb_id": "tt20969586",
+    "name": "Thunderbolts*",
+    "country": "United States, Australia, Canada",
+    "director": [
+      "Jake Schreier"
+    ],
+    "imdbRating": "7.1",
+    "released": "2025-05-02T00:00:00.000Z",
+    "slug": "movie/thunderbolts-20969586",
+    "writer": [
+      "Eric Pearson",
+      "Joanna Calo",
+      "Kurt Busiek"
+    ],
+    "moviedb_id": 986056,
+    "popularities": {
+      "moviedb": 37.6704,
+      "stremio": 1.2556800000000001,
+      "stremio_lib": 0,
+      "trakt": 79
+    },
+    "trailers": [
+      {
+        "source": "7rs_HhSA7XY",
+        "type": "Trailer"
+      },
+      {
+        "source": "-sAOWhvheK8",
+        "type": "Trailer"
+      },
+      {
+        "source": "BJk4wYL-_Hw",
+        "type": "Trailer"
+      },
+      {
+        "source": "bqnRzjPfb5A",
+        "type": "Trailer"
+      },
+      {
+        "source": "hUUszE29jS0",
+        "type": "Trailer"
+      },
+      {
+        "source": "8IiAm7KUuoY",
+        "type": "Trailer"
+      },
+      {
+        "source": "v-94Snw-H4o",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt20969586/img",
+    "logo": "https://images.metahub.space/logo/medium/tt20969586/img",
+    "runtime": "127 min",
+    "awards": "4 wins & 28 nominations total",
+    "popularity": 1.2556800000000001,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Thunderbolts*",
+        "ytId": "7rs_HhSA7XY"
+      },
+      {
+        "title": "Thunderbolts*",
+        "ytId": "-sAOWhvheK8"
+      },
+      {
+        "title": "Thunderbolts*",
+        "ytId": "BJk4wYL-_Hw"
+      },
+      {
+        "title": "Thunderbolts*",
+        "ytId": "bqnRzjPfb5A"
+      },
+      {
+        "title": "Thunderbolts*",
+        "ytId": "hUUszE29jS0"
+      },
+      {
+        "title": "Thunderbolts*",
+        "ytId": "8IiAm7KUuoY"
+      },
+      {
+        "title": "Thunderbolts*",
+        "ytId": "v-94Snw-H4o"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.1",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt20969586"
+      },
+      {
+        "name": "Thunderbolts*",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/thunderbolts-20969586"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Crime",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Crime"
+      },
+      {
+        "name": "Florence Pugh",
+        "category": "Cast",
+        "url": "stremio:///search?search=Florence%20Pugh"
+      },
+      {
+        "name": "Sebastian Stan",
+        "category": "Cast",
+        "url": "stremio:///search?search=Sebastian%20Stan"
+      },
+      {
+        "name": "Julia Louis-Dreyfus",
+        "category": "Cast",
+        "url": "stremio:///search?search=Julia%20Louis-Dreyfus"
+      },
+      {
+        "name": "Eric Pearson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Eric%20Pearson"
+      },
+      {
+        "name": "Joanna Calo",
+        "category": "Writers",
+        "url": "stremio:///search?search=Joanna%20Calo"
+      },
+      {
+        "name": "Kurt Busiek",
+        "category": "Writers",
+        "url": "stremio:///search?search=Kurt%20Busiek"
+      },
+      {
+        "name": "Jake Schreier",
+        "category": "Directors",
+        "url": "stremio:///search?search=Jake%20Schreier"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt20969586",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "مجموعة غير متوقعة من الشخصيات تتحد في مهمة خطيرة.",
+    "localPoster": "assets/tt20969586.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-conjuring-last-rites-2025",
+    "id": "tt22898462",
     "title": "The Conjuring: Last Rites",
     "titleAr": "الاستدعاء: الطقوس الأخيرة",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.2,
     "genre": [
       "Horror",
@@ -427,21 +2909,141 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt22898462/img",
-    "sourceUrl": "https://www.imdb.com/title/tt22898462/",
     "description": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.",
     "duration": "136 min",
     "cast": [
       "Patrick Wilson",
       "Vera Farmiga",
       "Mia Tomlinson"
-    ]
+    ],
+    "imdb_id": "tt22898462",
+    "name": "The Conjuring: Last Rites",
+    "country": "Canada, United States",
+    "director": [
+      "Michael Chaves"
+    ],
+    "imdbRating": "6.2",
+    "released": "2025-09-05T00:00:00.000Z",
+    "slug": "movie/the-conjuring-last-rites-22898462",
+    "writer": [
+      "Ian Goldberg",
+      "Richard Naing",
+      "David Leslie Johnson-McGoldrick"
+    ],
+    "moviedb_id": 1038392,
+    "popularities": {
+      "moviedb": 35.432,
+      "stremio": 1.1810666666666667,
+      "stremio_lib": 0,
+      "trakt": 50
+    },
+    "trailers": [
+      {
+        "source": "p4aWdkM5xF8",
+        "type": "Trailer"
+      },
+      {
+        "source": "bMgfsdYoEEo",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "136 min",
+    "background": "https://images.metahub.space/background/medium/tt22898462/img",
+    "logo": "https://images.metahub.space/logo/medium/tt22898462/img",
+    "awards": "1 nomination total",
+    "popularity": 1.1810666666666667,
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Conjuring: Last Rites",
+        "ytId": "p4aWdkM5xF8"
+      },
+      {
+        "title": "The Conjuring: Last Rites",
+        "ytId": "bMgfsdYoEEo"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.2",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt22898462"
+      },
+      {
+        "name": "The Conjuring: Last Rites",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-conjuring-last-rites-22898462"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Mystery",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Mystery"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Patrick Wilson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Patrick%20Wilson"
+      },
+      {
+        "name": "Vera Farmiga",
+        "category": "Cast",
+        "url": "stremio:///search?search=Vera%20Farmiga"
+      },
+      {
+        "name": "Mia Tomlinson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Mia%20Tomlinson"
+      },
+      {
+        "name": "Ian Goldberg",
+        "category": "Writers",
+        "url": "stremio:///search?search=Ian%20Goldberg"
+      },
+      {
+        "name": "Richard Naing",
+        "category": "Writers",
+        "url": "stremio:///search?search=Richard%20Naing"
+      },
+      {
+        "name": "David Leslie Johnson-McGoldrick",
+        "category": "Writers",
+        "url": "stremio:///search?search=David%20Leslie%20Johnson-McGoldrick"
+      },
+      {
+        "name": "Michael Chaves",
+        "category": "Directors",
+        "url": "stremio:///search?search=Michael%20Chaves"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt22898462",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "قضية مرعبة تختبر المحققَين في الظواهر الخارقة.",
+    "localPoster": "assets/tt22898462.jpg",
+    "featured": true
   },
   {
-    "id": "mov-ne-zha-2-2025",
+    "id": "tt34956443",
     "title": "Ne Zha 2",
     "titleAr": "نزا 2",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.9,
     "genre": [
       "Animation",
@@ -449,21 +3051,141 @@
       "Adventure"
     ],
     "poster": "https://images.metahub.space/poster/small/tt34956443/img",
-    "sourceUrl": "https://www.imdb.com/title/tt34956443/",
     "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.",
     "duration": "144 min",
     "cast": [
       "Yanting Lü",
       "Joseph",
       "Mo Han"
-    ]
+    ],
+    "imdb_id": "tt34956443",
+    "name": "Ne Zha 2",
+    "popularities": {
+      "trakt": 34,
+      "moviedb": 29.2007,
+      "stremio": 0.9733566666666668,
+      "stremio_lib": 0
+    },
+    "awards": "20 wins & 8 nominations total",
+    "country": "China",
+    "director": [
+      "Yu Yang"
+    ],
+    "imdbRating": "7.9",
+    "released": "2025-01-29T00:00:00.000Z",
+    "slug": "movie/ne-zha-2-34956443",
+    "writer": [
+      "Xixing Lu",
+      "Zhonglin Xu",
+      "Yu Yang"
+    ],
+    "moviedb_id": 980477,
+    "runtime": "144 min",
+    "trailers": [
+      {
+        "source": "ETlOSBR92Fs",
+        "type": "Trailer"
+      },
+      {
+        "source": "nsXQijb0F4I",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt34956443/img",
+    "logo": "https://images.metahub.space/logo/medium/tt34956443/img",
+    "popularity": 0.9733566666666668,
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Ne Zha 2",
+        "ytId": "ETlOSBR92Fs"
+      },
+      {
+        "title": "Ne Zha 2",
+        "ytId": "nsXQijb0F4I"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.9",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt34956443"
+      },
+      {
+        "name": "Ne Zha 2",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/ne-zha-2-34956443"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Yanting Lü",
+        "category": "Cast",
+        "url": "stremio:///search?search=Yanting%20L%C3%BC"
+      },
+      {
+        "name": "Joseph",
+        "category": "Cast",
+        "url": "stremio:///search?search=Joseph"
+      },
+      {
+        "name": "Mo Han",
+        "category": "Cast",
+        "url": "stremio:///search?search=Mo%20Han"
+      },
+      {
+        "name": "Xixing Lu",
+        "category": "Writers",
+        "url": "stremio:///search?search=Xixing%20Lu"
+      },
+      {
+        "name": "Zhonglin Xu",
+        "category": "Writers",
+        "url": "stremio:///search?search=Zhonglin%20Xu"
+      },
+      {
+        "name": "Yu Yang",
+        "category": "Writers",
+        "url": "stremio:///search?search=Yu%20Yang"
+      },
+      {
+        "name": "Yu Yang",
+        "category": "Directors",
+        "url": "stremio:///search?search=Yu%20Yang"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt34956443",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "مغامرة أسطورية عن المصير والقوة والروابط العائلية.",
+    "localPoster": "assets/tt34956443.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-gorge-2025",
+    "id": "tt13654226",
     "title": "The Gorge",
     "titleAr": "الوادي",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.7,
     "genre": [
       "Action",
@@ -471,21 +3193,121 @@
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13654226/img",
-    "sourceUrl": "https://www.imdb.com/title/tt13654226/",
     "description": "Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.",
     "duration": "128 min",
     "cast": [
       "Miles Teller",
       "Anya Taylor-Joy",
       "Sigourney Weaver"
-    ]
+    ],
+    "imdb_id": "tt13654226",
+    "name": "The Gorge",
+    "popularities": {
+      "trakt": 51,
+      "moviedb": 30.5317,
+      "stremio": 1.0177233333333333,
+      "stremio_lib": 0
+    },
+    "country": "United Kingdom, United States",
+    "director": [
+      "Scott Derrickson"
+    ],
+    "imdbRating": "6.7",
+    "released": "2025-02-14T00:00:00.000Z",
+    "slug": "movie/the-gorge-13654226",
+    "writer": [
+      "Zach Dean"
+    ],
+    "moviedb_id": 950396,
+    "runtime": "128 min",
+    "trailers": [
+      {
+        "source": "rUSdnuOLebE",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt13654226/img",
+    "logo": "https://images.metahub.space/logo/medium/tt13654226/img",
+    "awards": "Nominated for 2 Primetime Emmys. 2 wins & 12 nominations total",
+    "popularity": 1.0177233333333333,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Horror"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Gorge",
+        "ytId": "rUSdnuOLebE"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.7",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt13654226"
+      },
+      {
+        "name": "The Gorge",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-gorge-13654226"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Miles Teller",
+        "category": "Cast",
+        "url": "stremio:///search?search=Miles%20Teller"
+      },
+      {
+        "name": "Anya Taylor-Joy",
+        "category": "Cast",
+        "url": "stremio:///search?search=Anya%20Taylor-Joy"
+      },
+      {
+        "name": "Sigourney Weaver",
+        "category": "Cast",
+        "url": "stremio:///search?search=Sigourney%20Weaver"
+      },
+      {
+        "name": "Zach Dean",
+        "category": "Writers",
+        "url": "stremio:///search?search=Zach%20Dean"
+      },
+      {
+        "name": "Scott Derrickson",
+        "category": "Directors",
+        "url": "stremio:///search?search=Scott%20Derrickson"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt13654226",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "حارسان على جانبَي وادٍ غامض يكتشفان ما تخفيه أعماقه.",
+    "localPoster": "assets/tt13654226.jpg",
+    "featured": true
   },
   {
-    "id": "mov-sonic-the-hedgehog-3-2024",
+    "id": "tt18259086",
     "title": "Sonic the Hedgehog 3",
     "titleAr": "سونيك القنفذ 3",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.9,
     "genre": [
       "Action",
@@ -493,21 +3315,141 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt18259086/img",
-    "sourceUrl": "https://www.imdb.com/title/tt18259086/",
     "description": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched, Team Sonic must seek out an unlikely alliance.",
     "duration": "110 min",
     "cast": [
       "Jim Carrey",
       "Ben Schwartz",
       "Keanu Reeves"
-    ]
+    ],
+    "imdb_id": "tt18259086",
+    "name": "Sonic the Hedgehog 3",
+    "country": "United States, Japan",
+    "director": [
+      "Jeff Fowler"
+    ],
+    "imdbRating": "6.9",
+    "released": "2024-12-20T00:00:00.000Z",
+    "slug": "movie/sonic-the-hedgehog-3-18259086",
+    "writer": [
+      "Pat Casey",
+      "Josh Miller",
+      "John Whittington"
+    ],
+    "moviedb_id": 939243,
+    "popularities": {
+      "moviedb": 24.0247,
+      "stremio": 0.8008233333333333,
+      "stremio_lib": 0,
+      "trakt": 60
+    },
+    "trailers": [
+      {
+        "source": "LH1J1EbqCaI",
+        "type": "Trailer"
+      },
+      {
+        "source": "qSu6i2iFMO0",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt18259086/img",
+    "logo": "https://images.metahub.space/logo/medium/tt18259086/img",
+    "runtime": "110 min",
+    "awards": "1 win & 6 nominations total",
+    "popularity": 0.8008233333333333,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Sonic the Hedgehog 3",
+        "ytId": "LH1J1EbqCaI"
+      },
+      {
+        "title": "Sonic the Hedgehog 3",
+        "ytId": "qSu6i2iFMO0"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.9",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt18259086"
+      },
+      {
+        "name": "Sonic the Hedgehog 3",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/sonic-the-hedgehog-3-18259086"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Jim Carrey",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jim%20Carrey"
+      },
+      {
+        "name": "Ben Schwartz",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ben%20Schwartz"
+      },
+      {
+        "name": "Keanu Reeves",
+        "category": "Cast",
+        "url": "stremio:///search?search=Keanu%20Reeves"
+      },
+      {
+        "name": "Pat Casey",
+        "category": "Writers",
+        "url": "stremio:///search?search=Pat%20Casey"
+      },
+      {
+        "name": "Josh Miller",
+        "category": "Writers",
+        "url": "stremio:///search?search=Josh%20Miller"
+      },
+      {
+        "name": "John Whittington",
+        "category": "Writers",
+        "url": "stremio:///search?search=John%20Whittington"
+      },
+      {
+        "name": "Jeff Fowler",
+        "category": "Directors",
+        "url": "stremio:///search?search=Jeff%20Fowler"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt18259086",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "سونيك وأصدقاؤه يواجهون خصماً جديداً ذا قوة استثنائية.",
+    "localPoster": "assets/tt18259086.jpg",
+    "featured": true
   },
   {
-    "id": "mov-a-minecraft-movie-2025",
+    "id": "tt3566834",
     "title": "A Minecraft Movie",
     "titleAr": "فيلم ماينكرافت",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 5.6,
     "genre": [
       "Action",
@@ -515,21 +3457,123 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt3566834/img",
-    "sourceUrl": "https://www.imdb.com/title/tt3566834/",
     "description": "Four misfits are suddenly pulled through a mysterious portal into a bizarre cubic wonderland that thrives on imagination. To get back home they'll have to master this world while embarking on a quest with an unexpected expert craf...",
     "cast": [
       "Jason Momoa",
       "Jack Black",
       "Sebastian Hansen"
     ],
-    "duration": "101 min"
+    "duration": "101 min",
+    "imdb_id": "tt3566834",
+    "name": "A Minecraft Movie",
+    "released": "2025-04-04T00:00:00.000Z",
+    "director": [
+      "Jared Hess"
+    ],
+    "writer": [
+      "Chris Bowman",
+      "Hubbel Palmer",
+      "Neil Widener"
+    ],
+    "imdbRating": "5.6",
+    "country": "United States, Sweden, New Zealand, Canada",
+    "trailers": [],
+    "moviedb_id": 297946,
+    "popularities": {
+      "moviedb": 9.533,
+      "stremio": 0.31776666666666664,
+      "stremio_lib": 0,
+      "trakt": 57
+    },
+    "slug": "movie/a-minecraft-movie-3566834",
+    "background": "https://images.metahub.space/background/medium/tt3566834/img",
+    "logo": "https://images.metahub.space/logo/medium/tt3566834/img",
+    "awards": "2 wins & 15 nominations total",
+    "popularity": 0.31776666666666664,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [],
+    "links": [
+      {
+        "name": "5.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt3566834"
+      },
+      {
+        "name": "A Minecraft Movie",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/a-minecraft-movie-3566834"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Jason Momoa",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jason%20Momoa"
+      },
+      {
+        "name": "Jack Black",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jack%20Black"
+      },
+      {
+        "name": "Sebastian Hansen",
+        "category": "Cast",
+        "url": "stremio:///search?search=Sebastian%20Hansen"
+      },
+      {
+        "name": "Chris Bowman",
+        "category": "Writers",
+        "url": "stremio:///search?search=Chris%20Bowman"
+      },
+      {
+        "name": "Hubbel Palmer",
+        "category": "Writers",
+        "url": "stremio:///search?search=Hubbel%20Palmer"
+      },
+      {
+        "name": "Neil Widener",
+        "category": "Writers",
+        "url": "stremio:///search?search=Neil%20Widener"
+      },
+      {
+        "name": "Jared Hess",
+        "category": "Directors",
+        "url": "stremio:///search?search=Jared%20Hess"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt3566834",
+      "hasScheduledVideos": false
+    },
+    "runtime": "101 min",
+    "descriptionAr": "مجموعة من الغرباء تجد طريقها إلى عالم تصنع فيه المخيلة كل شيء.",
+    "localPoster": "assets/tt3566834.jpg",
+    "featured": true
   },
   {
-    "id": "mov-lilo-stitch-2025",
+    "id": "tt11655566",
     "title": "Lilo & Stitch",
     "titleAr": "ليلو وستيتش",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.7,
     "genre": [
       "Action",
@@ -537,21 +3581,133 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt11655566/img",
-    "sourceUrl": "https://www.imdb.com/title/tt11655566/",
     "description": "A lonely Hawaiian girl befriends a runaway alien, helping to mend her fragmented family.",
     "duration": "108 min",
     "cast": [
       "Maia Kealoha",
       "Sydney Agudong",
       "Chris Sanders"
-    ]
+    ],
+    "imdb_id": "tt11655566",
+    "name": "Lilo & Stitch",
+    "country": "United States, Australia, Canada",
+    "director": [
+      "Dean Fleischer Camp"
+    ],
+    "imdbRating": "6.7",
+    "released": "2025-05-23T00:00:00.000Z",
+    "slug": "movie/lilo-stitch-11655566",
+    "writer": [
+      "Chris Kekaniokalani Bright",
+      "Mike Van Waes",
+      "Chris Sanders"
+    ],
+    "moviedb_id": 552524,
+    "popularities": {
+      "moviedb": 35.5563,
+      "stremio": 1.18521,
+      "stremio_lib": 0,
+      "trakt": 50
+    },
+    "background": "https://images.metahub.space/background/medium/tt11655566/img",
+    "logo": "https://images.metahub.space/logo/medium/tt11655566/img",
+    "runtime": "108 min",
+    "trailers": [
+      {
+        "source": "VWqJifMMgZE",
+        "type": "Trailer"
+      }
+    ],
+    "awards": "Nominated for 1 BAFTA Award. 10 nominations total",
+    "popularity": 1.18521,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Lilo & Stitch",
+        "ytId": "VWqJifMMgZE"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.7",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt11655566"
+      },
+      {
+        "name": "Lilo & Stitch",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/lilo-stitch-11655566"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Maia Kealoha",
+        "category": "Cast",
+        "url": "stremio:///search?search=Maia%20Kealoha"
+      },
+      {
+        "name": "Sydney Agudong",
+        "category": "Cast",
+        "url": "stremio:///search?search=Sydney%20Agudong"
+      },
+      {
+        "name": "Chris Sanders",
+        "category": "Cast",
+        "url": "stremio:///search?search=Chris%20Sanders"
+      },
+      {
+        "name": "Chris Kekaniokalani Bright",
+        "category": "Writers",
+        "url": "stremio:///search?search=Chris%20Kekaniokalani%20Bright"
+      },
+      {
+        "name": "Mike Van Waes",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mike%20Van%20Waes"
+      },
+      {
+        "name": "Chris Sanders",
+        "category": "Writers",
+        "url": "stremio:///search?search=Chris%20Sanders"
+      },
+      {
+        "name": "Dean Fleischer Camp",
+        "category": "Directors",
+        "url": "stremio:///search?search=Dean%20Fleischer%20Camp"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt11655566",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "طفلة من هاواي تصادق كائناً فضائياً مشاغباً يبحث عن عائلة.",
+    "localPoster": "assets/tt11655566.jpg",
+    "featured": true
   },
   {
-    "id": "mov-longlegs-2024",
+    "id": "tt23468450",
     "title": "Longlegs",
     "titleAr": "لونج ليجز",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.5,
     "genre": [
       "Crime",
@@ -559,21 +3715,137 @@
       "Mystery"
     ],
     "poster": "https://images.metahub.space/poster/small/tt23468450/img",
-    "sourceUrl": "https://www.imdb.com/title/tt23468450/",
     "description": "In pursuit of a serial killer, an FBI agent uncovers a series of occult clues that she must solve to end his terrifying killing spree.",
     "duration": "101 min",
     "cast": [
       "Maika Monroe",
       "Nicolas Cage",
       "Blair Underwood"
-    ]
+    ],
+    "imdb_id": "tt23468450",
+    "name": "Longlegs",
+    "country": "Canada, United States",
+    "director": [
+      "Osgood Perkins"
+    ],
+    "imdbRating": "6.5",
+    "released": "2024-07-12T00:00:00.000Z",
+    "slug": "movie/longlegs-23468450",
+    "writer": [
+      "Osgood Perkins"
+    ],
+    "moviedb_id": 1226578,
+    "popularities": {
+      "moviedb": 9.0886,
+      "stremio": 0.3029533333333333,
+      "stremio_lib": 0,
+      "trakt": 12
+    },
+    "runtime": "101 min",
+    "trailers": [
+      {
+        "source": "FXOtkvx25gI",
+        "type": "Trailer"
+      },
+      {
+        "source": "OG7wOTE8NhE",
+        "type": "Trailer"
+      },
+      {
+        "source": "48wg-_VzD04",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt23468450/img",
+    "logo": "https://images.metahub.space/logo/medium/tt23468450/img",
+    "awards": "10 wins & 31 nominations total",
+    "popularity": 0.3029533333333333,
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Longlegs",
+        "ytId": "FXOtkvx25gI"
+      },
+      {
+        "title": "Longlegs",
+        "ytId": "OG7wOTE8NhE"
+      },
+      {
+        "title": "Longlegs",
+        "ytId": "48wg-_VzD04"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.5",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt23468450"
+      },
+      {
+        "name": "Longlegs",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/longlegs-23468450"
+      },
+      {
+        "name": "Crime",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Crime"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Mystery",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Mystery"
+      },
+      {
+        "name": "Maika Monroe",
+        "category": "Cast",
+        "url": "stremio:///search?search=Maika%20Monroe"
+      },
+      {
+        "name": "Nicolas Cage",
+        "category": "Cast",
+        "url": "stremio:///search?search=Nicolas%20Cage"
+      },
+      {
+        "name": "Blair Underwood",
+        "category": "Cast",
+        "url": "stremio:///search?search=Blair%20Underwood"
+      },
+      {
+        "name": "Osgood Perkins",
+        "category": "Writers",
+        "url": "stremio:///search?search=Osgood%20Perkins"
+      },
+      {
+        "name": "Osgood Perkins",
+        "category": "Directors",
+        "url": "stremio:///search?search=Osgood%20Perkins"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt23468450",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "محققة تلاحق قاتلاً غامضاً في قضية تتشابك فيها أسرار الماضي.",
+    "localPoster": "assets/tt23468450.jpg",
+    "featured": true
   },
   {
-    "id": "mov-mufasa-the-lion-king-2024",
+    "id": "tt13186482",
     "title": "Mufasa: The Lion King",
     "titleAr": "موفاسا: الأسد الملك",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.6,
     "genre": [
       "Animation",
@@ -581,21 +3853,137 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13186482/img",
-    "sourceUrl": "https://www.imdb.com/title/tt13186482/",
     "description": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
     "duration": "118 min",
     "cast": [
       "Aaron Pierre",
       "Kelvin Harrison Jr.",
       "Tiffany Boone"
-    ]
+    ],
+    "imdb_id": "tt13186482",
+    "name": "Mufasa: The Lion King",
+    "country": "United States, Canada",
+    "director": [
+      "Barry Jenkins"
+    ],
+    "imdbRating": "6.6",
+    "released": "2024-12-20T00:00:00.000Z",
+    "slug": "movie/mufasa-the-lion-king-13186482",
+    "writer": [
+      "Jeff Nathanson"
+    ],
+    "moviedb_id": 762509,
+    "popularities": {
+      "moviedb": 14.452,
+      "stremio": 0.48173333333333335,
+      "stremio_lib": 0,
+      "trakt": 32
+    },
+    "trailers": [
+      {
+        "source": "lMXh6vjiZrI",
+        "type": "Trailer"
+      },
+      {
+        "source": "o17MF9vnabg",
+        "type": "Trailer"
+      },
+      {
+        "source": "MjQG-a7d41Q",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt13186482/img",
+    "logo": "https://images.metahub.space/logo/medium/tt13186482/img",
+    "runtime": "118 min",
+    "awards": "1 win & 18 nominations total",
+    "popularity": 0.48173333333333335,
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Drama"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Mufasa: The Lion King",
+        "ytId": "lMXh6vjiZrI"
+      },
+      {
+        "title": "Mufasa: The Lion King",
+        "ytId": "o17MF9vnabg"
+      },
+      {
+        "title": "Mufasa: The Lion King",
+        "ytId": "MjQG-a7d41Q"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt13186482"
+      },
+      {
+        "name": "Mufasa: The Lion King",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/mufasa-the-lion-king-13186482"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Aaron Pierre",
+        "category": "Cast",
+        "url": "stremio:///search?search=Aaron%20Pierre"
+      },
+      {
+        "name": "Kelvin Harrison Jr.",
+        "category": "Cast",
+        "url": "stremio:///search?search=Kelvin%20Harrison%20Jr."
+      },
+      {
+        "name": "Tiffany Boone",
+        "category": "Cast",
+        "url": "stremio:///search?search=Tiffany%20Boone"
+      },
+      {
+        "name": "Jeff Nathanson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Jeff%20Nathanson"
+      },
+      {
+        "name": "Barry Jenkins",
+        "category": "Directors",
+        "url": "stremio:///search?search=Barry%20Jenkins"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt13186482",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "حكاية الصعود التي سبقت أسطورة ملك أرض العزة.",
+    "localPoster": "assets/tt13186482.jpg",
+    "featured": true
   },
   {
-    "id": "mov-alien-romulus-2024",
+    "id": "tt18412256",
     "title": "Alien: Romulus",
     "titleAr": "أجنبي: رومولوس",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 7.1,
     "genre": [
       "Horror",
@@ -603,21 +3991,141 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt18412256/img",
-    "sourceUrl": "https://www.imdb.com/title/tt18412256/",
     "description": "While scavenging the deep ends of a derelict space station, a group of young space colonists come face to face with the most terrifying life form in the universe.",
     "duration": "119 min",
     "cast": [
       "Cailee Spaeny",
       "David Jonsson",
       "Archie Renaux"
-    ]
+    ],
+    "imdb_id": "tt18412256",
+    "name": "Alien: Romulus",
+    "country": "United Kingdom, United States, Hungary, Australia, New Zealand, Canada",
+    "director": [
+      "Fede Alvarez"
+    ],
+    "imdbRating": "7.1",
+    "released": "2024-08-16T00:00:00.000Z",
+    "slug": "movie/alien-romulus-18412256",
+    "writer": [
+      "Dan O'Bannon",
+      "Ronald Shusett",
+      "Fede Alvarez"
+    ],
+    "moviedb_id": 945961,
+    "popularities": {
+      "moviedb": 25.6293,
+      "stremio": 0.85431,
+      "stremio_lib": 0,
+      "trakt": 53
+    },
+    "background": "https://images.metahub.space/background/medium/tt18412256/img",
+    "logo": "https://images.metahub.space/logo/medium/tt18412256/img",
+    "trailers": [
+      {
+        "source": "x0XDEhP4MQs",
+        "type": "Trailer"
+      },
+      {
+        "source": "OzY2r2JXsDM",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "119 min",
+    "awards": "Nominated for 1 Oscar. 16 wins & 55 nominations total",
+    "popularity": 0.85431,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Alien: Romulus",
+        "ytId": "x0XDEhP4MQs"
+      },
+      {
+        "title": "Alien: Romulus",
+        "ytId": "OzY2r2JXsDM"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.1",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt18412256"
+      },
+      {
+        "name": "Alien: Romulus",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/alien-romulus-18412256"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Cailee Spaeny",
+        "category": "Cast",
+        "url": "stremio:///search?search=Cailee%20Spaeny"
+      },
+      {
+        "name": "David Jonsson",
+        "category": "Cast",
+        "url": "stremio:///search?search=David%20Jonsson"
+      },
+      {
+        "name": "Archie Renaux",
+        "category": "Cast",
+        "url": "stremio:///search?search=Archie%20Renaux"
+      },
+      {
+        "name": "Dan O'Bannon",
+        "category": "Writers",
+        "url": "stremio:///search?search=Dan%20O'Bannon"
+      },
+      {
+        "name": "Ronald Shusett",
+        "category": "Writers",
+        "url": "stremio:///search?search=Ronald%20Shusett"
+      },
+      {
+        "name": "Fede Alvarez",
+        "category": "Writers",
+        "url": "stremio:///search?search=Fede%20Alvarez"
+      },
+      {
+        "name": "Fede Alvarez",
+        "category": "Directors",
+        "url": "stremio:///search?search=Fede%20Alvarez"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt18412256",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "شباب يستكشفون محطة فضائية مهجورة ويواجهون كائناً قاتلاً.",
+    "localPoster": "assets/tt18412256.jpg",
+    "featured": true
   },
   {
-    "id": "mov-beetlejuice-beetlejuice-2024",
+    "id": "tt2049403",
     "title": "Beetlejuice Beetlejuice",
     "titleAr": "بيتلجوس بيتلجوس",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.6,
     "genre": [
       "Comedy",
@@ -625,21 +4133,157 @@
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt2049403/img",
-    "sourceUrl": "https://www.imdb.com/title/tt2049403/",
     "description": "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Beetlejuice, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Af...",
     "duration": "105 min",
     "cast": [
       "Michael Keaton",
       "Winona Ryder",
       "Catherine O'Hara"
-    ]
+    ],
+    "imdb_id": "tt2049403",
+    "name": "Beetlejuice Beetlejuice",
+    "popularities": {
+      "trakt": 22,
+      "moviedb": 7.8471,
+      "stremio": 0.26157,
+      "stremio_lib": 0
+    },
+    "country": "France, United States",
+    "director": [
+      "Tim Burton"
+    ],
+    "imdbRating": "6.6",
+    "released": "2024-09-06T00:00:00.000Z",
+    "slug": "movie/beetlejuice-beetlejuice-2049403",
+    "writer": [
+      "Alfred Gough",
+      "Miles Millar",
+      "Seth Grahame-Smith"
+    ],
+    "moviedb_id": 917496,
+    "trailers": [
+      {
+        "source": "xnbAxOEiMis",
+        "type": "Trailer"
+      },
+      {
+        "source": "As-vKW4ZboU",
+        "type": "Trailer"
+      },
+      {
+        "source": "CoZqL9N6Rx4",
+        "type": "Trailer"
+      },
+      {
+        "source": "e6yDanmWI1E",
+        "type": "Trailer"
+      }
+    ],
+    "awards": "9 wins & 48 nominations total",
+    "runtime": "105 min",
+    "background": "https://images.metahub.space/background/medium/tt2049403/img",
+    "logo": "https://images.metahub.space/logo/medium/tt2049403/img",
+    "popularity": 0.26157,
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Beetlejuice Beetlejuice",
+        "ytId": "xnbAxOEiMis"
+      },
+      {
+        "title": "Beetlejuice Beetlejuice",
+        "ytId": "As-vKW4ZboU"
+      },
+      {
+        "title": "Beetlejuice Beetlejuice",
+        "ytId": "CoZqL9N6Rx4"
+      },
+      {
+        "title": "Beetlejuice Beetlejuice",
+        "ytId": "e6yDanmWI1E"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt2049403"
+      },
+      {
+        "name": "Beetlejuice Beetlejuice",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/beetlejuice-beetlejuice-2049403"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Fantasy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Fantasy"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Michael Keaton",
+        "category": "Cast",
+        "url": "stremio:///search?search=Michael%20Keaton"
+      },
+      {
+        "name": "Winona Ryder",
+        "category": "Cast",
+        "url": "stremio:///search?search=Winona%20Ryder"
+      },
+      {
+        "name": "Catherine O'Hara",
+        "category": "Cast",
+        "url": "stremio:///search?search=Catherine%20O'Hara"
+      },
+      {
+        "name": "Alfred Gough",
+        "category": "Writers",
+        "url": "stremio:///search?search=Alfred%20Gough"
+      },
+      {
+        "name": "Miles Millar",
+        "category": "Writers",
+        "url": "stremio:///search?search=Miles%20Millar"
+      },
+      {
+        "name": "Seth Grahame-Smith",
+        "category": "Writers",
+        "url": "stremio:///search?search=Seth%20Grahame-Smith"
+      },
+      {
+        "name": "Tim Burton",
+        "category": "Directors",
+        "url": "stremio:///search?search=Tim%20Burton"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt2049403",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "عودة فوضوية إلى العالم الآخر وأسرار عائلة غير اعتيادية.",
+    "localPoster": "assets/tt2049403.jpg",
+    "featured": true
   },
   {
-    "id": "mov-paddington-in-peru-2024",
+    "id": "tt5822536",
     "title": "Paddington in Peru",
     "titleAr": "بادينغتون في بيرو",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.6,
     "genre": [
       "Adventure",
@@ -647,21 +4291,157 @@
       "Family"
     ],
     "poster": "https://images.metahub.space/poster/small/tt5822536/img",
-    "sourceUrl": "https://www.imdb.com/title/tt5822536/",
     "description": "Paddington returns to Peru to visit his beloved Aunt Lucy, who now resides at the Home for Retired Bears. With the Brown family in tow, a thrilling adventure ensues when a mystery plunges them into an unexpected journey.",
     "duration": "106 min",
     "cast": [
       "Hugh Bonneville",
       "Emily Mortimer",
       "Ben Whishaw"
-    ]
+    ],
+    "imdb_id": "tt5822536",
+    "country": "United Kingdom, France, Japan, United States, Colombia",
+    "imdbRating": "6.6",
+    "name": "Paddington in Peru",
+    "released": "2025-02-14T00:00:00.000Z",
+    "slug": "movie/paddington-in-peru-5822536",
+    "writer": [
+      "Michael Bond",
+      "Paul King",
+      "Simon Farnaby"
+    ],
+    "moviedb_id": 516729,
+    "popularities": {
+      "moviedb": 5.0082,
+      "stremio": 0.16694,
+      "stremio_lib": 0,
+      "trakt": 36
+    },
+    "trailers": [
+      {
+        "source": "xAVaoYfOCrU",
+        "type": "Trailer"
+      },
+      {
+        "source": "NTvudSGfHRI",
+        "type": "Trailer"
+      },
+      {
+        "source": "iE78Os20g4g",
+        "type": "Trailer"
+      },
+      {
+        "source": "lKgitu25ZAg",
+        "type": "Trailer"
+      }
+    ],
+    "director": [
+      "Dougal Wilson"
+    ],
+    "runtime": "106 min",
+    "background": "https://images.metahub.space/background/medium/tt5822536/img",
+    "logo": "https://images.metahub.space/logo/medium/tt5822536/img",
+    "awards": "2 wins & 8 nominations total",
+    "popularity": 0.16694,
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Paddington in Peru",
+        "ytId": "xAVaoYfOCrU"
+      },
+      {
+        "title": "Paddington in Peru",
+        "ytId": "NTvudSGfHRI"
+      },
+      {
+        "title": "Paddington in Peru",
+        "ytId": "iE78Os20g4g"
+      },
+      {
+        "title": "Paddington in Peru",
+        "ytId": "lKgitu25ZAg"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt5822536"
+      },
+      {
+        "name": "Paddington in Peru",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/paddington-in-peru-5822536"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Family",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Family"
+      },
+      {
+        "name": "Hugh Bonneville",
+        "category": "Cast",
+        "url": "stremio:///search?search=Hugh%20Bonneville"
+      },
+      {
+        "name": "Emily Mortimer",
+        "category": "Cast",
+        "url": "stremio:///search?search=Emily%20Mortimer"
+      },
+      {
+        "name": "Ben Whishaw",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ben%20Whishaw"
+      },
+      {
+        "name": "Michael Bond",
+        "category": "Writers",
+        "url": "stremio:///search?search=Michael%20Bond"
+      },
+      {
+        "name": "Paul King",
+        "category": "Writers",
+        "url": "stremio:///search?search=Paul%20King"
+      },
+      {
+        "name": "Simon Farnaby",
+        "category": "Writers",
+        "url": "stremio:///search?search=Simon%20Farnaby"
+      },
+      {
+        "name": "Dougal Wilson",
+        "category": "Directors",
+        "url": "stremio:///search?search=Dougal%20Wilson"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt5822536",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "الدب المحبوب يسافر إلى موطنه في مغامرة مع عائلته.",
+    "localPoster": "assets/tt5822536.jpg",
+    "featured": true
   },
   {
-    "id": "mov-twisters-2024",
+    "id": "tt12584954",
     "title": "Twisters",
     "titleAr": "توسترز",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.5,
     "genre": [
       "Action",
@@ -669,21 +4449,157 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt12584954/img",
-    "sourceUrl": "https://www.imdb.com/title/tt12584954/",
     "description": "Kate Carter, a retired tornado-chaser and meteorologist, is persuaded to return to Oklahoma to work with a new team and new technologies.",
     "duration": "123 min",
     "cast": [
       "Daisy Edgar-Jones",
       "Glen Powell",
       "Anthony Ramos"
-    ]
+    ],
+    "imdb_id": "tt12584954",
+    "name": "Twisters",
+    "country": "United States, Japan",
+    "director": [
+      "Lee Isaac Chung"
+    ],
+    "imdbRating": "6.5",
+    "released": "2024-07-19T00:00:00.000Z",
+    "slug": "movie/twisters-12584954",
+    "writer": [
+      "Mark L. Smith",
+      "Joseph Kosinski",
+      "Michael Crichton"
+    ],
+    "moviedb_id": 718821,
+    "popularities": {
+      "moviedb": 8.3053,
+      "stremio": 0.2768433333333334,
+      "stremio_lib": 0,
+      "trakt": 15
+    },
+    "trailers": [
+      {
+        "source": "AZbEi95SuMg",
+        "type": "Trailer"
+      },
+      {
+        "source": "jVOlBUF7l6I",
+        "type": "Trailer"
+      },
+      {
+        "source": "Jm27YjLnPHc",
+        "type": "Trailer"
+      },
+      {
+        "source": "wdok0rZdmx4",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt12584954/img",
+    "logo": "https://images.metahub.space/logo/medium/tt12584954/img",
+    "runtime": "123 min",
+    "awards": "37 nominations total",
+    "popularity": 0.2768433333333334,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Twisters",
+        "ytId": "AZbEi95SuMg"
+      },
+      {
+        "title": "Twisters",
+        "ytId": "jVOlBUF7l6I"
+      },
+      {
+        "title": "Twisters",
+        "ytId": "Jm27YjLnPHc"
+      },
+      {
+        "title": "Twisters",
+        "ytId": "wdok0rZdmx4"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.5",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt12584954"
+      },
+      {
+        "name": "Twisters",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/twisters-12584954"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Daisy Edgar-Jones",
+        "category": "Cast",
+        "url": "stremio:///search?search=Daisy%20Edgar-Jones"
+      },
+      {
+        "name": "Glen Powell",
+        "category": "Cast",
+        "url": "stremio:///search?search=Glen%20Powell"
+      },
+      {
+        "name": "Anthony Ramos",
+        "category": "Cast",
+        "url": "stremio:///search?search=Anthony%20Ramos"
+      },
+      {
+        "name": "Mark L. Smith",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mark%20L.%20Smith"
+      },
+      {
+        "name": "Joseph Kosinski",
+        "category": "Writers",
+        "url": "stremio:///search?search=Joseph%20Kosinski"
+      },
+      {
+        "name": "Michael Crichton",
+        "category": "Writers",
+        "url": "stremio:///search?search=Michael%20Crichton"
+      },
+      {
+        "name": "Lee Isaac Chung",
+        "category": "Directors",
+        "url": "stremio:///search?search=Lee%20Isaac%20Chung"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt12584954",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "مطاردو عواصف يختبرون حدودهم أمام قوة الطبيعة.",
+    "localPoster": "assets/tt12584954.jpg",
+    "featured": true
   },
   {
-    "id": "mov-a-quiet-place-day-one-2024",
+    "id": "tt13433802",
     "title": "A Quiet Place: Day One",
     "titleAr": "مكان هادئ: اليوم الأول",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.3,
     "genre": [
       "Drama",
@@ -691,21 +4607,149 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13433802/img",
-    "sourceUrl": "https://www.imdb.com/title/tt13433802/",
     "description": "A young woman named Sam finds herself trapped in New York City during the early stages of an invasion by alien creatures with ultra-sensitive hearing.",
     "duration": "100 min",
     "cast": [
       "Lupita Nyong&apos;o",
       "Joseph Quinn",
       "Alex Wolff"
-    ]
+    ],
+    "imdb_id": "tt13433802",
+    "name": "A Quiet Place: Day One",
+    "country": "United States",
+    "director": [
+      "Michael Sarnoski"
+    ],
+    "imdbRating": "6.3",
+    "released": "2024-06-28T00:00:00.000Z",
+    "slug": "movie/a-quiet-place-day-one-13433802",
+    "writer": [
+      "Michael Sarnoski",
+      "John Krasinski",
+      "Bryan Woods"
+    ],
+    "moviedb_id": 762441,
+    "popularities": {
+      "moviedb": 8.5467,
+      "stremio": 0.28489,
+      "stremio_lib": 0,
+      "trakt": 30
+    },
+    "trailers": [
+      {
+        "source": "E-WIb4ATfT8",
+        "type": "Trailer"
+      },
+      {
+        "source": "gjx-iHGXk9Q",
+        "type": "Trailer"
+      },
+      {
+        "source": "YPY7J-flzE8",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "100 min",
+    "background": "https://images.metahub.space/background/medium/tt13433802/img",
+    "logo": "https://images.metahub.space/logo/medium/tt13433802/img",
+    "awards": "5 wins & 12 nominations total",
+    "popularity": 0.28489,
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "A Quiet Place: Day One",
+        "ytId": "E-WIb4ATfT8"
+      },
+      {
+        "title": "A Quiet Place: Day One",
+        "ytId": "gjx-iHGXk9Q"
+      },
+      {
+        "title": "A Quiet Place: Day One",
+        "ytId": "YPY7J-flzE8"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.3",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt13433802"
+      },
+      {
+        "name": "A Quiet Place: Day One",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/a-quiet-place-day-one-13433802"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Lupita Nyong&apos;o",
+        "category": "Cast",
+        "url": "stremio:///search?search=Lupita%20Nyong%26apos%3Bo"
+      },
+      {
+        "name": "Joseph Quinn",
+        "category": "Cast",
+        "url": "stremio:///search?search=Joseph%20Quinn"
+      },
+      {
+        "name": "Alex Wolff",
+        "category": "Cast",
+        "url": "stremio:///search?search=Alex%20Wolff"
+      },
+      {
+        "name": "Michael Sarnoski",
+        "category": "Writers",
+        "url": "stremio:///search?search=Michael%20Sarnoski"
+      },
+      {
+        "name": "John Krasinski",
+        "category": "Writers",
+        "url": "stremio:///search?search=John%20Krasinski"
+      },
+      {
+        "name": "Bryan Woods",
+        "category": "Writers",
+        "url": "stremio:///search?search=Bryan%20Woods"
+      },
+      {
+        "name": "Michael Sarnoski",
+        "category": "Directors",
+        "url": "stremio:///search?search=Michael%20Sarnoski"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt13433802",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "مع بدء الغزو، يصبح الصمت طريق النجاة الوحيد.",
+    "localPoster": "assets/tt13433802.jpg",
+    "featured": true
   },
   {
-    "id": "mov-godzilla-x-kong-the-new-empire-2024",
+    "id": "tt14539740",
     "title": "Godzilla X Kong: The New Empire",
     "titleAr": "غودزيلا x كينغ: الإمبراطورية الجديدة",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6,
     "genre": [
       "Action",
@@ -713,21 +4757,157 @@
       "Fantasy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14539740/img",
-    "sourceUrl": "https://www.imdb.com/title/tt14539740/",
     "description": "Two ancient titans, Godzilla and Kong, clash in an epic battle as humans unravel their intertwined origins and connection to Skull Island's mysteries.",
     "duration": "115 min",
     "cast": [
       "Rebecca Hall",
       "Brian Tyree Henry",
       "Dan Stevens"
-    ]
+    ],
+    "imdb_id": "tt14539740",
+    "name": "Godzilla X Kong: The New Empire",
+    "country": "United States, Australia",
+    "director": [
+      "Adam Wingard"
+    ],
+    "imdbRating": "6.0",
+    "released": "2024-03-29T00:00:00.000Z",
+    "slug": "movie/godzilla-x-kong-the-new-empire-14539740",
+    "writer": [
+      "Terry Rossio",
+      "Adam Wingard",
+      "Simon Barrett"
+    ],
+    "moviedb_id": 823464,
+    "popularities": {
+      "moviedb": 16.914,
+      "stremio": 0.5638000000000001,
+      "stremio_lib": 0,
+      "trakt": 42
+    },
+    "trailers": [
+      {
+        "source": "m2u6RfmTXt0",
+        "type": "Trailer"
+      },
+      {
+        "source": "XeDbyVODQ5M",
+        "type": "Trailer"
+      },
+      {
+        "source": "qqrpMRDuPfc",
+        "type": "Trailer"
+      },
+      {
+        "source": "lV1OOlGwExM",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt14539740/img",
+    "logo": "https://images.metahub.space/logo/medium/tt14539740/img",
+    "runtime": "115 min",
+    "awards": "4 wins & 6 nominations total",
+    "popularity": 0.5638000000000001,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Godzilla X Kong: The New Empire",
+        "ytId": "m2u6RfmTXt0"
+      },
+      {
+        "title": "Godzilla X Kong: The New Empire",
+        "ytId": "XeDbyVODQ5M"
+      },
+      {
+        "title": "Godzilla X Kong: The New Empire",
+        "ytId": "qqrpMRDuPfc"
+      },
+      {
+        "title": "Godzilla X Kong: The New Empire",
+        "ytId": "lV1OOlGwExM"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.0",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt14539740"
+      },
+      {
+        "name": "Godzilla X Kong: The New Empire",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/godzilla-x-kong-the-new-empire-14539740"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Fantasy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Fantasy"
+      },
+      {
+        "name": "Rebecca Hall",
+        "category": "Cast",
+        "url": "stremio:///search?search=Rebecca%20Hall"
+      },
+      {
+        "name": "Brian Tyree Henry",
+        "category": "Cast",
+        "url": "stremio:///search?search=Brian%20Tyree%20Henry"
+      },
+      {
+        "name": "Dan Stevens",
+        "category": "Cast",
+        "url": "stremio:///search?search=Dan%20Stevens"
+      },
+      {
+        "name": "Terry Rossio",
+        "category": "Writers",
+        "url": "stremio:///search?search=Terry%20Rossio"
+      },
+      {
+        "name": "Adam Wingard",
+        "category": "Writers",
+        "url": "stremio:///search?search=Adam%20Wingard"
+      },
+      {
+        "name": "Simon Barrett",
+        "category": "Writers",
+        "url": "stremio:///search?search=Simon%20Barrett"
+      },
+      {
+        "name": "Adam Wingard",
+        "category": "Directors",
+        "url": "stremio:///search?search=Adam%20Wingard"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt14539740",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "عملاقان يواجهان تهديداً يخرج من أعماق الأرض.",
+    "localPoster": "assets/tt14539740.jpg",
+    "featured": true
   },
   {
-    "id": "mov-bad-boys-ride-or-die-2024",
+    "id": "tt4919268",
     "title": "Bad Boys: Ride or Die",
     "titleAr": "الفتيان الأشرار: اركب أو مت",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.5,
     "genre": [
       "Action",
@@ -735,21 +4915,129 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt4919268/img",
-    "sourceUrl": "https://www.imdb.com/title/tt4919268/",
     "description": "When their late police captain gets linked to drug cartels, wisecracking Miami cops Mike Lowrey and Marcus Burnett embark on a dangerous mission to clear his name.",
     "cast": [
       "Will Smith",
       "Martin Lawrence",
       "Vanessa Hudgens"
     ],
-    "duration": "115 min"
+    "duration": "115 min",
+    "imdb_id": "tt4919268",
+    "name": "Bad Boys: Ride or Die",
+    "released": "2024-06-07T00:00:00.000Z",
+    "writer": [
+      "Chris Bremner",
+      "Will Beall",
+      "George Gallo"
+    ],
+    "imdbRating": "6.5",
+    "country": "United States",
+    "trailers": [],
+    "moviedb_id": 353262,
+    "popularities": {
+      "moviedb": 1.874,
+      "stremio": 0.06246666666666667,
+      "stremio_lib": 0,
+      "trakt": 44
+    },
+    "director": [
+      "Adil El Arbi",
+      "Bilall Fallah"
+    ],
+    "slug": "movie/bad-boys-ride-or-die-4919268",
+    "background": "https://images.metahub.space/background/medium/tt4919268/img",
+    "logo": "https://images.metahub.space/logo/medium/tt4919268/img",
+    "awards": "1 win & 4 nominations total",
+    "popularity": 0.06246666666666667,
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [],
+    "links": [
+      {
+        "name": "6.5",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt4919268"
+      },
+      {
+        "name": "Bad Boys: Ride or Die",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/bad-boys-ride-or-die-4919268"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Will Smith",
+        "category": "Cast",
+        "url": "stremio:///search?search=Will%20Smith"
+      },
+      {
+        "name": "Martin Lawrence",
+        "category": "Cast",
+        "url": "stremio:///search?search=Martin%20Lawrence"
+      },
+      {
+        "name": "Vanessa Hudgens",
+        "category": "Cast",
+        "url": "stremio:///search?search=Vanessa%20Hudgens"
+      },
+      {
+        "name": "Chris Bremner",
+        "category": "Writers",
+        "url": "stremio:///search?search=Chris%20Bremner"
+      },
+      {
+        "name": "Will Beall",
+        "category": "Writers",
+        "url": "stremio:///search?search=Will%20Beall"
+      },
+      {
+        "name": "George Gallo",
+        "category": "Writers",
+        "url": "stremio:///search?search=George%20Gallo"
+      },
+      {
+        "name": "Adil El Arbi",
+        "category": "Directors",
+        "url": "stremio:///search?search=Adil%20El%20Arbi"
+      },
+      {
+        "name": "Bilall Fallah",
+        "category": "Directors",
+        "url": "stremio:///search?search=Bilall%20Fallah"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt4919268",
+      "hasScheduledVideos": false
+    },
+    "runtime": "115 min",
+    "descriptionAr": "الثنائي يعود في مطاردة جديدة مليئة بالأكشن والكوميديا.",
+    "localPoster": "assets/tt4919268.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-garfield-movie-2024",
+    "id": "tt5779228",
     "title": "The Garfield Movie",
     "titleAr": "فيلم غارفيلد",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 5.7,
     "genre": [
       "Animation",
@@ -757,21 +5045,157 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt5779228/img",
-    "sourceUrl": "https://www.imdb.com/title/tt5779228/",
     "description": "After Garfield's unexpected reunion with his long-lost father, ragged alley cat Vic, he and his canine friend Odie are forced from their perfectly pampered lives to join Vic on a risky heist.",
     "duration": "101 min",
     "cast": [
       "Chris Pratt",
       "Samuel L. Jackson",
       "Hannah Waddingham"
-    ]
+    ],
+    "imdb_id": "tt5779228",
+    "country": "United States, United Kingdom, Hong Kong",
+    "director": [
+      "Mark Dindal"
+    ],
+    "imdbRating": "5.7",
+    "name": "The Garfield Movie",
+    "released": "2024-05-24T00:00:00.000Z",
+    "slug": "movie/the-garfield-movie-5779228",
+    "writer": [
+      "Paul A. Kaplan",
+      "Mark Torgove",
+      "David Reynolds"
+    ],
+    "moviedb_id": 748783,
+    "popularities": {
+      "moviedb": 11.8102,
+      "stremio": 0.3936733333333333,
+      "stremio_lib": 0,
+      "trakt": 2
+    },
+    "trailers": [
+      {
+        "source": "yk2Ej59DnrE",
+        "type": "Trailer"
+      },
+      {
+        "source": "S3XjsSvwSuU",
+        "type": "Trailer"
+      },
+      {
+        "source": "j0Qk01BhAQM",
+        "type": "Trailer"
+      },
+      {
+        "source": "IeFWNtMo1Fs",
+        "type": "Trailer"
+      }
+    ],
+    "runtime": "101 min",
+    "background": "https://images.metahub.space/background/medium/tt5779228/img",
+    "logo": "https://images.metahub.space/logo/medium/tt5779228/img",
+    "awards": "2 wins & 2 nominations total",
+    "popularity": 0.3936733333333333,
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "The Garfield Movie",
+        "ytId": "yk2Ej59DnrE"
+      },
+      {
+        "title": "The Garfield Movie",
+        "ytId": "S3XjsSvwSuU"
+      },
+      {
+        "title": "The Garfield Movie",
+        "ytId": "j0Qk01BhAQM"
+      },
+      {
+        "title": "The Garfield Movie",
+        "ytId": "IeFWNtMo1Fs"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.7",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt5779228"
+      },
+      {
+        "name": "The Garfield Movie",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-garfield-movie-5779228"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Chris Pratt",
+        "category": "Cast",
+        "url": "stremio:///search?search=Chris%20Pratt"
+      },
+      {
+        "name": "Samuel L. Jackson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Samuel%20L.%20Jackson"
+      },
+      {
+        "name": "Hannah Waddingham",
+        "category": "Cast",
+        "url": "stremio:///search?search=Hannah%20Waddingham"
+      },
+      {
+        "name": "Paul A. Kaplan",
+        "category": "Writers",
+        "url": "stremio:///search?search=Paul%20A.%20Kaplan"
+      },
+      {
+        "name": "Mark Torgove",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mark%20Torgove"
+      },
+      {
+        "name": "David Reynolds",
+        "category": "Writers",
+        "url": "stremio:///search?search=David%20Reynolds"
+      },
+      {
+        "name": "Mark Dindal",
+        "category": "Directors",
+        "url": "stremio:///search?search=Mark%20Dindal"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt5779228",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "القط المحب للراحة ينطلق في مغامرة بعيدة عن أريكته.",
+    "localPoster": "assets/tt5779228.jpg",
+    "featured": true
   },
   {
-    "id": "mov-despicable-me-4-2024",
+    "id": "tt7510222",
     "title": "Despicable Me 4",
     "titleAr": "أنا الحقير 4",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 6.2,
     "genre": [
       "Animation",
@@ -779,21 +5203,141 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt7510222/img",
-    "sourceUrl": "https://www.imdb.com/title/tt7510222/",
     "description": "Gru, Lucy, Margo, Edith, and Agnes welcome a new member to the family, Gru Jr., who is intent on tormenting his dad. Gru faces a new nemesis in Maxime Le Mal and his girlfriend Valentina, and the family is forced to go on the run.",
     "duration": "94 min",
     "cast": [
       "Steve Carell",
       "Kristen Wiig",
       "Pierre Coffin"
-    ]
+    ],
+    "imdb_id": "tt7510222",
+    "country": "United States",
+    "director": [
+      "Chris Renaud",
+      "Patrick Delage"
+    ],
+    "imdbRating": "6.2",
+    "name": "Despicable Me 4",
+    "released": "2024-07-03T00:00:00.000Z",
+    "slug": "movie/despicable-me-4-7510222",
+    "moviedb_id": 519182,
+    "popularities": {
+      "moviedb": 22.7725,
+      "stremio": 0.7590833333333333,
+      "stremio_lib": 0,
+      "trakt": 51
+    },
+    "trailers": [
+      {
+        "source": "LtNYaH61dXY",
+        "type": "Trailer"
+      },
+      {
+        "source": "qQlr9-rF32A",
+        "type": "Trailer"
+      }
+    ],
+    "writer": [
+      "Mike White",
+      "Ken Daurio"
+    ],
+    "runtime": "94 min",
+    "background": "https://images.metahub.space/background/medium/tt7510222/img",
+    "logo": "https://images.metahub.space/logo/medium/tt7510222/img",
+    "awards": "2 wins & 6 nominations total",
+    "popularity": 0.7590833333333333,
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Despicable Me 4",
+        "ytId": "LtNYaH61dXY"
+      },
+      {
+        "title": "Despicable Me 4",
+        "ytId": "qQlr9-rF32A"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.2",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt7510222"
+      },
+      {
+        "name": "Despicable Me 4",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/despicable-me-4-7510222"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Steve Carell",
+        "category": "Cast",
+        "url": "stremio:///search?search=Steve%20Carell"
+      },
+      {
+        "name": "Kristen Wiig",
+        "category": "Cast",
+        "url": "stremio:///search?search=Kristen%20Wiig"
+      },
+      {
+        "name": "Pierre Coffin",
+        "category": "Cast",
+        "url": "stremio:///search?search=Pierre%20Coffin"
+      },
+      {
+        "name": "Mike White",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mike%20White"
+      },
+      {
+        "name": "Ken Daurio",
+        "category": "Writers",
+        "url": "stremio:///search?search=Ken%20Daurio"
+      },
+      {
+        "name": "Chris Renaud",
+        "category": "Directors",
+        "url": "stremio:///search?search=Chris%20Renaud"
+      },
+      {
+        "name": "Patrick Delage",
+        "category": "Directors",
+        "url": "stremio:///search?search=Patrick%20Delage"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt7510222",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "غرو وعائلته يواجهون تحديات جديدة مع عودة المينيونز.",
+    "localPoster": "assets/tt7510222.jpg",
+    "featured": true
   },
   {
-    "id": "mov-joker-folie-a-deux-2024",
+    "id": "tt11315808",
     "title": "Joker: Folie à Deux",
     "titleAr": "الجوكر: جنون الثنائي",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 5.2,
     "genre": [
       "Drama",
@@ -801,21 +5345,149 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt11315808/img",
-    "sourceUrl": "https://www.imdb.com/title/tt11315808/",
     "description": "Struggling with his dual identity, failed comedian Arthur Fleck meets the love of his life, Harley Quinn, while incarcerated at Arkham State Hospital.",
     "duration": "138 min",
     "cast": [
       "Joaquin Phoenix",
       "Lady Gaga",
       "Brendan Gleeson"
-    ]
+    ],
+    "imdb_id": "tt11315808",
+    "name": "Joker: Folie à Deux",
+    "country": "United States",
+    "director": [
+      "Todd Phillips"
+    ],
+    "imdbRating": "5.2",
+    "released": "2024-10-04T00:00:00.000Z",
+    "runtime": "138 min",
+    "slug": "movie/joker-folie-deux-11315808",
+    "writer": [
+      "Scott Silver",
+      "Todd Phillips",
+      "Bob Kane"
+    ],
+    "moviedb_id": 889737,
+    "popularities": {
+      "moviedb": 7.4599,
+      "stremio": 0.24866333333333335,
+      "stremio_lib": 0,
+      "trakt": 12
+    },
+    "trailers": [
+      {
+        "source": "fiqqAI0e4Nc",
+        "type": "Trailer"
+      },
+      {
+        "source": "_OKAwz2MsJs",
+        "type": "Trailer"
+      },
+      {
+        "source": "xy8aJw1vYHo",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt11315808/img",
+    "logo": "https://images.metahub.space/logo/medium/tt11315808/img",
+    "awards": "7 wins & 19 nominations total",
+    "popularity": 0.24866333333333335,
+    "genres": [
+      "Drama",
+      "Musical",
+      "Thriller"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Joker: Folie à Deux",
+        "ytId": "fiqqAI0e4Nc"
+      },
+      {
+        "title": "Joker: Folie à Deux",
+        "ytId": "_OKAwz2MsJs"
+      },
+      {
+        "title": "Joker: Folie à Deux",
+        "ytId": "xy8aJw1vYHo"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.2",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt11315808"
+      },
+      {
+        "name": "Joker: Folie à Deux",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/joker-folie-deux-11315808"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Musical",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Musical"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Joaquin Phoenix",
+        "category": "Cast",
+        "url": "stremio:///search?search=Joaquin%20Phoenix"
+      },
+      {
+        "name": "Lady Gaga",
+        "category": "Cast",
+        "url": "stremio:///search?search=Lady%20Gaga"
+      },
+      {
+        "name": "Brendan Gleeson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Brendan%20Gleeson"
+      },
+      {
+        "name": "Scott Silver",
+        "category": "Writers",
+        "url": "stremio:///search?search=Scott%20Silver"
+      },
+      {
+        "name": "Todd Phillips",
+        "category": "Writers",
+        "url": "stremio:///search?search=Todd%20Phillips"
+      },
+      {
+        "name": "Bob Kane",
+        "category": "Writers",
+        "url": "stremio:///search?search=Bob%20Kane"
+      },
+      {
+        "name": "Todd Phillips",
+        "category": "Directors",
+        "url": "stremio:///search?search=Todd%20Phillips"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt11315808",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "آرثر فليك يواجه مصيره وسط الموسيقى والاضطراب.",
+    "localPoster": "assets/tt11315808.jpg",
+    "featured": true
   },
   {
-    "id": "mov-transformers-one-2024",
+    "id": "tt8864596",
     "title": "Transformers One",
     "titleAr": "المتحولون واحد",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 7.6,
     "genre": [
       "Animation",
@@ -823,62 +5495,416 @@
       "Adventure"
     ],
     "poster": "https://images.metahub.space/poster/small/tt8864596/img",
-    "sourceUrl": "https://www.imdb.com/title/tt8864596/",
     "description": "The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but who once were friends bonded like brothers who changed the fate of Cybertron forever.",
     "duration": "104 min",
     "cast": [
       "Chris Hemsworth",
       "Brian Tyree Henry",
       "Scarlett Johansson"
-    ]
+    ],
+    "imdb_id": "tt8864596",
+    "country": "United States",
+    "director": [
+      "Josh Cooley"
+    ],
+    "imdbRating": "7.6",
+    "name": "Transformers One",
+    "released": "2024-09-20T00:00:00.000Z",
+    "slug": "movie/transformers-one-8864596",
+    "writer": [
+      "Eric Pearson",
+      "Andrew Barrer",
+      "Gabriel Ferrari"
+    ],
+    "moviedb_id": 698687,
+    "popularities": {
+      "moviedb": 10.6171,
+      "stremio": 0.35390333333333335,
+      "stremio_lib": 0,
+      "trakt": 47
+    },
+    "trailers": [
+      {
+        "source": "jaVcDaozGgc",
+        "type": "Trailer"
+      },
+      {
+        "source": "nIyu_fb0YvU",
+        "type": "Trailer"
+      },
+      {
+        "source": "U4cTDE16zGo",
+        "type": "Trailer"
+      },
+      {
+        "source": "u2NuUWuwPCM",
+        "type": "Trailer"
+      },
+      {
+        "source": "5a09yJU-mCI",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt8864596/img",
+    "logo": "https://images.metahub.space/logo/medium/tt8864596/img",
+    "runtime": "104 min",
+    "awards": "25 nominations total",
+    "popularity": 0.35390333333333335,
+    "genres": [
+      "Animation",
+      "Action",
+      "Adventure"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Transformers One",
+        "ytId": "jaVcDaozGgc"
+      },
+      {
+        "title": "Transformers One",
+        "ytId": "nIyu_fb0YvU"
+      },
+      {
+        "title": "Transformers One",
+        "ytId": "U4cTDE16zGo"
+      },
+      {
+        "title": "Transformers One",
+        "ytId": "u2NuUWuwPCM"
+      },
+      {
+        "title": "Transformers One",
+        "ytId": "5a09yJU-mCI"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt8864596"
+      },
+      {
+        "name": "Transformers One",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/transformers-one-8864596"
+      },
+      {
+        "name": "Animation",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Animation"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Adventure",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Adventure"
+      },
+      {
+        "name": "Chris Hemsworth",
+        "category": "Cast",
+        "url": "stremio:///search?search=Chris%20Hemsworth"
+      },
+      {
+        "name": "Brian Tyree Henry",
+        "category": "Cast",
+        "url": "stremio:///search?search=Brian%20Tyree%20Henry"
+      },
+      {
+        "name": "Scarlett Johansson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Scarlett%20Johansson"
+      },
+      {
+        "name": "Eric Pearson",
+        "category": "Writers",
+        "url": "stremio:///search?search=Eric%20Pearson"
+      },
+      {
+        "name": "Andrew Barrer",
+        "category": "Writers",
+        "url": "stremio:///search?search=Andrew%20Barrer"
+      },
+      {
+        "name": "Gabriel Ferrari",
+        "category": "Writers",
+        "url": "stremio:///search?search=Gabriel%20Ferrari"
+      },
+      {
+        "name": "Josh Cooley",
+        "category": "Directors",
+        "url": "stremio:///search?search=Josh%20Cooley"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt8864596",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "قصة الصداقة التي سبقت الصراع بين أوبتيموس وميغاترون.",
+    "localPoster": "assets/tt8864596.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-brutalist-2024",
+    "id": "tt8999762",
     "title": "The Brutalist",
     "titleAr": "الوحشي",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.2,
     "genre": [
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt8999762/img",
-    "sourceUrl": "https://www.imdb.com/title/tt8999762/",
     "description": "A visionary architect flees post-war Europe in 1947 for a brighter future in the United States and finds his life forever changed by a wealthy client.",
     "duration": "215 min",
     "cast": [
       "Adrien Brody",
       "Felicity Jones",
       "Guy Pearce"
-    ]
+    ],
+    "imdb_id": "tt8999762",
+    "name": "The Brutalist",
+    "country": "United States, United Kingdom, Canada",
+    "director": [
+      "Brady Corbet"
+    ],
+    "imdbRating": "7.2",
+    "released": "2025-01-24T00:00:00.000Z",
+    "slug": "movie/the-brutalist-8999762",
+    "writer": [
+      "Brady Corbet",
+      "Mona Fastvold"
+    ],
+    "moviedb_id": 549509,
+    "popularities": {
+      "moviedb": 32.9244,
+      "stremio": 1.09748,
+      "stremio_lib": 0,
+      "trakt": 31
+    },
+    "runtime": "215 min",
+    "background": "https://images.metahub.space/background/medium/tt8999762/img",
+    "logo": "https://images.metahub.space/logo/medium/tt8999762/img",
+    "awards": "Won 3 Oscars. 140 wins & 362 nominations total",
+    "trailers": [
+      {
+        "source": "GdRXPAHIEW4",
+        "type": "Trailer"
+      },
+      {
+        "source": "6d7yU379Ur0",
+        "type": "Trailer"
+      }
+    ],
+    "popularity": 1.09748,
+    "genres": [
+      "Drama"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Brutalist",
+        "ytId": "GdRXPAHIEW4"
+      },
+      {
+        "title": "The Brutalist",
+        "ytId": "6d7yU379Ur0"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.2",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt8999762"
+      },
+      {
+        "name": "The Brutalist",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-brutalist-8999762"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Adrien Brody",
+        "category": "Cast",
+        "url": "stremio:///search?search=Adrien%20Brody"
+      },
+      {
+        "name": "Felicity Jones",
+        "category": "Cast",
+        "url": "stremio:///search?search=Felicity%20Jones"
+      },
+      {
+        "name": "Guy Pearce",
+        "category": "Cast",
+        "url": "stremio:///search?search=Guy%20Pearce"
+      },
+      {
+        "name": "Brady Corbet",
+        "category": "Writers",
+        "url": "stremio:///search?search=Brady%20Corbet"
+      },
+      {
+        "name": "Mona Fastvold",
+        "category": "Writers",
+        "url": "stremio:///search?search=Mona%20Fastvold"
+      },
+      {
+        "name": "Brady Corbet",
+        "category": "Directors",
+        "url": "stremio:///search?search=Brady%20Corbet"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt8999762",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "مهندس معماري مهاجر يسعى لبناء حياة وإرث جديدَين.",
+    "localPoster": "assets/tt8999762.jpg",
+    "featured": true
   },
   {
-    "id": "mov-conclave-2024",
+    "id": "tt20215234",
     "title": "Conclave",
     "titleAr": "المجمع",
     "type": "movie",
-    "year": 2024,
+    "year": "2024",
     "rating": 7.4,
     "genre": [
       "Drama",
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt20215234/img",
-    "sourceUrl": "https://www.imdb.com/title/tt20215234/",
     "description": "When Cardinal Lawrence is tasked with leading the selection of a new Pope, he finds himself in a web of conspiracy and intrigue that could shake the very foundations of the Catholic Church.",
     "duration": "120 min",
     "cast": [
       "Ralph Fiennes",
       "Stanley Tucci",
       "John Lithgow"
-    ]
+    ],
+    "imdb_id": "tt20215234",
+    "name": "Conclave",
+    "awards": "Won 1 Oscar. 95 wins & 326 nominations total",
+    "country": "United Kingdom, United States",
+    "director": [
+      "Edward Berger"
+    ],
+    "imdbRating": "7.4",
+    "released": "2024-10-25T00:00:00.000Z",
+    "slug": "movie/conclave-20215234",
+    "writer": [
+      "Peter Straughan",
+      "Robert Harris"
+    ],
+    "moviedb_id": 974576,
+    "popularities": {
+      "moviedb": 9.8096,
+      "stremio": 0.32698666666666665,
+      "stremio_lib": 0,
+      "trakt": 46
+    },
+    "runtime": "120 min",
+    "trailers": [
+      {
+        "source": "t915aZmyEBg",
+        "type": "Trailer"
+      },
+      {
+        "source": "JX9jasdi3ic",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt20215234/img",
+    "logo": "https://images.metahub.space/logo/medium/tt20215234/img",
+    "popularity": 0.32698666666666665,
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "releaseInfo": "2024",
+    "trailerStreams": [
+      {
+        "title": "Conclave",
+        "ytId": "t915aZmyEBg"
+      },
+      {
+        "title": "Conclave",
+        "ytId": "JX9jasdi3ic"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.4",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt20215234"
+      },
+      {
+        "name": "Conclave",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/conclave-20215234"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Ralph Fiennes",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ralph%20Fiennes"
+      },
+      {
+        "name": "Stanley Tucci",
+        "category": "Cast",
+        "url": "stremio:///search?search=Stanley%20Tucci"
+      },
+      {
+        "name": "John Lithgow",
+        "category": "Cast",
+        "url": "stremio:///search?search=John%20Lithgow"
+      },
+      {
+        "name": "Peter Straughan",
+        "category": "Writers",
+        "url": "stremio:///search?search=Peter%20Straughan"
+      },
+      {
+        "name": "Robert Harris",
+        "category": "Writers",
+        "url": "stremio:///search?search=Robert%20Harris"
+      },
+      {
+        "name": "Edward Berger",
+        "category": "Directors",
+        "url": "stremio:///search?search=Edward%20Berger"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt20215234",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "انتخاب بابا جديد يكشف أسراراً وصراعات خلف الأبواب المغلقة.",
+    "localPoster": "assets/tt20215234.jpg",
+    "featured": true
   },
   {
-    "id": "mov-28-years-later-2025",
+    "id": "tt10548174",
     "title": "28 Years Later",
     "titleAr": "28 عاماً بعد",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.6,
     "genre": [
       "Horror",
@@ -886,42 +5912,256 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt10548174/img",
-    "sourceUrl": "https://www.imdb.com/title/tt10548174/",
     "description": "A group of survivors of the rage virus live on a small island. When one of the group leaves the island on a mission into the mainland, he discovers secrets, wonders, and horrors that have mutated not only the infected but other su...",
     "duration": "115 min",
     "cast": [
       "Jodie Comer",
       "Aaron Taylor-Johnson",
       "Ralph Fiennes"
-    ]
+    ],
+    "imdb_id": "tt10548174",
+    "name": "28 Years Later",
+    "country": "United Kingdom, Canada, United States",
+    "director": [
+      "Danny Boyle"
+    ],
+    "imdbRating": "6.6",
+    "released": "2025-06-20T00:00:00.000Z",
+    "slug": "movie/28-years-later-10548174",
+    "writer": [
+      "Alex Garland"
+    ],
+    "moviedb_id": 1100988,
+    "popularities": {
+      "moviedb": 28.1995,
+      "stremio": 0.9399833333333334,
+      "stremio_lib": 0,
+      "trakt": 58
+    },
+    "trailers": [
+      {
+        "source": "IYGG55qwQZQ",
+        "type": "Trailer"
+      },
+      {
+        "source": "mcvLKldPM08",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt10548174/img",
+    "logo": "https://images.metahub.space/logo/medium/tt10548174/img",
+    "awards": "Nominated for 1 BAFTA Award. 6 wins & 63 nominations total",
+    "runtime": "115 min",
+    "popularity": 0.9399833333333334,
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "28 Years Later",
+        "ytId": "IYGG55qwQZQ"
+      },
+      {
+        "title": "28 Years Later",
+        "ytId": "mcvLKldPM08"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.6",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt10548174"
+      },
+      {
+        "name": "28 Years Later",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/28-years-later-10548174"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Jodie Comer",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jodie%20Comer"
+      },
+      {
+        "name": "Aaron Taylor-Johnson",
+        "category": "Cast",
+        "url": "stremio:///search?search=Aaron%20Taylor-Johnson"
+      },
+      {
+        "name": "Ralph Fiennes",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ralph%20Fiennes"
+      },
+      {
+        "name": "Alex Garland",
+        "category": "Writers",
+        "url": "stremio:///search?search=Alex%20Garland"
+      },
+      {
+        "name": "Danny Boyle",
+        "category": "Directors",
+        "url": "stremio:///search?search=Danny%20Boyle"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt10548174",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "ناجون يواجهون عالماً تغير بعد عقود من انتشار العدوى.",
+    "localPoster": "assets/tt10548174.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-amateur-2025",
+    "id": "tt0899043",
     "title": "The Amateur",
     "titleAr": "الهاوي",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.5,
     "genre": [
       "Action",
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt0899043/img",
-    "sourceUrl": "https://www.imdb.com/title/tt0899043/",
     "description": "When his supervisors at the CIA refuse to take action after his wife is killed in a London terrorist attack, a decoder takes matters into his own hands.",
     "duration": "123 min",
     "cast": [
       "Rami Malek",
       "Rachel Brosnahan",
       "Jon Bernthal"
-    ]
+    ],
+    "imdb_id": "tt0899043",
+    "name": "The Amateur",
+    "country": "United States",
+    "director": [
+      "James Hawes"
+    ],
+    "imdbRating": "6.5",
+    "released": "2025-04-11T00:00:00.000Z",
+    "slug": "movie/the-amateur-0899043",
+    "writer": [
+      "Robert Littell",
+      "Ken Nolan",
+      "Gary Spinelli"
+    ],
+    "moviedb_id": 1087891,
+    "popularities": {
+      "moviedb": 22.6634,
+      "stremio": 0.7554466666666666,
+      "stremio_lib": 0,
+      "trakt": 65
+    },
+    "runtime": "123 min",
+    "trailers": [
+      {
+        "source": "DCWcK4c-F8Q",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt0899043/img",
+    "logo": "https://images.metahub.space/logo/medium/tt0899043/img",
+    "awards": "1 win total",
+    "popularity": 0.7554466666666666,
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Amateur",
+        "ytId": "DCWcK4c-F8Q"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.5",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt0899043"
+      },
+      {
+        "name": "The Amateur",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-amateur-0899043"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Rami Malek",
+        "category": "Cast",
+        "url": "stremio:///search?search=Rami%20Malek"
+      },
+      {
+        "name": "Rachel Brosnahan",
+        "category": "Cast",
+        "url": "stremio:///search?search=Rachel%20Brosnahan"
+      },
+      {
+        "name": "Jon Bernthal",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jon%20Bernthal"
+      },
+      {
+        "name": "Robert Littell",
+        "category": "Writers",
+        "url": "stremio:///search?search=Robert%20Littell"
+      },
+      {
+        "name": "Ken Nolan",
+        "category": "Writers",
+        "url": "stremio:///search?search=Ken%20Nolan"
+      },
+      {
+        "name": "Gary Spinelli",
+        "category": "Writers",
+        "url": "stremio:///search?search=Gary%20Spinelli"
+      },
+      {
+        "name": "James Hawes",
+        "category": "Directors",
+        "url": "stremio:///search?search=James%20Hawes"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt0899043",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "خبير تشفير يدخل عالم المواجهة بحثاً عن الحقيقة.",
+    "localPoster": "assets/tt0899043.jpg",
+    "featured": true
   },
   {
-    "id": "mov-warfare-2025",
+    "id": "tt31434639",
     "title": "Warfare",
     "titleAr": "حرب",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 7.1,
     "genre": [
       "Action",
@@ -929,42 +6169,256 @@
       "War"
     ],
     "poster": "https://images.metahub.space/poster/small/tt31434639/img",
-    "sourceUrl": "https://www.imdb.com/title/tt31434639/",
     "description": "A platoon of Navy SEALs embark on a dangerous mission in Ramadi, Iraq, with the chaos and brotherhood of war retold through their memories of the event.",
     "duration": "95 min",
     "cast": [
       "D'Pharaoh Woon-A-Tai",
       "Will Poulter",
       "Cosmo Jarvis"
-    ]
+    ],
+    "imdb_id": "tt31434639",
+    "name": "Warfare",
+    "country": "United States, United Kingdom",
+    "director": [
+      "Alex Garland",
+      "Ray Mendoza"
+    ],
+    "imdbRating": "7.1",
+    "released": "2025-04-11T00:00:00.000Z",
+    "slug": "movie/warfare-31434639",
+    "writer": [
+      "Ray Mendoza",
+      "Alex Garland"
+    ],
+    "moviedb_id": 1241436,
+    "popularities": {
+      "moviedb": 13.8475,
+      "stremio": 0.46158333333333335,
+      "stremio_lib": 0,
+      "trakt": 42
+    },
+    "runtime": "95 min",
+    "trailers": [
+      {
+        "source": "JER0Fkyy3tw",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt31434639/img",
+    "logo": "https://images.metahub.space/logo/medium/tt31434639/img",
+    "awards": "Nominated for 1 BAFTA Award7 wins & 26 nominations total",
+    "popularity": 0.46158333333333335,
+    "genres": [
+      "Action",
+      "Drama",
+      "War"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Warfare",
+        "ytId": "JER0Fkyy3tw"
+      }
+    ],
+    "links": [
+      {
+        "name": "7.1",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt31434639"
+      },
+      {
+        "name": "Warfare",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/warfare-31434639"
+      },
+      {
+        "name": "Action",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Action"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "War",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=War"
+      },
+      {
+        "name": "D'Pharaoh Woon-A-Tai",
+        "category": "Cast",
+        "url": "stremio:///search?search=D'Pharaoh%20Woon-A-Tai"
+      },
+      {
+        "name": "Will Poulter",
+        "category": "Cast",
+        "url": "stremio:///search?search=Will%20Poulter"
+      },
+      {
+        "name": "Cosmo Jarvis",
+        "category": "Cast",
+        "url": "stremio:///search?search=Cosmo%20Jarvis"
+      },
+      {
+        "name": "Ray Mendoza",
+        "category": "Writers",
+        "url": "stremio:///search?search=Ray%20Mendoza"
+      },
+      {
+        "name": "Alex Garland",
+        "category": "Writers",
+        "url": "stremio:///search?search=Alex%20Garland"
+      },
+      {
+        "name": "Alex Garland",
+        "category": "Directors",
+        "url": "stremio:///search?search=Alex%20Garland"
+      },
+      {
+        "name": "Ray Mendoza",
+        "category": "Directors",
+        "url": "stremio:///search?search=Ray%20Mendoza"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt31434639",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "جنود يواجهون تجربة قاسية في ساحة القتال.",
+    "localPoster": "assets/tt31434639.jpg",
+    "featured": true
   },
   {
-    "id": "mov-companion-2025",
+    "id": "tt26584495",
     "title": "Companion",
     "titleAr": "الرفيق",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.9,
     "genre": [
       "Sci-Fi",
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt26584495/img",
-    "sourceUrl": "https://www.imdb.com/title/tt26584495/",
     "description": "A weekend getaway with friends at a remote cabin turns into chaos after it's revealed that one of the guests is not what they seem.",
     "duration": "97 min",
     "cast": [
       "Sophie Thatcher",
       "Jack Quaid",
       "Lukas Gage"
-    ]
+    ],
+    "imdb_id": "tt26584495",
+    "name": "Companion",
+    "popularities": {
+      "trakt": 56,
+      "moviedb": 20.8391,
+      "stremio": 0.6946366666666666,
+      "stremio_lib": 0
+    },
+    "awards": "3 wins & 20 nominations total",
+    "country": "United States",
+    "director": [
+      "Drew Hancock"
+    ],
+    "imdbRating": "6.9",
+    "released": "2025-01-31T00:00:00.000Z",
+    "slug": "movie/companion-26584495",
+    "writer": [
+      "Drew Hancock"
+    ],
+    "moviedb_id": 1084199,
+    "runtime": "97 min",
+    "trailers": [
+      {
+        "source": "Qr_kX0D3DNA",
+        "type": "Trailer"
+      },
+      {
+        "source": "PhcLjiVtgco",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt26584495/img",
+    "logo": "https://images.metahub.space/logo/medium/tt26584495/img",
+    "popularity": 0.6946366666666666,
+    "genres": [
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Companion",
+        "ytId": "Qr_kX0D3DNA"
+      },
+      {
+        "title": "Companion",
+        "ytId": "PhcLjiVtgco"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.9",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt26584495"
+      },
+      {
+        "name": "Companion",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/companion-26584495"
+      },
+      {
+        "name": "Sci-Fi",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Sci-Fi"
+      },
+      {
+        "name": "Thriller",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Thriller"
+      },
+      {
+        "name": "Sophie Thatcher",
+        "category": "Cast",
+        "url": "stremio:///search?search=Sophie%20Thatcher"
+      },
+      {
+        "name": "Jack Quaid",
+        "category": "Cast",
+        "url": "stremio:///search?search=Jack%20Quaid"
+      },
+      {
+        "name": "Lukas Gage",
+        "category": "Cast",
+        "url": "stremio:///search?search=Lukas%20Gage"
+      },
+      {
+        "name": "Drew Hancock",
+        "category": "Writers",
+        "url": "stremio:///search?search=Drew%20Hancock"
+      },
+      {
+        "name": "Drew Hancock",
+        "category": "Directors",
+        "url": "stremio:///search?search=Drew%20Hancock"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt26584495",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "رحلة مع الأصدقاء تكشف حقيقة غير متوقعة عن علاقة عاطفية.",
+    "localPoster": "assets/tt26584495.jpg",
+    "featured": true
   },
   {
-    "id": "mov-bridget-jones-mad-about-the-boy-2025",
+    "id": "tt32063050",
     "title": "Bridget Jones: Mad About the Boy",
     "titleAr": "بريدجت جونز: مجنونة بالشاب",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 6.5,
     "genre": [
       "Comedy",
@@ -972,33 +6426,247 @@
       "Romance"
     ],
     "poster": "https://images.metahub.space/poster/small/tt32063050/img",
-    "sourceUrl": "https://www.imdb.com/title/tt32063050/",
     "description": "After jumping back into the dating pool, single mother Bridget Jones finds herself caught between a younger man and her son's science teacher.",
     "duration": "124 min",
     "cast": [
       "Renée Zellweger",
       "Chiwetel Ejiofor",
       "Leo Woodall"
-    ]
+    ],
+    "imdb_id": "tt32063050",
+    "name": "Bridget Jones: Mad About the Boy",
+    "popularities": {
+      "trakt": 52,
+      "moviedb": 13.7282,
+      "stremio": 0.45760666666666666,
+      "stremio_lib": 0
+    },
+    "country": "United Kingdom, France, United States",
+    "director": [
+      "Michael Morris"
+    ],
+    "imdbRating": "6.5",
+    "released": "2025-02-13T00:00:00.000Z",
+    "slug": "movie/bridget-jones-mad-about-the-boy-32063050",
+    "writer": [
+      "Helen Fielding",
+      "Dan Mazer",
+      "Abi Morgan"
+    ],
+    "moviedb_id": 1272149,
+    "runtime": "124 min",
+    "trailers": [
+      {
+        "source": "7sSNobjiep4",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt32063050/img",
+    "logo": "https://images.metahub.space/logo/medium/tt32063050/img",
+    "awards": "Nominated for 1 Primetime Emmy. 8 wins & 28 nominations total",
+    "popularity": 0.45760666666666666,
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "Bridget Jones: Mad About the Boy",
+        "ytId": "7sSNobjiep4"
+      }
+    ],
+    "links": [
+      {
+        "name": "6.5",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt32063050"
+      },
+      {
+        "name": "Bridget Jones: Mad About the Boy",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/bridget-jones-mad-about-the-boy-32063050"
+      },
+      {
+        "name": "Comedy",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Comedy"
+      },
+      {
+        "name": "Drama",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Drama"
+      },
+      {
+        "name": "Romance",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Romance"
+      },
+      {
+        "name": "Renée Zellweger",
+        "category": "Cast",
+        "url": "stremio:///search?search=Ren%C3%A9e%20Zellweger"
+      },
+      {
+        "name": "Chiwetel Ejiofor",
+        "category": "Cast",
+        "url": "stremio:///search?search=Chiwetel%20Ejiofor"
+      },
+      {
+        "name": "Leo Woodall",
+        "category": "Cast",
+        "url": "stremio:///search?search=Leo%20Woodall"
+      },
+      {
+        "name": "Helen Fielding",
+        "category": "Writers",
+        "url": "stremio:///search?search=Helen%20Fielding"
+      },
+      {
+        "name": "Dan Mazer",
+        "category": "Writers",
+        "url": "stremio:///search?search=Dan%20Mazer"
+      },
+      {
+        "name": "Abi Morgan",
+        "category": "Writers",
+        "url": "stremio:///search?search=Abi%20Morgan"
+      },
+      {
+        "name": "Michael Morris",
+        "category": "Directors",
+        "url": "stremio:///search?search=Michael%20Morris"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt32063050",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "بريدجيت تبدأ فصلاً جديداً بين الأمومة والحب والحياة.",
+    "localPoster": "assets/tt32063050.jpg",
+    "featured": true
   },
   {
-    "id": "mov-the-monkey-2025",
+    "id": "tt27714946",
     "title": "The Monkey",
     "titleAr": "القرد",
     "type": "movie",
-    "year": 2025,
+    "year": "2025",
     "rating": 5.9,
     "genre": [
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt27714946/img",
-    "sourceUrl": "https://www.imdb.com/title/tt27714946/",
     "description": "When twin brothers Bill and Hal find their father's old monkey toy in the attic, a series of gruesome deaths start. The siblings decide to throw the toy away and move on with their lives, growing apart over the years.",
     "duration": "97 min",
     "cast": [
       "Theo James",
       "Tatiana Maslany",
       "Christian Convery"
-    ]
+    ],
+    "imdb_id": "tt27714946",
+    "name": "The Monkey",
+    "popularities": {
+      "trakt": 17,
+      "moviedb": 8.505,
+      "stremio": 0.28350000000000003,
+      "stremio_lib": 0
+    },
+    "country": "United States, United Kingdom, Canada",
+    "director": [
+      "Osgood Perkins"
+    ],
+    "imdbRating": "5.9",
+    "released": "2025-02-21T00:00:00.000Z",
+    "slug": "movie/the-monkey-27714946",
+    "writer": [
+      "Osgood Perkins",
+      "Stephen King"
+    ],
+    "moviedb_id": 1124620,
+    "runtime": "97 min",
+    "trailers": [
+      {
+        "source": "KPxmK_ihDO8",
+        "type": "Trailer"
+      },
+      {
+        "source": "husMGbXEIho",
+        "type": "Trailer"
+      }
+    ],
+    "background": "https://images.metahub.space/background/medium/tt27714946/img",
+    "logo": "https://images.metahub.space/logo/medium/tt27714946/img",
+    "awards": "4 wins & 6 nominations total",
+    "popularity": 0.28350000000000003,
+    "genres": [
+      "Horror"
+    ],
+    "releaseInfo": "2025",
+    "trailerStreams": [
+      {
+        "title": "The Monkey",
+        "ytId": "KPxmK_ihDO8"
+      },
+      {
+        "title": "The Monkey",
+        "ytId": "husMGbXEIho"
+      }
+    ],
+    "links": [
+      {
+        "name": "5.9",
+        "category": "imdb",
+        "url": "https://imdb.com/title/tt27714946"
+      },
+      {
+        "name": "The Monkey",
+        "category": "share",
+        "url": "https://www.strem.io/s/movie/the-monkey-27714946"
+      },
+      {
+        "name": "Horror",
+        "category": "Genres",
+        "url": "stremio:///discover/https%3A%2F%2Fv3-cinemeta.strem.io%2Fmanifest.json/movie/top?genre=Horror"
+      },
+      {
+        "name": "Theo James",
+        "category": "Cast",
+        "url": "stremio:///search?search=Theo%20James"
+      },
+      {
+        "name": "Tatiana Maslany",
+        "category": "Cast",
+        "url": "stremio:///search?search=Tatiana%20Maslany"
+      },
+      {
+        "name": "Christian Convery",
+        "category": "Cast",
+        "url": "stremio:///search?search=Christian%20Convery"
+      },
+      {
+        "name": "Osgood Perkins",
+        "category": "Writers",
+        "url": "stremio:///search?search=Osgood%20Perkins"
+      },
+      {
+        "name": "Stephen King",
+        "category": "Writers",
+        "url": "stremio:///search?search=Stephen%20King"
+      },
+      {
+        "name": "Osgood Perkins",
+        "category": "Directors",
+        "url": "stremio:///search?search=Osgood%20Perkins"
+      }
+    ],
+    "behaviorHints": {
+      "defaultVideoId": "tt27714946",
+      "hasScheduledVideos": false
+    },
+    "descriptionAr": "لعبة قديمة تعيد سلسلة من الأحداث الغامضة والمرعبة.",
+    "localPoster": "assets/tt27714946.jpg",
+    "featured": true
   }
 ]

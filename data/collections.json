@@ -1,0 +1,281 @@
+{
+  "updatedAt": "2026-10-03T13:11:30.076Z",
+  "uniqueMovies": 2547,
+  "uniqueSeries": 349,
+  "collections": [
+    {
+      "slug": "popular",
+      "name": "الأكثر رواجاً الآن",
+      "type": "movie",
+      "id": "top",
+      "icon": "✦",
+      "key": "movie/top",
+      "count": 196,
+      "nextSkip": 400
+    },
+    {
+      "slug": "top-rated",
+      "name": "الأعلى تقييماً",
+      "type": "movie",
+      "id": "imdbRating",
+      "icon": "★",
+      "key": "movie/imdbRating",
+      "count": 198,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2026",
+      "name": "أفلام 2026",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2026"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2026",
+      "count": 169,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2025",
+      "name": "أفلام 2025",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2025"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2025",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2024",
+      "name": "أفلام 2024",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2024"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2024",
+      "count": 199,
+      "nextSkip": 400
+    },
+    {
+      "slug": "action",
+      "name": "أكشن وإثارة",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Action"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Action",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "adventure",
+      "name": "مغامرات",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Adventure"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Adventure",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "animation",
+      "name": "رسوم متحركة",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Animation"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Animation",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "comedy",
+      "name": "كوميديا",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Comedy"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Comedy",
+      "count": 198,
+      "nextSkip": 400
+    },
+    {
+      "slug": "crime",
+      "name": "جريمة وتحقيق",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Crime"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Crime",
+      "count": 198,
+      "nextSkip": 400
+    },
+    {
+      "slug": "drama",
+      "name": "دراما",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Drama"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Drama",
+      "count": 196,
+      "nextSkip": 400
+    },
+    {
+      "slug": "family",
+      "name": "أفلام عائلية",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Family"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Family",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "fantasy",
+      "name": "فانتازيا",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Fantasy"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Fantasy",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "horror",
+      "name": "رعب",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Horror"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Horror",
+      "count": 198,
+      "nextSkip": 400
+    },
+    {
+      "slug": "mystery",
+      "name": "غموض",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Mystery"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Mystery",
+      "count": 199,
+      "nextSkip": 400
+    },
+    {
+      "slug": "romance",
+      "name": "رومانسية",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Romance"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Romance",
+      "count": 197,
+      "nextSkip": 400
+    },
+    {
+      "slug": "sci-fi",
+      "name": "خيال علمي",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Sci-Fi"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Sci-Fi",
+      "count": 201,
+      "nextSkip": 400
+    },
+    {
+      "slug": "thriller",
+      "name": "تشويق",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Thriller"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Thriller",
+      "count": 197,
+      "nextSkip": 400
+    },
+    {
+      "slug": "documentary",
+      "name": "وثائقيات",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Documentary"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Documentary",
+      "count": 200,
+      "nextSkip": 400
+    },
+    {
+      "slug": "war",
+      "name": "أفلام حربية",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "War"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=War",
+      "count": 199,
+      "nextSkip": 400
+    },
+    {
+      "slug": "series",
+      "name": "مسلسلات تستحق وقتك",
+      "type": "series",
+      "id": "top",
+      "icon": "▤",
+      "key": "series/top",
+      "count": 197,
+      "nextSkip": 400
+    },
+    {
+      "slug": "series-rated",
+      "name": "المسلسلات الأعلى تقييماً",
+      "type": "series",
+      "id": "imdbRating",
+      "icon": "★",
+      "key": "series/imdbRating",
+      "count": 200,
+      "nextSkip": 400
+    }
+  ]
+}

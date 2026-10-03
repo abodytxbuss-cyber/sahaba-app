@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sahaba-app
+    runtime: node
+    plan: free
+    branch: master
+    buildCommand: npm install --omit=dev && npm test
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0

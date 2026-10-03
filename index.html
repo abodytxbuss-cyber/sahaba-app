@@ -1,140 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>سحابة — رحلة السينما</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=El+Messiri:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090c15"><meta name="description" content="سحابة، رحلتك إلى عوالم السينما. اكتشف الأفلام والمسلسلات وابنِ مكتبتك عبر إضافات Stremio.">
+  <title>سحابة — لكل حكاية سماء</title>
+  <link rel="icon" href="assets/cloud.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="stars" aria-hidden="true"></div>
-<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
-
-<header class="topbar glass">
-  <div class="logo" id="logo">
-    <span class="logo-ic">☁️</span>
-    <span class="logo-txt">سحابة<em>رحلة السينما</em></span>
-  </div>
-  <nav class="nav" id="nav">
-    <button class="nav-btn active" data-tab="home">الرئيسية</button>
-    <button class="nav-btn" data-tab="journey">الرحلة</button>
-    <button class="nav-btn" data-tab="library">مكتبتي</button>
-    <button class="nav-btn" data-tab="search">بحث</button>
-  </nav>
-  <button class="xp-badge" id="xpBtn">
-    <span class="xp-star">⭐</span>
-    <span class="xp-bar"><i id="xpFill"></i></span>
-    <span class="xp-num" id="xpNum">0</span>
-  </button>
-</header>
-
-<main id="app">
-
-  <!-- HOME -->
-  <section class="tab-view active" id="view-home">
-    <div class="hero glass-soft" id="heroCard">
-      <div class="hero-bg" id="heroBg"></div>
-      <div class="hero-content">
-        <span class="hero-label">✨ اختيار مشاهير الليلة</span>
-        <h1 id="heroTitle">…</h1>
-        <p id="heroMeta"></p>
-        <p class="hero-desc" id="heroDesc"></p>
-        <div class="hero-actions">
-          <button class="btn btn-gold" data-play="">▶ شاهد الآن</button>
-          <button class="btn btn-ghost" data-info="">التفاصيل</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="shelves">
-      <div class="shelf" id="shelf-heroes"></div>
-      <div class="shelf" id="shelf-2025"></div>
-      <div class="shelf" id="shelf-2024"></div>
-      <div class="shelf" id="shelf-classic"></div>
-    </div>
-  </section>
-
-  <!-- JOURNEY -->
-  <section class="tab-view" id="view-journey">
-    <div class="journey-head">
-      <h2>🗺️ رحلة السحاب</h2>
-      <p>أنهي أفلام كل مرحلة لتلمع نجمتها وتفتح المرحلة اللي بعدها</p>
-    </div>
-    <div class="journey" id="journey"></div>
-  </section>
-
-  <!-- LIBRARY -->
-  <section class="tab-view" id="view-library">
-    <div class="lib-head">
-      <h2>📚 مكتبتي</h2>
-      <div class="lib-stats" id="libStats"></div>
-    </div>
-    <div class="lib-tabs">
-      <button class="lib-tab active" data-lib="watched">شاهدتها ✅</button>
-      <button class="lib-tab" data-lib="watchlist">لاحقاً 🔖</button>
-    </div>
-    <div class="grid lib-grid" id="libGrid"></div>
-  </section>
-
-  <!-- SEARCH -->
-  <section class="tab-view" id="view-search">
-    <div class="search-box glass">
-      <input id="searchInput" type="search" placeholder="ابحث عن فيلم أو مسلسل… ✨" />
-      <button class="btn btn-gold" id="searchBtn">ابحث</button>
-    </div>
-    <div class="grid lib-grid" id="searchGrid"></div>
-  </section>
-
-</main>
-
-<!-- DETAIL MODAL -->
-<div class="modal-overlay" id="detailModal">
-  <div class="modal-card glass-strong">
-    <button class="modal-close" id="detailClose">✕</button>
-    <div class="detail-bg" id="detailBg"></div>
-    <div class="detail-body">
-      <img class="detail-poster" id="detailPoster" alt="" />
-      <div class="detail-info">
-        <h2 id="detailTitle"></h2>
-        <p class="detail-en" id="detailEn"></p>
-        <p class="detail-meta" id="detailMeta"></p>
-        <div class="detail-genres" id="detailGenres"></div>
-        <p class="detail-desc" id="detailDesc"></p>
-        <div class="detail-cast" id="detailCast"></div>
-        <div class="detail-actions">
-          <button class="btn btn-gold" id="detailPlay">▶ شاهد الآن</button>
-          <button class="btn btn-ghost" id="detailLater">🔖 شاهد لاحقاً</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- PLAYER OVERLAY -->
-<div class="player-overlay" id="playerOverlay">
-  <div class="player-head">
-    <span id="playerTitle"></span>
-    <div class="player-servers" id="playerServers"></div>
-    <button class="modal-close" id="playerClose">✕</button>
-  </div>
-  <div class="player-frame-wrap">
-    <iframe id="playerFrame" allowfullscreen allow="autoplay; encrypted-media; fullscreen; picture-in-picture" />
-  </div>
-</div>
-
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-<div class="confetti-layer" id="confetti" aria-hidden="true"></div>
-<div class="stage-badge" id="stageBadge">
-  <div class="big">⭐</div>
-  <h3 id="badgeTitle">إنجزت المرحلة!</h3>
-  <p id="badgeSub"></p>
-</div>
-
-<script src="app.js"></script>
-</body>
-</html>
+  <div class="night" aria-hidden="true"><div class="stars"></div><div class="aurora"></div></div>
+  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <header class="topbar">
+    <a class="brand" href="#/home" aria-label="سحابة، الرئيسية"><img src="assets/cloud.svg" alt=""><span>سحابة<small>لِكُلّ حكايةٍ سماء</small></span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#/home" data-route="home">الرئيسية</a><a href="#/journey" data-route="journey">رحلتي</a><a href="#/search" data-route="search">اكتشف</a><a href="#/library" data-route="library">مكتبتي</a><a href="#/addons" data-route="addons">إضافاتي</a>
+    </nav>
+    <button id="xp-button" class="xp-button" aria-label="نقاط الخبرة والإنجازات"><span class="gold">✧</span><b id="xp-value">0 XP</b><span class="avatar">س</span></button>
+  </header>
+  <div id="connection" class="connection" role="status" hidden>أنت غير متصل. محتواك المحفوظ ما زال هنا. <button data-action="retry">إعادة المحاولة</button></div>
+  <main id="main" tabindex="-1"><div class="boot"><img src="assets/cloud.svg" alt=""><h1>تتهيّأ سماؤك…</h1><div class="skeleton"></div><button onclick="location.reload()">إعادة المحاولة</button></div></main>
+  <footer><a class="footer-brand" href="#/home">☁ سحابة</a><span>حكاية جديدة، نجمة جديدة.</span><a href="#/addons">مصادرك، باختيارك</a></footer>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-top"><h2 id="modal-title"></h2><button id="close-modal" class="icon-button" aria-label="إغلاق">×</button></div><div id="modal-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="empty">فعّل JavaScript لتبدأ رحلتك في سحابة.</div></noscript>
+  <script type="module" src="app.js"></script>
+</body></html>
