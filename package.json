@@ -1,14 +1,21 @@
-{
+﻿{
   "name": "sahaba-app",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "private": true,
   "type": "module",
-  "description": "سحابة — رحلة سينمائية عربية عبر إضافات Stremio",
+  "description": "Ø³Ø­Ø§Ø¨Ø© â€” Ø±Ø­Ù„Ø© Ø³ÙŠÙ†Ù…Ø§Ø¦ÙŠØ© Ø¹Ø±Ø¨ÙŠØ© Ø¹Ø¨Ø± Ø¥Ø¶Ø§ÙØ§Øª Stremio",
   "scripts": {
     "start": "node server.js",
     "test": "node --test tests/*.test.js",
     "refresh:catalogs": "node scripts/refresh-catalogs.js",
-    "catalog:one": "node scripts/catalog-one.mjs"
+    "catalog:one": "node scripts/catalog-one.mjs",
+    "catalogs:expand": "node scripts/expand-catalogs.mjs",
+    "catalogs:rebuild": "node scripts/rebuild-catalogs.mjs",
+    "posters:fetch": "node scripts/fetch-posters.mjs",
+    "titles:translate": "node scripts/translate-titles.mjs",
+    "descriptions:translate": "node scripts/translate-descriptions.mjs",
+    "descriptions:enrich": "node scripts/enrich-descriptions.mjs",
+    "data:merge": "node scripts/merge-extras.mjs"
   },
   "engines": {
     "node": ">=20 <25"

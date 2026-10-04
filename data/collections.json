@@ -1,18 +1,8 @@
 {
-  "updatedAt": "2026-10-03T20:20:05.775Z",
-  "uniqueMovies": 2592,
-  "uniqueSeries": 444,
+  "updatedAt": "2026-10-04T14:56:44.927Z",
+  "uniqueMovies": 2656,
+  "uniqueSeries": 446,
   "collections": [
-    {
-      "slug": "popular",
-      "name": "الأكثر رواجاً الآن",
-      "type": "movie",
-      "id": "top",
-      "icon": "✦",
-      "key": "movie/top",
-      "count": 301,
-      "nextSkip": 400
-    },
     {
       "slug": "top-rated",
       "name": "الأعلى تقييماً",
@@ -20,7 +10,17 @@
       "id": "imdbRating",
       "icon": "★",
       "key": "movie/imdbRating",
-      "count": 198,
+      "count": 450,
+      "nextSkip": 400
+    },
+    {
+      "slug": "popular",
+      "name": "الأكثر رواجاً الآن",
+      "type": "movie",
+      "id": "top",
+      "icon": "✦",
+      "key": "movie/top",
+      "count": 450,
       "nextSkip": 400
     },
     {
@@ -33,7 +33,7 @@
       },
       "icon": "◷",
       "key": "movie/year/genre=2026",
-      "count": 208,
+      "count": 248,
       "nextSkip": 400
     },
     {
@@ -46,7 +46,7 @@
       },
       "icon": "◷",
       "key": "movie/year/genre=2025",
-      "count": 208,
+      "count": 301,
       "nextSkip": 400
     },
     {
@@ -59,7 +59,59 @@
       },
       "icon": "◷",
       "key": "movie/year/genre=2024",
-      "count": 204,
+      "count": 274,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2023",
+      "name": "أفلام 2023",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2023"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2023",
+      "count": 79,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2022",
+      "name": "أفلام 2022",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2022"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2022",
+      "count": 57,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2021",
+      "name": "أفلام 2021",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2021"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2021",
+      "count": 42,
+      "nextSkip": 400
+    },
+    {
+      "slug": "year-2020",
+      "name": "أفلام 2020",
+      "type": "movie",
+      "id": "year",
+      "extra": {
+        "genre": "2020"
+      },
+      "icon": "◷",
+      "key": "movie/year/genre=2020",
+      "count": 36,
       "nextSkip": 400
     },
     {
@@ -72,7 +124,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Action",
-      "count": 236,
+      "count": 450,
       "nextSkip": 400
     },
     {
@@ -85,7 +137,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Adventure",
-      "count": 212,
+      "count": 450,
       "nextSkip": 400
     },
     {
@@ -98,7 +150,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Animation",
-      "count": 202,
+      "count": 295,
       "nextSkip": 400
     },
     {
@@ -111,7 +163,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Comedy",
-      "count": 216,
+      "count": 450,
       "nextSkip": 400
     },
     {
@@ -124,7 +176,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Crime",
-      "count": 210,
+      "count": 375,
       "nextSkip": 400
     },
     {
@@ -137,7 +189,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Drama",
-      "count": 244,
+      "count": 450,
       "nextSkip": 400
     },
     {
@@ -150,7 +202,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Family",
-      "count": 202,
+      "count": 160,
       "nextSkip": 400
     },
     {
@@ -163,7 +215,20 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Fantasy",
-      "count": 205,
+      "count": 227,
+      "nextSkip": 400
+    },
+    {
+      "slug": "history",
+      "name": "تاريخ",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "History"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=History",
+      "count": 137,
       "nextSkip": 400
     },
     {
@@ -176,7 +241,20 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Horror",
-      "count": 212,
+      "count": 334,
+      "nextSkip": 400
+    },
+    {
+      "slug": "music",
+      "name": "موسيقى",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Music"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Music",
+      "count": 90,
       "nextSkip": 400
     },
     {
@@ -189,7 +267,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Mystery",
-      "count": 203,
+      "count": 266,
       "nextSkip": 400
     },
     {
@@ -202,7 +280,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Romance",
-      "count": 204,
+      "count": 266,
       "nextSkip": 400
     },
     {
@@ -215,7 +293,20 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Sci-Fi",
-      "count": 209,
+      "count": 291,
+      "nextSkip": 400
+    },
+    {
+      "slug": "sport",
+      "name": "رياضة",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Sport"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Sport",
+      "count": 73,
       "nextSkip": 400
     },
     {
@@ -228,7 +319,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Thriller",
-      "count": 226,
+      "count": 421,
       "nextSkip": 400
     },
     {
@@ -241,7 +332,7 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=Documentary",
-      "count": 205,
+      "count": 229,
       "nextSkip": 400
     },
     {
@@ -254,17 +345,33 @@
       },
       "icon": "◇",
       "key": "movie/top/genre=War",
-      "count": 199,
+      "count": 154,
       "nextSkip": 400
     },
     {
-      "slug": "series",
-      "name": "مسلسلات تستحق وقتك",
-      "type": "series",
+      "slug": "biography",
+      "name": "سيرة ذاتية",
+      "type": "movie",
       "id": "top",
-      "icon": "▤",
-      "key": "series/top",
-      "count": 299,
+      "extra": {
+        "genre": "Biography"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Biography",
+      "count": 197,
+      "nextSkip": 400
+    },
+    {
+      "slug": "western",
+      "name": "غربية",
+      "type": "movie",
+      "id": "top",
+      "extra": {
+        "genre": "Western"
+      },
+      "icon": "◇",
+      "key": "movie/top/genre=Western",
+      "count": 30,
       "nextSkip": 400
     },
     {
@@ -274,7 +381,17 @@
       "id": "imdbRating",
       "icon": "★",
       "key": "series/imdbRating",
-      "count": 277,
+      "count": 398,
+      "nextSkip": 400
+    },
+    {
+      "slug": "series",
+      "name": "مسلسلات تستحق وقتك",
+      "type": "series",
+      "id": "top",
+      "icon": "▤",
+      "key": "series/top",
+      "count": 446,
       "nextSkip": 400
     }
   ]
