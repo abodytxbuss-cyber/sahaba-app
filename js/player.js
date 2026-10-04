@@ -28,7 +28,7 @@ export async function openPlayer(item,videoId,onComplete){
     const result=await sources(item,videoId,force);
     if(!alive||token!==generation)return;
     if(!result.addons){$('#video-wrap').innerHTML=empty('أضف إضافة Stremio تحتوي مصادر مشاهدة لتبدأ.', '<button class="btn primary" id="go-addons">إضافة مصدر الآن</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status('المعلومات والملصقات تأتي من Cinemeta. روابط المشاهدة تأتي من إضافات Stremio التي تختارها.');return;}
-    if(!result.streams.length){$('#video-wrap').innerHTML=empty('لا توجد مصادر متاحة لهذا العنوان.');status(errorBox(result.failed?'لم تستجب بعض الإضافات.':'لم ترسل إضافاتك أي مصادر.','sources'));$('#source-status button').onclick=()=>fetchSources(true);return;}
+    if(!result.streams.length){$('#video-wrap').innerHTML=empty('لا توجد مصادر متاحة لهذا العنوان من إضافاتك الحالية.', '<button class="btn primary" id="go-addons">إضافة مصدر آخر</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status(errorBox(result.failed?'لم تستجب بعض الإضافات.':'المصدر المجاني الرسمي يغطي أفلام الملكية العامة فقط. الأفلام الحديثة تحتاج إضافة Stremio مرخّصة أو مصدراً تملكه.','sources'));$('#source-status button').onclick=()=>fetchSources(true);return;}
     status((result.failed?'تعذّر الوصول إلى '+result.failed+' من إضافاتك. ':'')+'اختر مصدراً. يدعم المشغل الفيديو المباشر وHLS.');
     if(result.failed){const retry=document.createElement('button');retry.textContent='إعادة المحاولة';retry.className='text-button';retry.onclick=()=>fetchSources(true);$('#source-status').append(retry);}
     const list=$('#source-list');list.replaceChildren();
