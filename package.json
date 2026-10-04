@@ -15,7 +15,8 @@
     "titles:translate": "node scripts/translate-titles.mjs",
     "descriptions:translate": "node scripts/translate-descriptions.mjs",
     "descriptions:enrich": "node scripts/enrich-descriptions.mjs",
-    "data:merge": "node scripts/merge-extras.mjs"
+    "data:merge": "node scripts/merge-extras.mjs",
+    "data:split": "node scripts/split-details.mjs"
   },
   "engines": {
     "node": ">=20 <25"

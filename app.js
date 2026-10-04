@@ -1,4 +1,4 @@
-import {library,saveLibrary,xp,level,markWatched,getAddons,saveAddons,partition,stageStatus,read,write} from './js/store.js';
+import {library,saveLibrary,xp,level,markWatched,getAddons,saveAddons,partition,stageStatus,read,write,ensureBuiltinAddon} from './js/store.js';
 import {catalog,metadata,validateManifest,CINEMETA} from './js/api.js';
 import {$,esc,number,genreAR,title,year,genres,card,skeleton,empty,errorBox,toast,openModal,closeModal,imageURL,setTitles,setPosters} from './js/ui.js';
 import {openPlayer,trailer} from './js/player.js';
@@ -7,7 +7,7 @@ import {initializeArabicSubtitles} from './js/subtitle-addon.js';
 import {initializeLegalStreams} from './js/source-addons.js';
 import {filterCollectionRows} from './js/catalog-rules.js';
 
-const main=$('#main'),items=new Map();let featured=[],backup={},journeyBackup={},collections={collections:[]},stages=[],titles={},descriptions={},routeVersion=0,heroTimer,heroIndex=0,heroPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,searchTimer,searchVersion=0,currentItem,libraryTab='later';
+const main=$('#main'),items=new Map();let featured=[],backup={},journeyBackup={},collections={collections:[]},stages=[],titles={},detailsData={},routeVersion=0,heroTimer,heroIndex=0,heroPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,searchTimer,searchVersion=0,currentItem,libraryTab='later';
 const key=m=>`${m.type||'movie'}:${m.id}`;
 function remember(list){for(const m of list){const known=items.get(key(m));items.set(key(m),{...known,...m,...(known?.localPoster?{localPoster:known.localPoster}:{}),...(known?.descriptionAr?{descriptionAr:known.descriptionAr}:{})});}return list.map(m=>items.get(key(m)));}
 const unique=list=>[...new Map(list.map(m=>[key(m),m])).values()];
@@ -39,7 +39,7 @@ function buildStages(){
 const heroIds=['tt16311594','tt26743210','tt4900148'];
 function renderHero(){
   const m=items.get('movie:'+heroIds[heroIndex])||featured[0];if(!m||!$('#hero'))return;
-  const titleParts=title(m);$('#hero').innerHTML=`<div class="hero-art"><img src="assets/${esc(m.id)}-bg.jpg" alt="" fetchpriority="high"></div><div class="container"><div class="hero-content"><span class="feature-badge">✦ اختيار سحابة الليلة</span><h1>${esc(titleParts)}</h1><p class="original-title" lang="en" dir="ltr" style="text-align:right">${esc(m.name)}</p><div class="meta-line"><span class="gold">★ ${esc(m.imdbRating||'—')}</span><span class="separator">|</span><span>${esc(year(m))}</span><span>${esc(genres(m).slice(0,2).join(' · '))}</span><span class="pill">${esc((m.runtime||'').replace(/min/g,'دقيقة'))}</span></div><p class="description">${esc(m.descriptionAr||'حكاية تستحق أن تكون محطتك التالية في سحابة.')}</p><div class="actions"><button class="btn primary" data-play="${esc(key(m))}">▷ شاهد الآن</button><a class="btn secondary" href="#/details/movie/${m.id}">التفاصيل <span>ⓘ</span></a><button class="icon-button" data-later="${esc(key(m))}" aria-label="${library.later[m.id]?'إزالة من لاحقاً':'أضف إلى لاحقاً'}">${library.later[m.id]?'✓':'+'}</button></div></div></div><div class="hero-bottom"><span>حكايات تبقى معك، بعد المشهد الأخير.</span><div class="hero-controls">${heroIds.map((id,i)=>`<button class="hero-dot ${i===heroIndex?'active':''}" data-hero="${i}" aria-label="اختيار الفيلم ${number(i+1)}" aria-pressed="${i===heroIndex}"></button>`).join('')}<button class="pause" data-action="hero-pause" aria-label="${heroPaused?'تشغيل التبديل التلقائي':'إيقاف التبديل التلقائي'}">${heroPaused?'▷':'Ⅱ'}</button></div><div class="hero-count"><b class="gold">0${heroIndex+1}</b> / 03</div></div>`;
+  const info={...m,...(detailsData[m.id]||{})};const titleParts=title(info);$('#hero').innerHTML=`<div class="hero-art"><img src="assets/${esc(m.id)}-bg.jpg" alt="" fetchpriority="high"></div><div class="container"><div class="hero-content"><span class="feature-badge">✦ اختيار سحابة الليلة</span><h1>${esc(titleParts)}</h1><p class="original-title" lang="en" dir="ltr" style="text-align:right">${esc(m.name)}</p><div class="meta-line"><span class="gold">★ ${esc(m.imdbRating||'—')}</span><span class="separator">|</span><span>${esc(year(m))}</span><span>${esc(genres(m).slice(0,2).join(' · '))}</span><span class="pill">${esc((info.runtime||'').replace(/min/g,'دقيقة'))}</span></div><p class="description">${esc(info.descriptionAr||'حكاية تستحق أن تكون محطتك التالية في سحابة.')}</p><div class="actions"><button class="btn primary" data-play="${esc(key(m))}">▷ شاهد الآن</button><a class="btn secondary" href="#/details/movie/${m.id}">التفاصيل <span>ⓘ</span></a><button class="icon-button" data-later="${esc(key(m))}" aria-label="${library.later[m.id]?'إزالة من لاحقاً':'أضف إلى لاحقاً'}">${library.later[m.id]?'✓':'+'}</button></div></div></div><div class="hero-bottom"><span>حكايات تبقى معك، بعد المشهد الأخير.</span><div class="hero-controls">${heroIds.map((id,i)=>`<button class="hero-dot ${i===heroIndex?'active':''}" data-hero="${i}" aria-label="اختيار الفيلم ${number(i+1)}" aria-pressed="${heroIndex===i}"></button>`).join('')}<button class="pause" data-action="hero-pause" aria-label="${heroPaused?'تشغيل التبديل التلقائي':'إيقاف التبديل التلقائي'}">${heroPaused?'▷':'Ⅱ'}</button></div><div class="hero-count"><b class="gold">0${heroIndex+1}</b> / 03</div></div>`;
 }
 function shelfShell(id,name,link='',count=0){const badge=count?`<span class="sub">${number(count)} عنوان</span>`:'';return `<section class="shelf" id="${id}"><div class="section-title"><h2>${esc(name)} ${badge}</h2><div class="section-tools">${link?`<a class="text-button" href="${esc(link)}">عرض الكل</a>`:''}<button class="scroll-btn" data-scroll="${id}" data-direction="1" aria-label="العناوين السابقة">›</button><button class="scroll-btn" data-scroll="${id}" data-direction="-1" aria-label="العناوين التالية">‹</button></div></div><div class="shelf-content">${skeleton()}</div></section>`;}
 function putShelf(id,list,message='') {const el=$('#'+id+' .shelf-content');if(!el)return;el.innerHTML=(message?errorBox(message,'shelf:'+id):'')+(list.length?`<div class="rail">${remember(list).slice(0,20).map(m=>card(m)).join('')}</div>`:empty('لا توجد عناوين في هذا الرف حالياً.',`<button class="text-button" data-action="shelf:${id}">إعادة المحاولة</button>`));}
@@ -74,9 +74,13 @@ function home(version){
 function journey(){main.innerHTML=`<div class="container">${header('خطوة نحو السماء','رحلة السحاب','شاهد، اجمع النجوم، وافتح آفاقاً جديدة. كل مرحلة تقرّبك من سمائك.')}<div class="journey-layout"><div class="journey-path">${stages.map((s,i)=>{const status=stageStatus(stages,i),cls=status.done?'done':status.unlocked?'current':'locked';return `<section class="stage ${cls}"><div class="stage-node" aria-label="${status.done?'منجزة':status.unlocked?'حالية':'مقفولة'}">${status.done?'✓':status.unlocked?'✦':'♙'}</div><div class="stage-body"><p class="stage-label">المرحلة ${number(i+1)} · ${status.done?'مكتملة':status.unlocked?'رحلتك الحالية':'🔒 مقفولة'}</p><h2>${esc(s.name)}</h2><div class="stage-stats"><span>${number(status.count)} / ${number(s.items.length)} حكاية</span><span>${number(s.items.length)} نجمة</span></div><div class="track" role="progressbar" aria-label="تقدم المرحلة ${i+1}" aria-valuemin="0" aria-valuemax="${s.items.length}" aria-valuenow="${status.count}"><i style="width:${status.count/s.items.length*100}%"></i></div><div class="stage-posters">${s.items.slice(0,5).map(m=>`<img src="${esc(imageURL(m))}" alt="${esc(title(m))}" loading="lazy">`).join('')}${status.unlocked?`<a class="btn small ${status.done?'secondary':'primary'}" href="#/stage/${i}">${status.done?'عرض المرحلة':'ابدأ المرحلة'}</a>`:'<button class="btn small" disabled>أكمل السابقة</button>'}</div></div></section>`;}).join('')}</div><aside>${profile()}</aside></div></div>`;}
 function stage(index){if(!Number.isInteger(index)||!stages[index])return notFound();const s=stages[index],status=stageStatus(stages,index);main.innerHTML=`<div class="container">${header('رحلة السحاب',esc(s.name),`${number(status.count)} من ${number(s.items.length)} حكاية مكتملة`)}<a class="back-link" href="#/journey">العودة إلى خريطة الرحلة</a>${status.unlocked?grid(s.items):empty('هذه المرحلة مقفولة. أكمل المراحل السابقة أولاً.', '<a class="btn primary" href="#/journey">تابع رحلتك</a>')}</div>`;}
 async function details(type,id,version,force=false){
-  let m=items.get(type+':'+id)||{id,type,name:'جارٍ تحميل التفاصيل…'};currentItem=m;renderDetail(m,true);
+  let m=items.get(type+':'+id)||{id,type,name:'جارٍ تحميل التفاصيل…'};
+  // ندمج التفاصيل المحلية (الوصف والمدة والمخرج) فوراً حتى تظهر بالعربية بلا انتظار
+  const local=detailsData[id];
+  if(local){const merged={...m,...local};items.set(type+':'+id,merged);m=merged;currentItem=m;renderDetail(m,false);}
+  else renderDetail(m,true);
   try{m=await metadata(m,force);if(version!==routeVersion)return;remember([m]);currentItem=m;renderDetail(m,false);}
-  catch(error){if(version!==routeVersion)return;renderDetail(m,false,error.message);}
+  catch(error){if(version!==routeVersion)return;if(!local)renderDetail(m,false,error.message);}
 }
 function renderDetail(m,loading=false,error=''){
   const list=(m.videos||[]).filter(v=>Number.isFinite(v.season)&&Number.isFinite(v.episode)),seasons=[...new Set(list.map(v=>v.season))].sort((a,b)=>a-b),hasTrailer=(m.trailerStreams||[]).some(t=>t.ytId)||(m.trailers||[]).some(t=>t.source);
@@ -161,15 +165,13 @@ async function boot(){
   initializeArabicSubtitles();
   initializeLegalStreams();
   connection();updateXP();
-  try{
+try{
+    ensureBuiltinAddon();
     const load=async name=>{try{const r=await fetch('data/'+name+'.json');if(!r.ok)throw Error();const data=await r.json();write('backup:'+name,data);return data;}catch{const data=read('backup:'+name,null);if(!data)throw Error();return data;}};
-const data=await Promise.all([load('movies'),load('ar-titles'),load('catalogs'),load('posters'),load('collections'),load('journey'),load('ar-descriptions')]);
-    if(!Array.isArray(data[0])||!data[0].length)throw Error();titles=data[1];setTitles(titles);setPosters(data[3]);featured=remember(data[0]);backup=data[2];collections=data[4];journeyBackup=data[5];descriptions=data[6]||{};
+const data=await Promise.all([load('movies'),load('ar-titles'),load('catalogs'),load('posters'),load('collections'),load('journey'),load('details')]);
+    if(!Array.isArray(data[0])||!data[0].length)throw Error();titles=data[1];setTitles(titles);setPosters(data[3]);featured=remember(data[0]);backup=data[2];collections=data[4];journeyBackup=data[5];detailsData=data[6]||{};
     for(const list of Object.values(backup))remember(list);
     for(const list of [library.watched,library.later])remember(Object.values(list).filter(m=>m?.id));
-    for(const [id,entry] of Object.entries(descriptions)){
-      for(const type of ['movie','series']){const cur=items.get(type+':'+id);if(cur&&!cur.descriptionAr)items.set(type+':'+id,{...cur,descriptionAr:entry.ar});}
-    }
     buildStages();await route();
   }catch{main.innerHTML=`<div class="container">${header('سحابة','تعذّر تحميل المكتبة','تأكد أن ملفات data موجودة وأن الخادم يعمل.')} ${errorBox('لم تصل البيانات المحلية. أعد المحاولة بعد التحقق من الاتصال.')}</div>`;}
 }

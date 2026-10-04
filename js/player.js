@@ -4,8 +4,11 @@ import {library,saveLibrary,read,write} from './store.js';
 import {languageControls} from './player-languages.js';
 import {arabicAudio} from './languages.js';
 let generation=0,hlsPromise;
-const streamURL=stream=>safeURL(stream.url);
-const externalURL=stream=>safeURL(stream.externalUrl);
+// رابط ملف مرئي فقط؛ غير ذلك (صفحة مزود/متصفح) يُفتح داخل إطار لا في video.src
+const MEDIA=/\.(mp4|m4v|mkv|webm|mov|m3u8|mpd)(?:[?#]|$)/i;
+const streamURL=stream=>{const u=safeURL(stream&&stream.url);return u&&!stream.behaviorHints?.notWebReady&&(MEDIA.test(u)||/mpegurl/i.test(String(stream.mimeType||'')))?u:'';};
+const externalURL=stream=>{if(!stream||streamURL(stream))return '';return safeURL(stream.externalUrl)||safeURL(stream.url);};
+const openable=stream=>!!(streamURL(stream)||externalURL(stream));
 function loadHls(){
   if(window.Hls)return Promise.resolve(window.Hls);
   if(!hlsPromise)hlsPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='assets/hls.min.js';script.onload=()=>window.Hls?resolve(window.Hls):reject(Error());script.onerror=()=>reject(Error('تعذّر تحميل مشغل البث.'));document.head.append(script);}).catch(e=>{hlsPromise=null;throw e;});
@@ -36,21 +39,29 @@ export async function openPlayer(item,videoId,onComplete){
     const list=$('#source-list');list.replaceChildren();
     const ordered=[...result.streams].sort((a,b)=>Number(!!streamURL(b))-Number(!!streamURL(a))||Number(!!externalURL(b))-Number(!!externalURL(a))+(read('prefer-arabic',true)!==false?(Number(arabicAudio(b))-Number(arabicAudio(a)))*.5:0));
     ordered.forEach((stream,i)=>{
-      const url=streamURL(stream),external=externalURL(stream),button=document.createElement('button');button.className='source';button.dataset.source=i;
-      button.innerHTML=`<b>${esc(stream.name||stream.addon)}</b><span>${esc(stream.description||stream.title||(external?'رابط مزوّد رسمي':'مصدر مباشر'))}</span><span>${esc(stream.addon)}${arabicAudio(stream)?' · صوت عربي بحسب وصف المصدر':''}${!url&&external?' · يفتح خارج سحابة':!url?' · هذا المصدر يحتاج مشغلاً خارجياً':''}</span>`;
-      button.disabled=!url&&!external;button.onclick=()=>external&&!url?openExternal(stream):play(stream,button);list.append(button);
+      const url=streamURL(stream),external=externalURL(stream),copyURL=external||url,usable=!!url||!!external;
+      const row=document.createElement('div');row.className='source';row.dataset.source=i;row.setAttribute('role','button');row.tabIndex=usable?0:-1;
+      if(!usable)row.setAttribute('aria-disabled','true');
+      row.innerHTML=`<b>${esc(stream.name||stream.addon)}</b><span>${esc(stream.description||stream.title||(external?'رابط مزوّد رسمي':'مصدر مباشر'))}</span><span>${esc(stream.addon)}${arabicAudio(stream)?' · صوت عربي بحسب وصف المصدر':''}${!url&&external?' · يفتح خارج سحابة':!url?' · يحتاج مشغلاً خارجياً':''}</span>${copyURL?'<button class="text-button copy-source" type="button">نسخ الرابط</button>':''}`;
+      const activate=()=>{if(!usable)return;external&&!url?openExternal(stream):play(stream,row);};
+      row.onclick=activate;
+      row.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}};
+      const copyBtn=row.querySelector('.copy-source');
+      if(copyBtn)copyBtn.onclick=e=>{e.stopPropagation();if(navigator.clipboard?.writeText)navigator.clipboard.writeText(copyURL).then(()=>toast('نُسخ الرابط.')).catch(()=>toast('تعذّر نسخ الرابط.'));else toast(copyURL);};
+      list.append(row);
     });
-    $('#video-wrap').innerHTML=empty(result.streams.some(s=>streamURL(s))?'اختر جودة المشاهدة من المصادر أدناه.':'اختر رابط مزوّد رسمي من المصادر أدناه، أو أضف إضافة توفر MP4 أو HLS.');
+    const playable=result.streams.some(s=>streamURL(s));
+    $('#video-wrap').innerHTML=empty(playable?'اختر جودة المشاهدة من المصادر أدناه.':result.streams.length?'كل المصادر تفتح داخل الصفحة — اضغط أي مصدر للمشاهدة، أو انسخ الرابط وافتحه على جهازك.':'لم نعثر على أي مصدر لهذا العنوان الآن. اضغط «تحديث المصادر» بالأعلى، أو أضف إضافة توفر MP4 أو HLS من الإضافات.');
   }
   function openExternal(stream){
-    const url=externalURL(stream);if(!url)return;
-    window.open(url,'_blank','noopener,noreferrer');
-    status('فتحنا رابط المزوّد الرسمي في تبويب جديد. إذا لم يفتح، اسمح بالنوافذ المنبثقة لهذا الموقع.');
+    const url=externalURL(stream)||safeURL(stream.url);if(!url)return;
+    status('جارٍ فتح المشغل داخل سحابة…');
+    $('#video-wrap').innerHTML=`<div class="video-wrap" style="aspect-ratio:16/9"><iframe title="${esc(stream.name||'مشغل المصدر')}" src="${esc(url)}" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="no-referrer" loading="lazy"></iframe></div><p class="player-status">إذا لم يعمل المشغل داخل الصفحة، <a class="text-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer">افتحه في تبويب جديد</a>.</p>`;
   }
   function playbackError(message){clearTimeout(stallTimer);status(errorBox(message,'playback'));const retry=$('#source-status button');if(retry)retry.onclick=()=>selected&&play(selected.stream,selected.button);}
   async function play(stream,button){
     selected={stream,button};const session=++sourceGeneration;clearTimeout(stallTimer);storePosition();languages?.dispose();hls?.destroy();hls=null;if(video){video.pause();video.removeAttribute('src');video.load();}
-    $('#source-list').querySelectorAll('button').forEach(b=>b.classList.toggle('active',b===button));$('#subtitle-area').replaceChildren();
+    $('#source-list').querySelectorAll('.source').forEach(b=>b.classList.toggle('active',b===button));$('#subtitle-area').replaceChildren();
     $('#video-wrap').innerHTML='<video id="video" controls playsinline preload="metadata" aria-label="مشغل الفيديو"></video>';video=$('#video');status('جارٍ تجهيز المشاهدة…');
     languages=languageControls({video,root:$('#subtitle-area'),stream,fetchSubtitles:force=>subtitles(item,videoId,force)});
     const resume=library.positions[videoId]?.time||0;

@@ -2,6 +2,7 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { manifest as addonManifest, stream as addonStream, subtitles as addonSubtitles, providers as addonProviders } from './js/stream-addon.js';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const cache = new Map();
@@ -17,6 +18,19 @@ export const server = http.createServer(async (req, res) => {
     if (req.method === 'OPTIONS') { res.writeHead(204, { 'Access-Control-Allow-Origin':'*', 'Access-Control-Allow-Methods':'GET, HEAD, OPTIONS' }); return res.end(); }
     if (!['GET','HEAD'].includes(req.method)) return sendJSON(res, 405, {error:'طريقة الطلب غير مدعومة'});
     if (url.pathname === '/health') return sendJSON(res, 200, {ok:true});
+    // إضافة Stremio مدمجة: manifest + stream + subtitles من نفس الأصل
+    if (url.pathname === '/addon/manifest.json') return sendJSON(res, 200, addonManifest());
+    if (url.pathname.startsWith('/addon/')) {
+      const call = url.pathname.match(/^\/addon\/(stream|subtitles)\/(movie|series)\/(tt\d+)\.json$/);
+      if (!call) return sendJSON(res, 404, {error:'مسار الإضافة غير موجود'});
+      try {
+        const data = call[1] === 'stream' ? await addonStream(call[2], call[3]) : await addonSubtitles(call[2], call[3]);
+        return sendJSON(res, 200, data);
+      } catch {
+        // لا نضيع المشاهدة بسبب الأرشيف: نعيد المزوّدين على الأقل
+        return sendJSON(res, 200, call[1] === 'stream' ? { streams: addonProviders({ id: call[3], type: call[2] }) } : { subtitles: [] });
+      }
+    }
     if (url.pathname === '/api/proxy') {
       let target;
       try { target = new URL(url.searchParams.get('url')); } catch { return sendJSON(res,400,{error:'رابط غير صالح'}); }
