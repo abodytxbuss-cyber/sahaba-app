@@ -30,13 +30,36 @@ export const WATCHHUB_ADDON={
   },
 };
 
+export const STREAMING_CATALOGS_ADDON={
+  url:'https://7a82163c306e-stremio-netflix-catalog-addon.baby-beamup.club/manifest.json',
+  enabled:true,
+  manifest:{
+    id:'pw.ers.netflix-catalog',
+    version:'1.0.0',
+    name:'Streaming Catalogs',
+    description:'كتالوجات Netflix وHBO Max وDisney+ وApple TV+ وغيرها. هذه كتالوجات فقط وليست مصادر تشغيل.',
+    resources:['catalog'],
+    types:['movie','series'],
+    catalogs:[
+      {id:'nfx',type:'movie',name:'Netflix'},
+      {id:'nfx',type:'series',name:'Netflix'},
+      {id:'hbm',type:'movie',name:'HBO Max'},
+      {id:'hbm',type:'series',name:'HBO Max'},
+      {id:'dnp',type:'movie',name:'Disney+'},
+      {id:'dnp',type:'series',name:'Disney+'},
+      {id:'atp',type:'movie',name:'Apple TV+'},
+      {id:'atp',type:'series',name:'Apple TV+'},
+    ],
+  },
+};
+
 export function initializeLegalStreams(){
-  if(read('legal-streams-v2',false))return;
+  if(read('legal-streams-v3',false))return;
   const addons=getAddons();
-  for(const addon of [WATCHHUB_ADDON,PUBLIC_DOMAIN_MOVIES_ADDON]){
+  for(const addon of [WATCHHUB_ADDON,PUBLIC_DOMAIN_MOVIES_ADDON,STREAMING_CATALOGS_ADDON]){
     const existing=addons.findIndex(a=>a.manifest.id===addon.manifest.id||a.url===addon.url);
     if(existing>=0)addons[existing]={...addon,enabled:addons[existing].enabled!==false};
     else addons.push(addon);
   }
-  if(saveAddons(addons))write('legal-streams-v2',true);
+  if(saveAddons(addons))write('legal-streams-v3',true);
 }
