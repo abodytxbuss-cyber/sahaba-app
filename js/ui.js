@@ -1,19 +1,21 @@
 import {safeURL} from './api.js';
+import {t,tr,isEN} from './i18n.js';
 export const $=(s,root=document)=>root.querySelector(s);
 export const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export const number=n=>Number(n||0).toLocaleString('ar-KW',{numberingSystem:'arab',useGrouping:false});
+export const number=n=>Number(n||0).toLocaleString(isEN()?'en-US':'ar-KW',{numberingSystem:isEN()?'latn':'arab',useGrouping:false});
 export const genreAR={'Action':'أكشن','Adventure':'مغامرة','Animation':'رسوم متحركة','Biography':'سيرة ذاتية','Comedy':'كوميديا','Crime':'جريمة','Documentary':'وثائقي','Drama':'دراما','Family':'عائلي','Fantasy':'فانتازيا','History':'تاريخي','Horror':'رعب','Mystery':'غموض','Romance':'رومانسي','Sci-Fi':'خيال علمي','Sport':'رياضة','Thriller':'إثارة','War':'حرب','Western':'ويسترن','Music':'موسيقى','Musical':'موسيقي','Reality-TV':'تلفزيون الواقع','Talk-Show':'حواري','Game-Show':'مسابقات'};
+const genreEN={'Action':'Action','Adventure':'Adventure','Animation':'Animation','Biography':'Biography','Comedy':'Comedy','Crime':'Crime','Documentary':'Documentary','Drama':'Drama','Family':'Family','Fantasy':'Fantasy','History':'History','Horror':'Horror','Mystery':'Mystery','Romance':'Romance','Sci-Fi':'Sci-Fi','Sport':'Sport','Thriller':'Thriller','War':'War','Western':'Western','Music':'Music','Musical':'Musical','Reality-TV':'Reality TV','Talk-Show':'Talk Show','Game-Show':'Game Show'};
 let translations={},posters={};
 export const setTitles=t=>{translations=t;};
 export const setPosters=p=>{posters=p;};
-export const title=m=>translations[m.id]?.ar||m.titleAr||m.name||'عنوان غير متاح';
+export const title=m=>isEN()?(m.name||translations[m.id]?.en||m.titleAr||t('noTitle')):(translations[m.id]?.ar||m.titleAr||m.name||t('noTitle'));
 export const year=m=>String(m.releaseInfo||m.year||m.released||'').slice(0,4);
-export const genres=m=>(m.genres||m.genre||[]).map(g=>genreAR[g]||g);
+export const genres=m=>(m.genres||m.genre||[]).map(g=>isEN()?(genreEN[g]||g):(genreAR[g]||g));
 export const imageURL=m=>posters[m.id]||m.localPoster||safeURL(m.poster)||'assets/poster.svg';
-export function card(m,{badge='',progress}={}) {return `<a class="movie-card" href="#/details/${encodeURIComponent(m.type||'movie')}/${encodeURIComponent(m.id)}" aria-label="${esc(title(m))}"><div class="poster"><img src="${esc(imageURL(m))}" alt="" loading="lazy" width="300" height="450">${m.imdbRating?`<span class="rating">★ ${esc(m.imdbRating)}</span>`:''}${badge?`<span class="card-badge">${esc(badge)}</span>`:''}<span class="card-play" aria-hidden="true">▷</span>${progress?`<div class="watch-progress"><i style="width:${Math.min(100,progress)}%"></i></div>`:''}</div><h3>${esc(title(m))}</h3><p>${esc(year(m))}<span> • </span>${esc(genres(m)[0]||(m.type==='series'?'مسلسل':'فيلم'))}</p></a>`;}
-export const skeleton=(n=6)=>`<div class="rail" aria-label="جارٍ التحميل">${Array.from({length:n},()=>'<div class="skeleton-card"><div class="skeleton"></div><div class="skeleton line"></div></div>').join('')}</div>`;
+export function card(m,{badge='',progress}={}) {return `<a class="movie-card" href="#/details/${encodeURIComponent(m.type||'movie')}/${encodeURIComponent(m.id)}" aria-label="${esc(title(m))}"><div class="poster"><img src="${esc(imageURL(m))}" alt="" loading="lazy" width="300" height="450">${m.imdbRating?`<span class="rating">★ ${esc(m.imdbRating)}</span>`:''}${badge?`<span class="card-badge">${esc(badge)}</span>`:''}<span class="card-play" aria-hidden="true">▷</span>${progress?`<div class="watch-progress"><i style="width:${Math.min(100,progress)}%"></i></div>`:''}</div><h3>${esc(title(m))}</h3><p>${esc(year(m))}<span> • </span>${esc(genres(m)[0]||(m.type==='series'?tr('مسلسل','Series'):tr('فيلم','Movie')))}</p></a>`;}
+export const skeleton=(n=6)=>`<div class="rail" aria-label="${t('loading')}">${Array.from({length:n},()=>'<div class="skeleton-card"><div class="skeleton"></div><div class="skeleton line"></div></div>').join('')}</div>`;
 export const empty=(text,action='')=>`<div class="empty"><span class="empty-icon">✧</span><p>${esc(text)}</p>${action}</div>`;
-export const errorBox=(text,action='retry')=>`<div class="notice" role="status"><span>${esc(text)}</span><button class="text-button" data-action="${esc(action)}">إعادة المحاولة</button></div>`;
+export const errorBox=(text,action='retry')=>`<div class="notice" role="status"><span>${esc(text)}</span><button class="text-button" data-action="${esc(action)}">${t('retry')}</button></div>`;
 export function toast(text){const el=$('#toast');el.textContent=text;el.classList.add('visible');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('visible'),4500);}
 const modal=$('#modal');let cleanup=()=>{},returnFocus;
 export function closeModal(){cleanup();cleanup=()=>{};modal.close();$('#modal-body').replaceChildren();returnFocus?.focus?.();}

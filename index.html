@@ -9,19 +9,37 @@
 </head>
 <body>
   <div class="night" aria-hidden="true"><div class="stars"></div><div class="aurora"></div></div>
-  <a class="skip-link" href="#main">انتقل إلى المحتوى</a>
+  <a class="skip-link" href="#main" data-i18n="html.skip">انتقل إلى المحتوى</a>
   <header class="topbar">
-    <a class="brand" href="#/home" aria-label="سحابة، الرئيسية"><img src="assets/cloud.svg" alt=""><span>سحابة<small>لِكُلّ حكايةٍ سماء</small></span></a>
-    <nav aria-label="التنقل الرئيسي">
-      <a href="#/home" data-route="home">الرئيسية</a><a href="#/journey" data-route="journey">رحلتي</a><a href="#/search" data-route="search">اكتشف</a><a href="#/library" data-route="library">مكتبتي</a><a href="#/addons" data-route="addons">إضافاتي</a>
+    <a class="brand" href="#/home" aria-label="سحابة، الرئيسية" data-i18n-label="html.brandHome"><img src="assets/cloud.svg" alt=""><span><b data-i18n="brand.name">سحابة</b><small data-i18n="html.tagline">لِكُلّ حكايةٍ سماء</small></span></a>
+    <nav aria-label="التنقل الرئيسي" data-i18n-label="html.mainNav">
+      <a href="#/home" data-route="home" data-i18n="nav.home">الرئيسية</a><a href="#/journey" data-route="journey" data-i18n="nav.journey">رحلتي</a><a href="#/search" data-route="search" data-i18n="nav.search">اكتشف</a><a href="#/library" data-route="library" data-i18n="nav.library">مكتبتي</a><a href="#/addons" data-route="addons" data-i18n="nav.addons">إضافاتي</a>
     </nav>
-    <button id="xp-button" class="xp-button" aria-label="نقاط الخبرة والإنجازات"><span class="gold">✧</span><b id="xp-value">0 XP</b><span class="avatar">س</span></button>
+    <button id="lang-toggle" class="lang-toggle" data-i18n-label="lang.toggle">EN</button>
+    <button id="xp-button" class="xp-button" aria-label="نقاط الخبرة والإنجازات" data-i18n-label="html.xp"><span class="gold">✧</span><b id="xp-value">0 XP</b><span class="avatar">س</span></button>
   </header>
-  <div id="connection" class="connection" role="status" hidden>أنت غير متصل. محتواك المحفوظ ما زال هنا. <button data-action="retry">إعادة المحاولة</button></div>
-  <main id="main" tabindex="-1"><div class="boot"><img src="assets/cloud.svg" alt=""><h1>تتهيّأ سماؤك…</h1><div class="skeleton"></div><button onclick="location.reload()">إعادة المحاولة</button></div></main>
-  <footer><a class="footer-brand" href="#/home">☁ سحابة</a><span>حكاية جديدة، نجمة جديدة.</span><a href="#/addons">مصادرك، باختيارك</a></footer>
-  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-top"><h2 id="modal-title"></h2><button id="close-modal" class="icon-button" aria-label="إغلاق">×</button></div><div id="modal-body"></div></dialog>
+  <div id="connection" class="connection" role="status" hidden><span data-i18n="html.offline">أنت غير متصل. محتواك المحفوظ ما زال هنا.</span> <button data-action="retry" data-i18n="retry">إعادة المحاولة</button></div>
+  <main id="main" tabindex="-1"><div class="boot"><img src="assets/cloud.svg" alt=""><h1 data-i18n="html.boot">تتهيّأ سماؤك…</h1><div class="skeleton"></div><button onclick="location.reload()" data-i18n="retry">إعادة المحاولة</button></div></main>
+  <footer><a class="footer-brand" href="#/home">☁ سحابة</a><span data-i18n="html.footer">حكاية جديدة، نجمة جديدة.</span><a href="#/addons" data-i18n="html.footerLink">مصادرك، باختيارك</a></footer>
+  <section class="quick-orb" id="quick-orb" aria-label="اقتراحات وبحث سريع" data-i18n-label="quick.aria">
+    <button class="quick-orb-button" id="quick-orb-button" aria-expanded="false" aria-controls="quick-orb-panel"><span>⌕</span><b data-i18n="quick.button">اقتراحات</b></button>
+    <div class="quick-orb-panel" id="quick-orb-panel" hidden>
+      <div class="quick-orb-head"><span>✦</span><div><b data-i18n="quick.title">ماذا تشاهد الآن؟</b><small data-i18n="quick.subtitle">ابحث أو اختر اقتراحاً سريعاً</small></div></div>
+      <form id="quick-search-form" class="quick-search-form">
+        <input id="quick-search-input" type="search" autocomplete="off" data-i18n-placeholder="quick.placeholder" placeholder="اسم فيلم أو مسلسل…">
+        <button type="submit" data-i18n="quick.search">بحث</button>
+      </form>
+      <div class="quick-suggestions">
+        <a href="#/catalog/featured" data-i18n="quick.featured">إصدارات سحابة</a>
+        <a href="#/catalog/popular" data-i18n="quick.popular">الأكثر رواجاً</a>
+        <a href="#/catalog/series" data-i18n="quick.series">مسلسلات</a>
+        <a href="#/journey" data-i18n="quick.journey">رحلتي</a>
+        <a href="#/addons" data-i18n="quick.addons">مصادر المشاهدة</a>
+      </div>
+    </div>
+  </section>
+  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-top"><h2 id="modal-title"></h2><button id="close-modal" class="icon-button" aria-label="إغلاق" data-i18n-label="html.close">×</button></div><div id="modal-body"></div></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
-  <noscript><div class="empty">فعّل JavaScript لتبدأ رحلتك في سحابة.</div></noscript>
+  <noscript><div class="empty" data-i18n="html.noscript">فعّل JavaScript لتبدأ رحلتك في سحابة.</div></noscript>
   <script type="module" src="app.js"></script>
 </body></html>

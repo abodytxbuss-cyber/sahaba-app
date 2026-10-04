@@ -1,3 +1,5 @@
+import {t} from './i18n.js';
+
 // أسماء اللغات تختلف بين إضافات Stremio وقوائم HLS.
 export function isArabic(value='') {
   if(typeof value==='object'&&value)return [value.lang,value.language,value.name,value.label].some(isArabic);
@@ -8,9 +10,9 @@ export function arabicAudio(stream) {
   return (Array.isArray(languages)?languages:[languages]).some(isArabic)||/مدبلج|دبلجة|(?:arabic|\bara\b)[ ._-]*(?:dub|audio)|(?:dub|audio)[ ._-]*arabic/i.test([stream.name,stream.title,stream.description].join(' '));
 }
 export function languageName(track) {
-  if(isArabic(track))return 'العربية';
+  if(isArabic(track))return t('lang.arabic');
   const code=String(track.lang||track.language||'').toLowerCase();
-  return ({en:'الإنجليزية',eng:'الإنجليزية',fr:'الفرنسية',fra:'الفرنسية',fre:'الفرنسية',es:'الإسبانية',spa:'الإسبانية',de:'الألمانية',deu:'الألمانية',tr:'التركية',tur:'التركية',ja:'اليابانية',jpn:'اليابانية',hi:'الهندية',hin:'الهندية'})[code]||track.name||track.label||code||'لغة غير محددة';
+  return ({en:t('lang.english'),eng:t('lang.english'),fr:t('lang.french'),fra:t('lang.french'),fre:t('lang.french'),es:t('lang.spanish'),spa:t('lang.spanish'),de:t('lang.german'),deu:t('lang.german'),tr:t('lang.turkish'),tur:t('lang.turkish'),ja:t('lang.japanese'),jpn:t('lang.japanese'),hi:t('lang.hindi'),hin:t('lang.hindi')})[code]||track.name||track.label||code||t('lang.unspecified');
 }
 export function rankSubtitles(list,stream={}) {
   const release=String(stream.behaviorHints?.filename||stream.title||'').toLowerCase();
