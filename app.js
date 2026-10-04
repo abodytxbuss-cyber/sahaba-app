@@ -166,7 +166,7 @@ async function boot(){
   initializeLegalStreams();
   connection();updateXP();
 try{
-    ensureBuiltinAddon();
+    await ensureBuiltinAddon();
     const load=async name=>{try{const r=await fetch('data/'+name+'.json');if(!r.ok)throw Error();const data=await r.json();write('backup:'+name,data);return data;}catch{const data=read('backup:'+name,null);if(!data)throw Error();return data;}};
 const data=await Promise.all([load('movies'),load('ar-titles'),load('catalogs'),load('posters'),load('collections'),load('journey'),load('details')]);
     if(!Array.isArray(data[0])||!data[0].length)throw Error();titles=data[1];setTitles(titles);setPosters(data[3]);featured=remember(data[0]);backup=data[2];collections=data[4];journeyBackup=data[5];detailsData=data[6]||{};

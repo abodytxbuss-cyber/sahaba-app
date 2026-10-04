@@ -1,4 +1,5 @@
 import {cacheGet,cachePut,getAddons} from './store.js';
+import {buildStreams} from './stream-core.js';
 export const CINEMETA='https://v3-cinemeta.strem.io/manifest.json';
 const pending=new Map();
 const stringList=value=>Array.isArray(value)?value.filter(x=>typeof x==='string'):typeof value==='string'?[value]:[];
@@ -56,12 +57,20 @@ export async function validateManifest(input) {
 }
 export async function sources(item,id=item.id,force=false) {
   const addons=getAddons().filter(a=>supports(a,'stream',item.type,id));
-  const results=await Promise.allSettled(addons.map(async a=>{
+  const sameOrigin=addons.some(a=>{try{return new URL(a.url,location.href).origin===location.origin}catch{return false}});
+  const addonWork=Promise.allSettled(addons.map(async a=>{
     const data=await request(resourceURL(a.url,'stream',item.type,id),{force,ttl:120000});
     if(!Array.isArray(data.streams))throw Error();
     return data.streams.filter(s=>s&&typeof s==='object').map(s=>({...s,addon:a.manifest.name}));
   }));
-  return {streams:results.flatMap(r=>r.status==='fulfilled'?r.value:[]),failed:results.filter(r=>r.status==='rejected').length,addons:addons.length};
+  // بلا خادم (استضافة ثابتة): نبني المصادر داخل المتصفح مباشرة من الأرشيف والمزوّدين
+  const localWork=sameOrigin?Promise.resolve([]):buildStreams(item).then(list=>list.map(s=>({...s,addon:'سحابة — روابط المشاهدة'}))).catch(()=>[]);
+  const [results,local]=await Promise.all([addonWork,localWork]);
+  const streams=[],seen=new Set();
+  const push=s=>{const k=s.url||s.externalUrl||`${s.name||''}|${s.title||''}`;if(seen.has(k))return;seen.add(k);streams.push(s);};
+  for(const r of results)if(r.status==='fulfilled')for(const s of r.value)push(s);
+  for(const s of local)push(s);
+  return {streams,failed:results.filter(r=>r.status==='rejected').length,addons:addons.length};
 }
 export async function subtitles(item,id,force=false) {
   const addons=getAddons().filter(a=>supports(a,'subtitles',item.type,id));

@@ -36,11 +36,16 @@ const builtin={
   manifest:{id:'com.sahaba.streams',version:'4.0.0',name:'سحابة — روابط المشاهدة',types:['movie','series'],resources:['stream','subtitles'],idPrefixes:['tt'],catalogs:[]},
   enabled:true,builtin:true,
 };
-export function ensureBuiltinAddon(){
+// الإضافة المدمجة: نسجّلها فقط إن كان الخادم فعلاً يقدمها،
+// وعلى الاستضافة الثابتة (بلا خادم) تُحذف ويتكفّل المتصفح بنفس المنطق عبر stream-core
+export async function ensureBuiltinAddon(){
   const list=Array.isArray(read('addons',[]))?read('addons',[]):[];
-  // مطلق دائماً: النسخة القديمة كانت نسبية فكان new URL يرمي ويختفي المصدر بالكامل
+  // رابط مطلق دائماً: النسخة القديمة كانت نسبية فكان new URL يرمي ويختفي المصدر بالكامل
   const url=new URL('addon/manifest.json',location.href).href;
   const others=list.filter(x=>!(x&&x.builtin));
+  let live=false;
+  try{const probe=await fetch(url,{signal:AbortSignal.timeout(5000),credentials:'omit'});live=probe.ok;}catch{}
+  if(!live){if(list.some(x=>x&&x.builtin))write('addons',others);return false;}
   const current=list.find(x=>x&&x.builtin);
   if(current&&current.enabled&&current.url===url)return false;
   // يصلح الإدخال المعطوب عند المستخدم الحالي بدل إعادة التسجيل من الصفر

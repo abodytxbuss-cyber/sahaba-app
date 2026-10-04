@@ -1,5 +1,5 @@
-const CACHE='sahaba-shell-v4.1.0';
-const shell=['./','index.html','style.css','app.js','js/api.js','js/store.js','js/ui.js','js/player.js','js/languages.js','js/player-languages.js','js/subtitle-addon.js','js/source-addons.js','js/catalog-rules.js','js/collections.js','data/movies.json','data/ar-titles.json','data/ar-descriptions.json','data/catalogs.json','data/posters.json','data/collections.json','data/journey.json','assets/cloud.svg','assets/poster.svg','assets/fonts.css',...Array.from({length:7},(_,i)=>'assets/font-'+i+'.woff2')];
+const CACHE='sahaba-shell-v4.1.1';
+const shell=['./','index.html','style.css','app.js','js/api.js','js/stream-core.js','js/store.js','js/ui.js','js/player.js','js/languages.js','js/player-languages.js','js/subtitle-addon.js','js/source-addons.js','js/catalog-rules.js','js/collections.js','data/movies.json','data/ar-titles.json','data/ar-descriptions.json','data/catalogs.json','data/posters.json','data/collections.json','data/journey.json','assets/cloud.svg','assets/poster.svg','assets/fonts.css',...Array.from({length:7},(_,i)=>'assets/font-'+i+'.woff2')];
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(shell)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('sahaba-shell-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',event=>{
