@@ -12,22 +12,11 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt4900148/img",
-    "description": "Elio, a space fanatic with an active imagination, finds himself on a cosmic misadventure where he must form new bonds with alien lifeforms, navigate a crisis of intergalactic proportions and somehow discover who he is truly meant ...",
     "duration": "98 min",
-    "cast": [
-      "Yonas Kibreab",
-      "Zoe Saldaña",
-      "Remy Edgerly"
-    ],
     "imdb_id": "tt4900148",
     "name": "Elio",
     "awards": "Nominated for 1 Oscar. 1 win & 47 nominations total",
     "country": "United States",
-    "director": [
-      "Adrian Molina",
-      "Madeline Sharafian",
-      "Domee Shi"
-    ],
     "imdbRating": "6.6",
     "released": "2025-06-20T00:00:00.000Z",
     "slug": "movie/elio-4900148",
@@ -65,7 +54,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "98 min",
     "background": "https://images.metahub.space/background/medium/tt4900148/img",
     "logo": "https://images.metahub.space/logo/medium/tt4900148/img",
     "popularity": 0.4045833333333333,
@@ -173,7 +161,6 @@
       "defaultVideoId": "tt4900148",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "فتى يحلم بالفضاء يجد نفسه سفيراً للأرض في مغامرة بين النجوم.",
     "localPoster": "assets/tt4900148.jpg",
     "featured": true
   },
@@ -190,19 +177,10 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt10676052/img",
-    "description": "Forced to balance their roles as heroes with the strength of their family bond, the Fantastic Four must defend Earth from a ravenous space god called Galactus and his enigmatic herald, the Silver Surfer.",
     "duration": "115 min",
-    "cast": [
-      "Pedro Pascal",
-      "Vanessa Kirby",
-      "Ebon Moss-Bachrach"
-    ],
     "imdb_id": "tt10676052",
     "name": "The Fantastic Four: First Steps",
     "country": "United Kingdom, United States, Canada, New Zealand",
-    "director": [
-      "Matt Shakman"
-    ],
     "imdbRating": "6.8",
     "released": "2025-07-25T00:00:00.000Z",
     "slug": "movie/the-fantastic-four-first-steps-10676052",
@@ -246,7 +224,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "115 min",
     "awards": "4 wins & 48 nominations total",
     "popularity": 1.2344,
     "genres": [
@@ -347,7 +324,6 @@
       "defaultVideoId": "tt10676052",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "عائلة من الأبطال تواجه تهديداً كونياً يختبر قوتها وروابطها.",
     "localPoster": "assets/tt10676052.jpg",
     "featured": true
   },
@@ -362,19 +338,10 @@
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt29644189/img",
-    "description": "As Finn, now 17, struggles with life after his captivity, his sister begins receiving calls in her dreams from the black phone and seeing disturbing visions of three boys being stalked at a winter camp known as Alpine Lake.",
     "duration": "114 min",
-    "cast": [
-      "Ethan Hawke",
-      "Mason Thames",
-      "Madeleine McGraw"
-    ],
     "imdb_id": "tt29644189",
     "name": "Black Phone 2",
     "country": "United States, Canada",
-    "director": [
-      "Scott Derrickson"
-    ],
     "imdbRating": "6.1",
     "released": "2025-10-17T00:00:00.000Z",
     "slug": "movie/black-phone-2-29644189",
@@ -390,7 +357,6 @@
       "stremio_lib": 0,
       "trakt": 50
     },
-    "runtime": "114 min",
     "trailers": [
       {
         "source": "pWNucAcRoBY",
@@ -483,7 +449,6 @@
       "defaultVideoId": "tt29644189",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "تعود كوابيس الماضي لتطارد الناجين من جديد.",
     "localPoster": "assets/tt29644189.jpg",
     "featured": true
   },
@@ -500,19 +465,10 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt31036941/img",
-    "description": "Five years post-Jurassic World: Dominion (2022), an expedition braves isolated equatorial regions to extract DNA from three massive prehistoric creatures for a groundbreaking medical breakthrough.",
     "duration": "134 min",
-    "cast": [
-      "Scarlett Johansson",
-      "Mahershala Ali",
-      "Jonathan Bailey"
-    ],
     "imdb_id": "tt31036941",
     "name": "Jurassic World: Rebirth",
     "country": "United States, United Kingdom, Malta, India, Taiwan, Japan",
-    "director": [
-      "Gareth Edwards"
-    ],
     "imdbRating": "5.8",
     "released": "2025-07-02T00:00:00.000Z",
     "slug": "movie/jurassic-world-rebirth-31036941",
@@ -544,7 +500,6 @@
       }
     ],
     "awards": "Nominated for 1 Oscar. 3 wins & 14 nominations total",
-    "runtime": "134 min",
     "popularity": 1.09785,
     "genres": [
       "Action",
@@ -627,7 +582,6 @@
       "defaultVideoId": "tt31036941",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "رحلة إلى جزيرة معزولة تخفي أسرار الديناصورات ومخاطرها.",
     "localPoster": "assets/tt31036941.jpg",
     "featured": true
   },
@@ -644,19 +598,10 @@
       "Crime"
     ],
     "poster": "https://images.metahub.space/poster/small/tt28996126/img",
-    "description": "Suburban dad Hutch Mansell, a former lethal assassin, is pulled back into his violent past after thwarting a home invasion, setting off a chain of events.",
     "duration": "89 min",
-    "cast": [
-      "Bob Odenkirk",
-      "Connie Nielsen",
-      "Christopher Lloyd"
-    ],
     "imdb_id": "tt28996126",
     "name": "Nobody 2",
     "country": "United States, Canada",
-    "director": [
-      "Timo Tjahjanto"
-    ],
     "imdbRating": "6.3",
     "released": "2025-08-15T00:00:00.000Z",
     "slug": "movie/nobody-2-28996126",
@@ -681,7 +626,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "89 min",
     "background": "https://images.metahub.space/background/medium/tt28996126/img",
     "logo": "https://images.metahub.space/logo/medium/tt28996126/img",
     "awards": "3 nominations total",
@@ -763,7 +707,6 @@
       "defaultVideoId": "tt28996126",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "رجل يحاول الابتعاد عن ماضيه العنيف، لكن المتاعب تجد طريقها إليه.",
     "localPoster": "assets/tt28996126.jpg",
     "featured": true
   },
@@ -780,19 +723,10 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt30274401/img",
-    "description": "One year after the supernatural nightmare at Freddy Fazbear's Pizza, Abby runs away to reconnect with her animatronic friends, uncovering dark secrets about the true origins of Freddy's and unleashing a horror hidden for decades.",
     "duration": "104 min",
-    "cast": [
-      "Josh Hutcherson",
-      "Piper Rubio",
-      "Elizabeth Lail"
-    ],
     "imdb_id": "tt30274401",
     "name": "Five Nights at Freddy's 2",
     "country": "United States, Canada",
-    "director": [
-      "Emma Tammi"
-    ],
     "imdbRating": "5.1",
     "released": "2025-12-05T00:00:00.000Z",
     "slug": "movie/five-nights-at-freddys-2-30274401",
@@ -806,7 +740,6 @@
       "stremio_lib": 0,
       "trakt": 50
     },
-    "runtime": "104 min",
     "background": "https://images.metahub.space/background/medium/tt30274401/img",
     "logo": "https://images.metahub.space/logo/medium/tt30274401/img",
     "trailers": [
@@ -893,7 +826,6 @@
       "defaultVideoId": "tt30274401",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "عودة إلى عالم الدمى المتحركة وأسرار الليالي المرعبة.",
     "localPoster": "assets/tt30274401.jpg",
     "featured": true
   },
@@ -910,19 +842,10 @@
       "Sport"
     ],
     "poster": "https://images.metahub.space/poster/small/tt16311594/img",
-    "description": "A Formula One driver comes out of retirement to mentor and team up with a younger driver.",
     "duration": "156 min",
-    "cast": [
-      "Brad Pitt",
-      "Damson Idris",
-      "Javier Bardem"
-    ],
     "imdb_id": "tt16311594",
     "name": "F1: The Movie",
     "country": "United States",
-    "director": [
-      "Joseph Kosinski"
-    ],
     "imdbRating": "7.6",
     "released": "2025-06-27T00:00:00.000Z",
     "slug": "movie/f1-the-movie-16311594",
@@ -965,7 +888,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "156 min",
     "awards": "Won 1 Oscar. 31 wins & 129 nominations total",
     "popularity": 1.4239600000000001,
     "genres": [
@@ -1061,7 +983,6 @@
       "defaultVideoId": "tt16311594",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "سائق مخضرم يعود إلى المضمار ليرشد موهبة شابة. سباق أخير، وفرصة لكتابة نهاية مختلفة.",
     "localPoster": "assets/tt16311594.jpg",
     "featured": true
   },
@@ -1078,19 +999,10 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14107334/img",
-    "description": "A man joins a game show in which contestants, allowed to flee anywhere in the world, are pursued by \"hunters\" hired to kill them.",
     "duration": "133 min",
-    "cast": [
-      "Glen Powell",
-      "Alyssa Benn",
-      "Sienna Benn"
-    ],
     "imdb_id": "tt14107334",
     "name": "The Running Man",
     "country": "United Kingdom, United States",
-    "director": [
-      "Edgar Wright"
-    ],
     "imdbRating": "6.4",
     "released": "2025-11-14T00:00:00.000Z",
     "slug": "movie/the-running-man-14107334",
@@ -1122,7 +1034,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt14107334/img",
     "logo": "https://images.metahub.space/logo/medium/tt14107334/img",
-    "runtime": "133 min",
     "awards": "8 nominations total",
     "popularity": 0.94115,
     "genres": [
@@ -1211,7 +1122,6 @@
       "defaultVideoId": "tt14107334",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "رجل يدخل مسابقة خطرة تتحول إلى صراع من أجل البقاء.",
     "localPoster": "assets/tt14107334.jpg",
     "featured": true
   },
@@ -1228,19 +1138,10 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14364480/img",
-    "description": "Detective Benoit Blanc teams up with an earnest young priest to investigate a perfectly impossible crime at a small-town church with a dark history.",
     "duration": "145 min",
-    "cast": [
-      "Daniel Craig",
-      "Josh O'Connor",
-      "Glenn Close"
-    ],
     "imdb_id": "tt14364480",
     "name": "Wake Up Dead Man",
     "country": "United States",
-    "director": [
-      "Rian Johnson"
-    ],
     "imdbRating": "7.3",
     "released": "2025-12-12T00:00:00.000Z",
     "slug": "movie/wake-up-dead-man-14364480",
@@ -1254,7 +1155,6 @@
       "stremio_lib": 0,
       "trakt": 54
     },
-    "runtime": "145 min",
     "background": "https://images.metahub.space/background/medium/tt14364480/img",
     "logo": "https://images.metahub.space/logo/medium/tt14364480/img",
     "trailers": [
@@ -1333,7 +1233,6 @@
       "defaultVideoId": "tt14364480",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "المحقق بينوا بلانك يتتبع خيوط لغز جديد مليء بالأسرار.",
     "localPoster": "assets/tt14364480.jpg",
     "featured": true
   },
@@ -1350,19 +1249,10 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt26743210/img",
-    "description": "As an ancient threat endangers both Vikings and dragons alike on the isle of Berk, the friendship between Hiccup, an inventive Viking, and Toothless, a Night Fury dragon, becomes the key to both species forging a new future together.",
     "duration": "125 min",
-    "cast": [
-      "Mason Thames",
-      "Nico Parker",
-      "Gerard Butler"
-    ],
     "imdb_id": "tt26743210",
     "name": "How to Train Your Dragon",
     "country": "United States, United Kingdom, Ireland, Iceland, Canada",
-    "director": [
-      "Dean DeBlois"
-    ],
     "imdbRating": "7.7",
     "released": "2025-06-13T00:00:00.000Z",
     "slug": "movie/how-to-train-your-dragon-26743210",
@@ -1396,7 +1286,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "125 min",
     "background": "https://images.metahub.space/background/medium/tt26743210/img",
     "logo": "https://images.metahub.space/logo/medium/tt26743210/img",
     "awards": "Nominated for 1 BAFTA Award. 4 wins & 20 nominations total",
@@ -1491,7 +1380,6 @@
       "defaultVideoId": "tt26743210",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "صداقة غير متوقعة بين فتى وتنين تغيّر مصير عالمَيهما.",
     "localPoster": "assets/tt26743210.jpg",
     "featured": true
   },
@@ -1508,21 +1396,10 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13622970/img",
-    "description": "After receiving an unexpected call from her wayfinding ancestors, Moana must journey to the far seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever faced.",
     "duration": "100 min",
-    "cast": [
-      "Auli&apos;i Cravalho",
-      "Dwayne Johnson",
-      "Hualalai Chung"
-    ],
     "imdb_id": "tt13622970",
     "name": "Moana 2",
     "country": "United States, Canada",
-    "director": [
-      "David G. Derrick Jr.",
-      "Jason Hand",
-      "Dana Ledoux Miller"
-    ],
     "imdbRating": "6.3",
     "released": "2024-11-27T00:00:00.000Z",
     "slug": "movie/moana-2-13622970",
@@ -1554,7 +1431,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt13622970/img",
     "logo": "https://images.metahub.space/logo/medium/tt13622970/img",
-    "runtime": "100 min",
     "awards": "7 wins & 30 nominations total",
     "popularity": 1.30152,
     "genres": [
@@ -1653,7 +1529,6 @@
       "defaultVideoId": "tt13622970",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "موانا تبحر بعيداً مع طاقم جديد في رحلة تستجيب فيها لنداء أسلافها.",
     "localPoster": "assets/tt13622970.jpg",
     "featured": true
   },
@@ -1670,19 +1545,10 @@
       "Fantasy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt12299608/img",
-    "description": "During a human expedition to colonize space, Mickey 17, a so-called \"expendable\" employee, is sent to explore an ice planet.",
     "duration": "137 min",
-    "cast": [
-      "Robert Pattinson",
-      "Steven Yeun",
-      "Michael Monroe"
-    ],
     "imdb_id": "tt12299608",
     "name": "Mickey 17",
     "country": "United States, South Korea",
-    "director": [
-      "Bong Joon Ho"
-    ],
     "imdbRating": "6.7",
     "released": "2025-03-07T00:00:00.000Z",
     "slug": "movie/mickey-17-12299608",
@@ -1697,7 +1563,6 @@
       "stremio_lib": 0,
       "trakt": 53
     },
-    "runtime": "137 min",
     "trailers": [
       {
         "source": "tA1s65o_kYM",
@@ -1789,7 +1654,6 @@
       "defaultVideoId": "tt12299608",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "عامل قابل للاستبدال يكتشف معنى أن تكون نسخته التالية موجودة بالفعل.",
     "localPoster": "assets/tt12299608.jpg",
     "featured": true
   },
@@ -1806,18 +1670,9 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt7068946/img",
-    "description": "Christian Wolff applies his brilliant mind and illegal methods to reconstruct the unsolved puzzle of a Treasury chief's murder.",
     "duration": "133 min",
-    "cast": [
-      "Ben Affleck",
-      "Jon Bernthal",
-      "Cynthia Addai-Robinson"
-    ],
     "imdb_id": "tt7068946",
     "country": "United States",
-    "director": [
-      "Gavin O&apos;Connor"
-    ],
     "imdbRating": "6.6",
     "name": "The Accountant 2",
     "released": "2025-04-25T00:00:00.000Z",
@@ -1835,7 +1690,6 @@
     "awards": "1 win & 6 nominations total",
     "background": "https://images.metahub.space/background/medium/tt7068946/img",
     "logo": "https://images.metahub.space/logo/medium/tt7068946/img",
-    "runtime": "133 min",
     "trailers": [
       {
         "source": "RwXDphhQ9Tg",
@@ -1943,7 +1797,6 @@
       "defaultVideoId": "tt7068946",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "مهمة جديدة تجمع المحاسب وشقيقه وسط شبكة من الخطر.",
     "localPoster": "assets/tt7068946.jpg",
     "featured": true
   },
@@ -1959,18 +1812,9 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt4712810/img",
-    "description": "The Four Horsemen reunite and team up with a new generation of young illusionists to expose a diamond heiress's global money laundering scheme for criminals.",
     "duration": "113 min",
-    "cast": [
-      "Jesse Eisenberg",
-      "Woody Harrelson",
-      "Dave Franco"
-    ],
     "imdb_id": "tt4712810",
     "country": "United States, United Arab Emirates, Canada, Hungary",
-    "director": [
-      "Ruben Fleischer"
-    ],
     "imdbRating": "5.9",
     "name": "Now You See Me: Now You Don't",
     "released": "2025-11-14T00:00:00.000Z",
@@ -2003,7 +1847,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt4712810/img",
     "logo": "https://images.metahub.space/logo/medium/tt4712810/img",
-    "runtime": "113 min",
     "awards": "2 nominations total",
     "popularity": 1.0184833333333334,
     "genres": [
@@ -2086,7 +1929,6 @@
       "defaultVideoId": "tt4712810",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "السحرة يعودون بخدع جديدة ومهمة تتجاوز حدود الوهم.",
     "localPoster": "assets/tt4712810.jpg",
     "featured": true
   },
@@ -2103,18 +1945,9 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt9603208/img",
-    "description": "Hunt and the IMF pursue a dangerous AI called the Entity that's infiltrated global intelligence. With governments and a figure from his past in pursuit, Hunt races to stop it from forever changing the world.",
     "duration": "170 min",
-    "cast": [
-      "Tom Cruise",
-      "Hayley Atwell",
-      "Ving Rhames"
-    ],
     "imdb_id": "tt9603208",
     "country": "United States, Norway",
-    "director": [
-      "Christopher McQuarrie"
-    ],
     "imdbRating": "7.1",
     "name": "Mission: Impossible - The Final Reckoning",
     "released": "2025-05-23T00:00:00.000Z",
@@ -2149,7 +1982,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "170 min",
     "background": "https://images.metahub.space/background/medium/tt9603208/img",
     "logo": "https://images.metahub.space/logo/medium/tt9603208/img",
     "awards": "38 wins & 42 nominations total",
@@ -2244,7 +2076,6 @@
       "defaultVideoId": "tt9603208",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "إيثان هانت وفريقه يخوضون سباقاً حاسماً لإنقاذ العالم.",
     "localPoster": "assets/tt9603208.jpg",
     "featured": true
   },
@@ -2261,19 +2092,10 @@
       "Fantasy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt19847976/img",
-    "description": "Elphaba, the future Wicked Witch of the West and her relationship with Glinda, the Good Witch of the North. The second of a two-part feature film adaptation of the Broadway musical.",
     "duration": "137 min",
-    "cast": [
-      "Cynthia Erivo",
-      "Ariana Grande",
-      "Jeff Goldblum"
-    ],
     "imdb_id": "tt19847976",
     "name": "Wicked: For Good",
     "country": "United States, Canada, Australia",
-    "director": [
-      "Jon M. Chu"
-    ],
     "imdbRating": "6.6",
     "released": "2025-11-21T00:00:00.000Z",
     "slug": "movie/wicked-for-good-19847976",
@@ -2302,7 +2124,6 @@
       }
     ],
     "awards": "Nominated for 2 BAFTA Awards. 27 wins & 143 nominations total",
-    "runtime": "137 min",
     "popularity": 0.31303000000000003,
     "genres": [
       "Drama",
@@ -2386,7 +2207,6 @@
       "defaultVideoId": "tt19847976",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "تتقاطع مصائر ساحرتين وصداقة تغيّر أرض أوز.",
     "localPoster": "assets/tt19847976.jpg",
     "featured": true
   },
@@ -2403,18 +2223,9 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt6604188/img",
-    "description": "A highly sophisticated program, Ares, is sent from the digital world into the real world on a dangerous mission.",
     "duration": "119 min",
-    "cast": [
-      "Jared Leto",
-      "Greta Lee",
-      "Jeff Bridges"
-    ],
     "imdb_id": "tt6604188",
     "country": "United States, Canada, New Zealand",
-    "director": [
-      "Joachim Rønning"
-    ],
     "imdbRating": "6.2",
     "name": "Tron: Ares",
     "released": "2025-10-10T00:00:00.000Z",
@@ -2459,7 +2270,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt6604188/img",
     "logo": "https://images.metahub.space/logo/medium/tt6604188/img",
-    "runtime": "119 min",
     "awards": "3 wins & 19 nominations total",
     "popularity": 0.5061533333333333,
     "genres": [
@@ -2560,7 +2370,6 @@
       "defaultVideoId": "tt6604188",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "تتلاشى الحدود بين العالم الرقمي والواقع.",
     "localPoster": "assets/tt6604188.jpg",
     "featured": true
   },
@@ -2577,19 +2386,10 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14513804/img",
-    "description": "Sam Wilson, the new Captain America, finds himself in the middle of an international incident and must discover the motive behind a nefarious global plan.",
     "duration": "119 min",
-    "cast": [
-      "Anthony Mackie",
-      "Harrison Ford",
-      "Danny Ramirez"
-    ],
     "imdb_id": "tt14513804",
     "name": "Captain America: Brave New World",
     "country": "United States, Canada",
-    "director": [
-      "Julius Onah"
-    ],
     "imdbRating": "5.6",
     "released": "2025-02-14T00:00:00.000Z",
     "slug": "movie/captain-america-brave-new-world-14513804",
@@ -2621,7 +2421,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "119 min",
     "awards": "2 wins & 17 nominations total",
     "popularity": 0.55959,
     "genres": [
@@ -2710,7 +2509,6 @@
       "defaultVideoId": "tt14513804",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "سام ويلسون يحمل الدرع ويواجه أزمة دولية معقدة.",
     "localPoster": "assets/tt14513804.jpg",
     "featured": true
   },
@@ -2727,19 +2525,10 @@
       "Crime"
     ],
     "poster": "https://images.metahub.space/poster/small/tt20969586/img",
-    "description": "After finding themselves ensnared in a death trap, an unconventional team of antiheroes must go on a dangerous mission that will force them to confront the darkest corners of their pasts.",
     "duration": "127 min",
-    "cast": [
-      "Florence Pugh",
-      "Sebastian Stan",
-      "Julia Louis-Dreyfus"
-    ],
     "imdb_id": "tt20969586",
     "name": "Thunderbolts*",
     "country": "United States, Australia, Canada",
-    "director": [
-      "Jake Schreier"
-    ],
     "imdbRating": "7.1",
     "released": "2025-05-02T00:00:00.000Z",
     "slug": "movie/thunderbolts-20969586",
@@ -2787,7 +2576,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt20969586/img",
     "logo": "https://images.metahub.space/logo/medium/tt20969586/img",
-    "runtime": "127 min",
     "awards": "4 wins & 28 nominations total",
     "popularity": 1.2556800000000001,
     "genres": [
@@ -2892,7 +2680,6 @@
       "defaultVideoId": "tt20969586",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "مجموعة غير متوقعة من الشخصيات تتحد في مهمة خطيرة.",
     "localPoster": "assets/tt20969586.jpg",
     "featured": true
   },
@@ -2909,19 +2696,10 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt22898462/img",
-    "description": "Paranormal investigators Ed and Lorraine Warren take on one last terrifying case involving mysterious entities they must confront.",
     "duration": "136 min",
-    "cast": [
-      "Patrick Wilson",
-      "Vera Farmiga",
-      "Mia Tomlinson"
-    ],
     "imdb_id": "tt22898462",
     "name": "The Conjuring: Last Rites",
     "country": "Canada, United States",
-    "director": [
-      "Michael Chaves"
-    ],
     "imdbRating": "6.2",
     "released": "2025-09-05T00:00:00.000Z",
     "slug": "movie/the-conjuring-last-rites-22898462",
@@ -2947,7 +2725,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "136 min",
     "background": "https://images.metahub.space/background/medium/tt22898462/img",
     "logo": "https://images.metahub.space/logo/medium/tt22898462/img",
     "awards": "1 nomination total",
@@ -3034,7 +2811,6 @@
       "defaultVideoId": "tt22898462",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "قضية مرعبة تختبر المحققَين في الظواهر الخارقة.",
     "localPoster": "assets/tt22898462.jpg",
     "featured": true
   },
@@ -3051,13 +2827,7 @@
       "Adventure"
     ],
     "poster": "https://images.metahub.space/poster/small/tt34956443/img",
-    "description": "After a great catastrophe, the souls of Nezha and Aobing are saved, but their bodies face ruin. To give them new life, Taiyi Zhenren turns to the mystical seven-colored lotus in a daring bid to rebuild them and change their fate.",
     "duration": "144 min",
-    "cast": [
-      "Yanting Lü",
-      "Joseph",
-      "Mo Han"
-    ],
     "imdb_id": "tt34956443",
     "name": "Ne Zha 2",
     "popularities": {
@@ -3068,9 +2838,6 @@
     },
     "awards": "20 wins & 8 nominations total",
     "country": "China",
-    "director": [
-      "Yu Yang"
-    ],
     "imdbRating": "7.9",
     "released": "2025-01-29T00:00:00.000Z",
     "slug": "movie/ne-zha-2-34956443",
@@ -3080,7 +2847,6 @@
       "Yu Yang"
     ],
     "moviedb_id": 980477,
-    "runtime": "144 min",
     "trailers": [
       {
         "source": "ETlOSBR92Fs",
@@ -3176,7 +2942,6 @@
       "defaultVideoId": "tt34956443",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "مغامرة أسطورية عن المصير والقوة والروابط العائلية.",
     "localPoster": "assets/tt34956443.jpg",
     "featured": true
   },
@@ -3193,13 +2958,7 @@
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13654226/img",
-    "description": "Two operatives are appointed to posts in guard towers on opposite sides of a classified gorge.",
     "duration": "128 min",
-    "cast": [
-      "Miles Teller",
-      "Anya Taylor-Joy",
-      "Sigourney Weaver"
-    ],
     "imdb_id": "tt13654226",
     "name": "The Gorge",
     "popularities": {
@@ -3209,9 +2968,6 @@
       "stremio_lib": 0
     },
     "country": "United Kingdom, United States",
-    "director": [
-      "Scott Derrickson"
-    ],
     "imdbRating": "6.7",
     "released": "2025-02-14T00:00:00.000Z",
     "slug": "movie/the-gorge-13654226",
@@ -3219,7 +2975,6 @@
       "Zach Dean"
     ],
     "moviedb_id": 950396,
-    "runtime": "128 min",
     "trailers": [
       {
         "source": "rUSdnuOLebE",
@@ -3298,7 +3053,6 @@
       "defaultVideoId": "tt13654226",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "حارسان على جانبَي وادٍ غامض يكتشفان ما تخفيه أعماقه.",
     "localPoster": "assets/tt13654226.jpg",
     "featured": true
   },
@@ -3315,19 +3069,10 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt18259086/img",
-    "description": "Sonic, Knuckles, and Tails reunite against a powerful new adversary, Shadow, a mysterious villain with powers unlike anything they have faced before. With their abilities outmatched, Team Sonic must seek out an unlikely alliance.",
     "duration": "110 min",
-    "cast": [
-      "Jim Carrey",
-      "Ben Schwartz",
-      "Keanu Reeves"
-    ],
     "imdb_id": "tt18259086",
     "name": "Sonic the Hedgehog 3",
     "country": "United States, Japan",
-    "director": [
-      "Jeff Fowler"
-    ],
     "imdbRating": "6.9",
     "released": "2024-12-20T00:00:00.000Z",
     "slug": "movie/sonic-the-hedgehog-3-18259086",
@@ -3355,7 +3100,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt18259086/img",
     "logo": "https://images.metahub.space/logo/medium/tt18259086/img",
-    "runtime": "110 min",
     "awards": "1 win & 6 nominations total",
     "popularity": 0.8008233333333333,
     "genres": [
@@ -3440,7 +3184,6 @@
       "defaultVideoId": "tt18259086",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "سونيك وأصدقاؤه يواجهون خصماً جديداً ذا قوة استثنائية.",
     "localPoster": "assets/tt18259086.jpg",
     "featured": true
   },
@@ -3457,19 +3200,10 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt3566834/img",
-    "description": "Four misfits are suddenly pulled through a mysterious portal into a bizarre cubic wonderland that thrives on imagination. To get back home they'll have to master this world while embarking on a quest with an unexpected expert craf...",
-    "cast": [
-      "Jason Momoa",
-      "Jack Black",
-      "Sebastian Hansen"
-    ],
     "duration": "101 min",
     "imdb_id": "tt3566834",
     "name": "A Minecraft Movie",
     "released": "2025-04-04T00:00:00.000Z",
-    "director": [
-      "Jared Hess"
-    ],
     "writer": [
       "Chris Bowman",
       "Hubbel Palmer",
@@ -3563,8 +3297,6 @@
       "defaultVideoId": "tt3566834",
       "hasScheduledVideos": false
     },
-    "runtime": "101 min",
-    "descriptionAr": "مجموعة من الغرباء تجد طريقها إلى عالم تصنع فيه المخيلة كل شيء.",
     "localPoster": "assets/tt3566834.jpg",
     "featured": true
   },
@@ -3581,19 +3313,10 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt11655566/img",
-    "description": "A lonely Hawaiian girl befriends a runaway alien, helping to mend her fragmented family.",
     "duration": "108 min",
-    "cast": [
-      "Maia Kealoha",
-      "Sydney Agudong",
-      "Chris Sanders"
-    ],
     "imdb_id": "tt11655566",
     "name": "Lilo & Stitch",
     "country": "United States, Australia, Canada",
-    "director": [
-      "Dean Fleischer Camp"
-    ],
     "imdbRating": "6.7",
     "released": "2025-05-23T00:00:00.000Z",
     "slug": "movie/lilo-stitch-11655566",
@@ -3611,7 +3334,6 @@
     },
     "background": "https://images.metahub.space/background/medium/tt11655566/img",
     "logo": "https://images.metahub.space/logo/medium/tt11655566/img",
-    "runtime": "108 min",
     "trailers": [
       {
         "source": "VWqJifMMgZE",
@@ -3698,7 +3420,6 @@
       "defaultVideoId": "tt11655566",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "طفلة من هاواي تصادق كائناً فضائياً مشاغباً يبحث عن عائلة.",
     "localPoster": "assets/tt11655566.jpg",
     "featured": true
   },
@@ -3715,19 +3436,10 @@
       "Mystery"
     ],
     "poster": "https://images.metahub.space/poster/small/tt23468450/img",
-    "description": "In pursuit of a serial killer, an FBI agent uncovers a series of occult clues that she must solve to end his terrifying killing spree.",
     "duration": "101 min",
-    "cast": [
-      "Maika Monroe",
-      "Nicolas Cage",
-      "Blair Underwood"
-    ],
     "imdb_id": "tt23468450",
     "name": "Longlegs",
     "country": "Canada, United States",
-    "director": [
-      "Osgood Perkins"
-    ],
     "imdbRating": "6.5",
     "released": "2024-07-12T00:00:00.000Z",
     "slug": "movie/longlegs-23468450",
@@ -3741,7 +3453,6 @@
       "stremio_lib": 0,
       "trakt": 12
     },
-    "runtime": "101 min",
     "trailers": [
       {
         "source": "FXOtkvx25gI",
@@ -3836,7 +3547,6 @@
       "defaultVideoId": "tt23468450",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "محققة تلاحق قاتلاً غامضاً في قضية تتشابك فيها أسرار الماضي.",
     "localPoster": "assets/tt23468450.jpg",
     "featured": true
   },
@@ -3853,19 +3563,10 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13186482/img",
-    "description": "Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline. The chance meeting sets in motion an expansive journey of a group of misfits searching for their destiny.",
     "duration": "118 min",
-    "cast": [
-      "Aaron Pierre",
-      "Kelvin Harrison Jr.",
-      "Tiffany Boone"
-    ],
     "imdb_id": "tt13186482",
     "name": "Mufasa: The Lion King",
     "country": "United States, Canada",
-    "director": [
-      "Barry Jenkins"
-    ],
     "imdbRating": "6.6",
     "released": "2024-12-20T00:00:00.000Z",
     "slug": "movie/mufasa-the-lion-king-13186482",
@@ -3895,7 +3596,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt13186482/img",
     "logo": "https://images.metahub.space/logo/medium/tt13186482/img",
-    "runtime": "118 min",
     "awards": "1 win & 18 nominations total",
     "popularity": 0.48173333333333335,
     "genres": [
@@ -3974,7 +3674,6 @@
       "defaultVideoId": "tt13186482",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "حكاية الصعود التي سبقت أسطورة ملك أرض العزة.",
     "localPoster": "assets/tt13186482.jpg",
     "featured": true
   },
@@ -3991,19 +3690,10 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt18412256/img",
-    "description": "While scavenging the deep ends of a derelict space station, a group of young space colonists come face to face with the most terrifying life form in the universe.",
     "duration": "119 min",
-    "cast": [
-      "Cailee Spaeny",
-      "David Jonsson",
-      "Archie Renaux"
-    ],
     "imdb_id": "tt18412256",
     "name": "Alien: Romulus",
     "country": "United Kingdom, United States, Hungary, Australia, New Zealand, Canada",
-    "director": [
-      "Fede Alvarez"
-    ],
     "imdbRating": "7.1",
     "released": "2024-08-16T00:00:00.000Z",
     "slug": "movie/alien-romulus-18412256",
@@ -4031,7 +3721,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "119 min",
     "awards": "Nominated for 1 Oscar. 16 wins & 55 nominations total",
     "popularity": 0.85431,
     "genres": [
@@ -4116,7 +3805,6 @@
       "defaultVideoId": "tt18412256",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "شباب يستكشفون محطة فضائية مهجورة ويواجهون كائناً قاتلاً.",
     "localPoster": "assets/tt18412256.jpg",
     "featured": true
   },
@@ -4133,13 +3821,7 @@
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt2049403/img",
-    "description": "After a family tragedy, three generations of the Deetz family return home to Winter River. Still haunted by Beetlejuice, Lydia's life is turned upside down when her teenage daughter, Astrid, accidentally opens the portal to the Af...",
     "duration": "105 min",
-    "cast": [
-      "Michael Keaton",
-      "Winona Ryder",
-      "Catherine O'Hara"
-    ],
     "imdb_id": "tt2049403",
     "name": "Beetlejuice Beetlejuice",
     "popularities": {
@@ -4149,9 +3831,6 @@
       "stremio_lib": 0
     },
     "country": "France, United States",
-    "director": [
-      "Tim Burton"
-    ],
     "imdbRating": "6.6",
     "released": "2024-09-06T00:00:00.000Z",
     "slug": "movie/beetlejuice-beetlejuice-2049403",
@@ -4180,7 +3859,6 @@
       }
     ],
     "awards": "9 wins & 48 nominations total",
-    "runtime": "105 min",
     "background": "https://images.metahub.space/background/medium/tt2049403/img",
     "logo": "https://images.metahub.space/logo/medium/tt2049403/img",
     "popularity": 0.26157,
@@ -4274,7 +3952,6 @@
       "defaultVideoId": "tt2049403",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "عودة فوضوية إلى العالم الآخر وأسرار عائلة غير اعتيادية.",
     "localPoster": "assets/tt2049403.jpg",
     "featured": true
   },
@@ -4291,13 +3968,7 @@
       "Family"
     ],
     "poster": "https://images.metahub.space/poster/small/tt5822536/img",
-    "description": "Paddington returns to Peru to visit his beloved Aunt Lucy, who now resides at the Home for Retired Bears. With the Brown family in tow, a thrilling adventure ensues when a mystery plunges them into an unexpected journey.",
     "duration": "106 min",
-    "cast": [
-      "Hugh Bonneville",
-      "Emily Mortimer",
-      "Ben Whishaw"
-    ],
     "imdb_id": "tt5822536",
     "country": "United Kingdom, France, Japan, United States, Colombia",
     "imdbRating": "6.6",
@@ -4334,10 +4005,6 @@
         "type": "Trailer"
       }
     ],
-    "director": [
-      "Dougal Wilson"
-    ],
-    "runtime": "106 min",
     "background": "https://images.metahub.space/background/medium/tt5822536/img",
     "logo": "https://images.metahub.space/logo/medium/tt5822536/img",
     "awards": "2 wins & 8 nominations total",
@@ -4432,7 +4099,6 @@
       "defaultVideoId": "tt5822536",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "الدب المحبوب يسافر إلى موطنه في مغامرة مع عائلته.",
     "localPoster": "assets/tt5822536.jpg",
     "featured": true
   },
@@ -4449,19 +4115,10 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt12584954/img",
-    "description": "Kate Carter, a retired tornado-chaser and meteorologist, is persuaded to return to Oklahoma to work with a new team and new technologies.",
     "duration": "123 min",
-    "cast": [
-      "Daisy Edgar-Jones",
-      "Glen Powell",
-      "Anthony Ramos"
-    ],
     "imdb_id": "tt12584954",
     "name": "Twisters",
     "country": "United States, Japan",
-    "director": [
-      "Lee Isaac Chung"
-    ],
     "imdbRating": "6.5",
     "released": "2024-07-19T00:00:00.000Z",
     "slug": "movie/twisters-12584954",
@@ -4497,7 +4154,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt12584954/img",
     "logo": "https://images.metahub.space/logo/medium/tt12584954/img",
-    "runtime": "123 min",
     "awards": "37 nominations total",
     "popularity": 0.2768433333333334,
     "genres": [
@@ -4590,7 +4246,6 @@
       "defaultVideoId": "tt12584954",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "مطاردو عواصف يختبرون حدودهم أمام قوة الطبيعة.",
     "localPoster": "assets/tt12584954.jpg",
     "featured": true
   },
@@ -4607,19 +4262,10 @@
       "Sci-Fi"
     ],
     "poster": "https://images.metahub.space/poster/small/tt13433802/img",
-    "description": "A young woman named Sam finds herself trapped in New York City during the early stages of an invasion by alien creatures with ultra-sensitive hearing.",
     "duration": "100 min",
-    "cast": [
-      "Lupita Nyong&apos;o",
-      "Joseph Quinn",
-      "Alex Wolff"
-    ],
     "imdb_id": "tt13433802",
     "name": "A Quiet Place: Day One",
     "country": "United States",
-    "director": [
-      "Michael Sarnoski"
-    ],
     "imdbRating": "6.3",
     "released": "2024-06-28T00:00:00.000Z",
     "slug": "movie/a-quiet-place-day-one-13433802",
@@ -4649,7 +4295,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "100 min",
     "background": "https://images.metahub.space/background/medium/tt13433802/img",
     "logo": "https://images.metahub.space/logo/medium/tt13433802/img",
     "awards": "5 wins & 12 nominations total",
@@ -4740,7 +4385,6 @@
       "defaultVideoId": "tt13433802",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "مع بدء الغزو، يصبح الصمت طريق النجاة الوحيد.",
     "localPoster": "assets/tt13433802.jpg",
     "featured": true
   },
@@ -4757,19 +4401,10 @@
       "Fantasy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt14539740/img",
-    "description": "Two ancient titans, Godzilla and Kong, clash in an epic battle as humans unravel their intertwined origins and connection to Skull Island's mysteries.",
     "duration": "115 min",
-    "cast": [
-      "Rebecca Hall",
-      "Brian Tyree Henry",
-      "Dan Stevens"
-    ],
     "imdb_id": "tt14539740",
     "name": "Godzilla X Kong: The New Empire",
     "country": "United States, Australia",
-    "director": [
-      "Adam Wingard"
-    ],
     "imdbRating": "6.0",
     "released": "2024-03-29T00:00:00.000Z",
     "slug": "movie/godzilla-x-kong-the-new-empire-14539740",
@@ -4805,7 +4440,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt14539740/img",
     "logo": "https://images.metahub.space/logo/medium/tt14539740/img",
-    "runtime": "115 min",
     "awards": "4 wins & 6 nominations total",
     "popularity": 0.5638000000000001,
     "genres": [
@@ -4898,7 +4532,6 @@
       "defaultVideoId": "tt14539740",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "عملاقان يواجهان تهديداً يخرج من أعماق الأرض.",
     "localPoster": "assets/tt14539740.jpg",
     "featured": true
   },
@@ -4915,12 +4548,6 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt4919268/img",
-    "description": "When their late police captain gets linked to drug cartels, wisecracking Miami cops Mike Lowrey and Marcus Burnett embark on a dangerous mission to clear his name.",
-    "cast": [
-      "Will Smith",
-      "Martin Lawrence",
-      "Vanessa Hudgens"
-    ],
     "duration": "115 min",
     "imdb_id": "tt4919268",
     "name": "Bad Boys: Ride or Die",
@@ -4940,10 +4567,6 @@
       "stremio_lib": 0,
       "trakt": 44
     },
-    "director": [
-      "Adil El Arbi",
-      "Bilall Fallah"
-    ],
     "slug": "movie/bad-boys-ride-or-die-4919268",
     "background": "https://images.metahub.space/background/medium/tt4919268/img",
     "logo": "https://images.metahub.space/logo/medium/tt4919268/img",
@@ -5027,8 +4650,6 @@
       "defaultVideoId": "tt4919268",
       "hasScheduledVideos": false
     },
-    "runtime": "115 min",
-    "descriptionAr": "الثنائي يعود في مطاردة جديدة مليئة بالأكشن والكوميديا.",
     "localPoster": "assets/tt4919268.jpg",
     "featured": true
   },
@@ -5045,18 +4666,9 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt5779228/img",
-    "description": "After Garfield's unexpected reunion with his long-lost father, ragged alley cat Vic, he and his canine friend Odie are forced from their perfectly pampered lives to join Vic on a risky heist.",
     "duration": "101 min",
-    "cast": [
-      "Chris Pratt",
-      "Samuel L. Jackson",
-      "Hannah Waddingham"
-    ],
     "imdb_id": "tt5779228",
     "country": "United States, United Kingdom, Hong Kong",
-    "director": [
-      "Mark Dindal"
-    ],
     "imdbRating": "5.7",
     "name": "The Garfield Movie",
     "released": "2024-05-24T00:00:00.000Z",
@@ -5091,7 +4703,6 @@
         "type": "Trailer"
       }
     ],
-    "runtime": "101 min",
     "background": "https://images.metahub.space/background/medium/tt5779228/img",
     "logo": "https://images.metahub.space/logo/medium/tt5779228/img",
     "awards": "2 wins & 2 nominations total",
@@ -5186,7 +4797,6 @@
       "defaultVideoId": "tt5779228",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "القط المحب للراحة ينطلق في مغامرة بعيدة عن أريكته.",
     "localPoster": "assets/tt5779228.jpg",
     "featured": true
   },
@@ -5203,19 +4813,9 @@
       "Comedy"
     ],
     "poster": "https://images.metahub.space/poster/small/tt7510222/img",
-    "description": "Gru, Lucy, Margo, Edith, and Agnes welcome a new member to the family, Gru Jr., who is intent on tormenting his dad. Gru faces a new nemesis in Maxime Le Mal and his girlfriend Valentina, and the family is forced to go on the run.",
     "duration": "94 min",
-    "cast": [
-      "Steve Carell",
-      "Kristen Wiig",
-      "Pierre Coffin"
-    ],
     "imdb_id": "tt7510222",
     "country": "United States",
-    "director": [
-      "Chris Renaud",
-      "Patrick Delage"
-    ],
     "imdbRating": "6.2",
     "name": "Despicable Me 4",
     "released": "2024-07-03T00:00:00.000Z",
@@ -5241,7 +4841,6 @@
       "Mike White",
       "Ken Daurio"
     ],
-    "runtime": "94 min",
     "background": "https://images.metahub.space/background/medium/tt7510222/img",
     "logo": "https://images.metahub.space/logo/medium/tt7510222/img",
     "awards": "2 wins & 6 nominations total",
@@ -5328,7 +4927,6 @@
       "defaultVideoId": "tt7510222",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "غرو وعائلته يواجهون تحديات جديدة مع عودة المينيونز.",
     "localPoster": "assets/tt7510222.jpg",
     "featured": true
   },
@@ -5345,22 +4943,12 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt11315808/img",
-    "description": "Struggling with his dual identity, failed comedian Arthur Fleck meets the love of his life, Harley Quinn, while incarcerated at Arkham State Hospital.",
     "duration": "138 min",
-    "cast": [
-      "Joaquin Phoenix",
-      "Lady Gaga",
-      "Brendan Gleeson"
-    ],
     "imdb_id": "tt11315808",
     "name": "Joker: Folie à Deux",
     "country": "United States",
-    "director": [
-      "Todd Phillips"
-    ],
     "imdbRating": "5.2",
     "released": "2024-10-04T00:00:00.000Z",
-    "runtime": "138 min",
     "slug": "movie/joker-folie-deux-11315808",
     "writer": [
       "Scott Silver",
@@ -5478,7 +5066,6 @@
       "defaultVideoId": "tt11315808",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "آرثر فليك يواجه مصيره وسط الموسيقى والاضطراب.",
     "localPoster": "assets/tt11315808.jpg",
     "featured": true
   },
@@ -5495,18 +5082,9 @@
       "Adventure"
     ],
     "poster": "https://images.metahub.space/poster/small/tt8864596/img",
-    "description": "The untold origin story of Optimus Prime and Megatron, better known as sworn enemies, but who once were friends bonded like brothers who changed the fate of Cybertron forever.",
     "duration": "104 min",
-    "cast": [
-      "Chris Hemsworth",
-      "Brian Tyree Henry",
-      "Scarlett Johansson"
-    ],
     "imdb_id": "tt8864596",
     "country": "United States",
-    "director": [
-      "Josh Cooley"
-    ],
     "imdbRating": "7.6",
     "name": "Transformers One",
     "released": "2024-09-20T00:00:00.000Z",
@@ -5547,7 +5125,6 @@
     ],
     "background": "https://images.metahub.space/background/medium/tt8864596/img",
     "logo": "https://images.metahub.space/logo/medium/tt8864596/img",
-    "runtime": "104 min",
     "awards": "25 nominations total",
     "popularity": 0.35390333333333335,
     "genres": [
@@ -5644,7 +5221,6 @@
       "defaultVideoId": "tt8864596",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "قصة الصداقة التي سبقت الصراع بين أوبتيموس وميغاترون.",
     "localPoster": "assets/tt8864596.jpg",
     "featured": true
   },
@@ -5659,19 +5235,10 @@
       "Drama"
     ],
     "poster": "https://images.metahub.space/poster/small/tt8999762/img",
-    "description": "A visionary architect flees post-war Europe in 1947 for a brighter future in the United States and finds his life forever changed by a wealthy client.",
     "duration": "215 min",
-    "cast": [
-      "Adrien Brody",
-      "Felicity Jones",
-      "Guy Pearce"
-    ],
     "imdb_id": "tt8999762",
     "name": "The Brutalist",
     "country": "United States, United Kingdom, Canada",
-    "director": [
-      "Brady Corbet"
-    ],
     "imdbRating": "7.2",
     "released": "2025-01-24T00:00:00.000Z",
     "slug": "movie/the-brutalist-8999762",
@@ -5686,7 +5253,6 @@
       "stremio_lib": 0,
       "trakt": 31
     },
-    "runtime": "215 min",
     "background": "https://images.metahub.space/background/medium/tt8999762/img",
     "logo": "https://images.metahub.space/logo/medium/tt8999762/img",
     "awards": "Won 3 Oscars. 140 wins & 362 nominations total",
@@ -5766,7 +5332,6 @@
       "defaultVideoId": "tt8999762",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "مهندس معماري مهاجر يسعى لبناء حياة وإرث جديدَين.",
     "localPoster": "assets/tt8999762.jpg",
     "featured": true
   },
@@ -5782,20 +5347,11 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt20215234/img",
-    "description": "When Cardinal Lawrence is tasked with leading the selection of a new Pope, he finds himself in a web of conspiracy and intrigue that could shake the very foundations of the Catholic Church.",
     "duration": "120 min",
-    "cast": [
-      "Ralph Fiennes",
-      "Stanley Tucci",
-      "John Lithgow"
-    ],
     "imdb_id": "tt20215234",
     "name": "Conclave",
     "awards": "Won 1 Oscar. 95 wins & 326 nominations total",
     "country": "United Kingdom, United States",
-    "director": [
-      "Edward Berger"
-    ],
     "imdbRating": "7.4",
     "released": "2024-10-25T00:00:00.000Z",
     "slug": "movie/conclave-20215234",
@@ -5810,7 +5366,6 @@
       "stremio_lib": 0,
       "trakt": 46
     },
-    "runtime": "120 min",
     "trailers": [
       {
         "source": "t915aZmyEBg",
@@ -5895,7 +5450,6 @@
       "defaultVideoId": "tt20215234",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "انتخاب بابا جديد يكشف أسراراً وصراعات خلف الأبواب المغلقة.",
     "localPoster": "assets/tt20215234.jpg",
     "featured": true
   },
@@ -5912,19 +5466,10 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt10548174/img",
-    "description": "A group of survivors of the rage virus live on a small island. When one of the group leaves the island on a mission into the mainland, he discovers secrets, wonders, and horrors that have mutated not only the infected but other su...",
     "duration": "115 min",
-    "cast": [
-      "Jodie Comer",
-      "Aaron Taylor-Johnson",
-      "Ralph Fiennes"
-    ],
     "imdb_id": "tt10548174",
     "name": "28 Years Later",
     "country": "United Kingdom, Canada, United States",
-    "director": [
-      "Danny Boyle"
-    ],
     "imdbRating": "6.6",
     "released": "2025-06-20T00:00:00.000Z",
     "slug": "movie/28-years-later-10548174",
@@ -5951,7 +5496,6 @@
     "background": "https://images.metahub.space/background/medium/tt10548174/img",
     "logo": "https://images.metahub.space/logo/medium/tt10548174/img",
     "awards": "Nominated for 1 BAFTA Award. 6 wins & 63 nominations total",
-    "runtime": "115 min",
     "popularity": 0.9399833333333334,
     "genres": [
       "Horror",
@@ -6025,7 +5569,6 @@
       "defaultVideoId": "tt10548174",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "ناجون يواجهون عالماً تغير بعد عقود من انتشار العدوى.",
     "localPoster": "assets/tt10548174.jpg",
     "featured": true
   },
@@ -6041,19 +5584,10 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt0899043/img",
-    "description": "When his supervisors at the CIA refuse to take action after his wife is killed in a London terrorist attack, a decoder takes matters into his own hands.",
     "duration": "123 min",
-    "cast": [
-      "Rami Malek",
-      "Rachel Brosnahan",
-      "Jon Bernthal"
-    ],
     "imdb_id": "tt0899043",
     "name": "The Amateur",
     "country": "United States",
-    "director": [
-      "James Hawes"
-    ],
     "imdbRating": "6.5",
     "released": "2025-04-11T00:00:00.000Z",
     "slug": "movie/the-amateur-0899043",
@@ -6069,7 +5603,6 @@
       "stremio_lib": 0,
       "trakt": 65
     },
-    "runtime": "123 min",
     "trailers": [
       {
         "source": "DCWcK4c-F8Q",
@@ -6152,7 +5685,6 @@
       "defaultVideoId": "tt0899043",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "خبير تشفير يدخل عالم المواجهة بحثاً عن الحقيقة.",
     "localPoster": "assets/tt0899043.jpg",
     "featured": true
   },
@@ -6169,20 +5701,10 @@
       "War"
     ],
     "poster": "https://images.metahub.space/poster/small/tt31434639/img",
-    "description": "A platoon of Navy SEALs embark on a dangerous mission in Ramadi, Iraq, with the chaos and brotherhood of war retold through their memories of the event.",
     "duration": "95 min",
-    "cast": [
-      "D'Pharaoh Woon-A-Tai",
-      "Will Poulter",
-      "Cosmo Jarvis"
-    ],
     "imdb_id": "tt31434639",
     "name": "Warfare",
     "country": "United States, United Kingdom",
-    "director": [
-      "Alex Garland",
-      "Ray Mendoza"
-    ],
     "imdbRating": "7.1",
     "released": "2025-04-11T00:00:00.000Z",
     "slug": "movie/warfare-31434639",
@@ -6197,7 +5719,6 @@
       "stremio_lib": 0,
       "trakt": 42
     },
-    "runtime": "95 min",
     "trailers": [
       {
         "source": "JER0Fkyy3tw",
@@ -6286,7 +5807,6 @@
       "defaultVideoId": "tt31434639",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "جنود يواجهون تجربة قاسية في ساحة القتال.",
     "localPoster": "assets/tt31434639.jpg",
     "featured": true
   },
@@ -6302,13 +5822,7 @@
       "Thriller"
     ],
     "poster": "https://images.metahub.space/poster/small/tt26584495/img",
-    "description": "A weekend getaway with friends at a remote cabin turns into chaos after it's revealed that one of the guests is not what they seem.",
     "duration": "97 min",
-    "cast": [
-      "Sophie Thatcher",
-      "Jack Quaid",
-      "Lukas Gage"
-    ],
     "imdb_id": "tt26584495",
     "name": "Companion",
     "popularities": {
@@ -6319,9 +5833,6 @@
     },
     "awards": "3 wins & 20 nominations total",
     "country": "United States",
-    "director": [
-      "Drew Hancock"
-    ],
     "imdbRating": "6.9",
     "released": "2025-01-31T00:00:00.000Z",
     "slug": "movie/companion-26584495",
@@ -6329,7 +5840,6 @@
       "Drew Hancock"
     ],
     "moviedb_id": 1084199,
-    "runtime": "97 min",
     "trailers": [
       {
         "source": "Qr_kX0D3DNA",
@@ -6409,7 +5919,6 @@
       "defaultVideoId": "tt26584495",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "رحلة مع الأصدقاء تكشف حقيقة غير متوقعة عن علاقة عاطفية.",
     "localPoster": "assets/tt26584495.jpg",
     "featured": true
   },
@@ -6426,13 +5935,7 @@
       "Romance"
     ],
     "poster": "https://images.metahub.space/poster/small/tt32063050/img",
-    "description": "After jumping back into the dating pool, single mother Bridget Jones finds herself caught between a younger man and her son's science teacher.",
     "duration": "124 min",
-    "cast": [
-      "Renée Zellweger",
-      "Chiwetel Ejiofor",
-      "Leo Woodall"
-    ],
     "imdb_id": "tt32063050",
     "name": "Bridget Jones: Mad About the Boy",
     "popularities": {
@@ -6442,9 +5945,6 @@
       "stremio_lib": 0
     },
     "country": "United Kingdom, France, United States",
-    "director": [
-      "Michael Morris"
-    ],
     "imdbRating": "6.5",
     "released": "2025-02-13T00:00:00.000Z",
     "slug": "movie/bridget-jones-mad-about-the-boy-32063050",
@@ -6454,7 +5954,6 @@
       "Abi Morgan"
     ],
     "moviedb_id": 1272149,
-    "runtime": "124 min",
     "trailers": [
       {
         "source": "7sSNobjiep4",
@@ -6543,7 +6042,6 @@
       "defaultVideoId": "tt32063050",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "بريدجيت تبدأ فصلاً جديداً بين الأمومة والحب والحياة.",
     "localPoster": "assets/tt32063050.jpg",
     "featured": true
   },
@@ -6558,13 +6056,7 @@
       "Horror"
     ],
     "poster": "https://images.metahub.space/poster/small/tt27714946/img",
-    "description": "When twin brothers Bill and Hal find their father's old monkey toy in the attic, a series of gruesome deaths start. The siblings decide to throw the toy away and move on with their lives, growing apart over the years.",
     "duration": "97 min",
-    "cast": [
-      "Theo James",
-      "Tatiana Maslany",
-      "Christian Convery"
-    ],
     "imdb_id": "tt27714946",
     "name": "The Monkey",
     "popularities": {
@@ -6574,9 +6066,6 @@
       "stremio_lib": 0
     },
     "country": "United States, United Kingdom, Canada",
-    "director": [
-      "Osgood Perkins"
-    ],
     "imdbRating": "5.9",
     "released": "2025-02-21T00:00:00.000Z",
     "slug": "movie/the-monkey-27714946",
@@ -6585,7 +6074,6 @@
       "Stephen King"
     ],
     "moviedb_id": 1124620,
-    "runtime": "97 min",
     "trailers": [
       {
         "source": "KPxmK_ihDO8",
@@ -6665,7 +6153,6 @@
       "defaultVideoId": "tt27714946",
       "hasScheduledVideos": false
     },
-    "descriptionAr": "لعبة قديمة تعيد سلسلة من الأحداث الغامضة والمرعبة.",
     "localPoster": "assets/tt27714946.jpg",
     "featured": true
   }

@@ -1,7 +1,8 @@
 import {$,esc,number,title,card,empty,errorBox} from './ui.js';
 import {catalog} from './api.js';
+import {collectionKey as makeCollectionKey,filterCollectionRows} from './catalog-rules.js';
 
-export const collectionKey=c=>[c.type,c.id,...Object.entries(c.extra||{}).map(([k,v])=>k+'='+v)].join('/');
+export const collectionKey=makeCollectionKey;
 export const dedupe=list=>[...new Map(list.map(m=>[(m.type||'movie')+':'+m.id,m])).values()];
 const normalize=value=>String(value||'').toLowerCase().replace(/[أإآ]/g,'ا').replace(/ى/g,'ي').replace(/[\u064B-\u065F]/g,'');
 export function collectionChips(collections,active='all') {
@@ -11,7 +12,7 @@ export function renderCollection({main,slug,manifest,featured,backup,remember,al
   const definition=manifest.collections.find(c=>c.slug===slug),isAll=slug==='all',isFeatured=slug==='featured';
   if(!definition&&!isAll&&!isFeatured){main.innerHTML=empty('هذا الكتالوج غير موجود.', '<a class="btn primary" href="#/catalog/all">جميع الكتالوجات</a>');return;}
   const heading=isAll?'كتالوجات سحابة':isFeatured?'إصدارات سحابة':definition.name;
-  let rows=dedupe(isFeatured?featured:isAll?[...featured,...Object.values(backup).flat().filter(m=>m.type==='movie')]:backup[definition.key]||[]),visible=48,busy=false,ended=false,skip=definition?.nextSkip||0;
+  let rows=dedupe(isFeatured?featured:isAll?[...featured,...Object.values(backup).flat().filter(m=>m.type==='movie')]:filterCollectionRows(backup[definition.key]||[],definition)),visible=48,busy=false,ended=false,skip=definition?.nextSkip||0;
   remember(rows);
   main.innerHTML=`<div class="container"><div class="page-head"><div><span class="eyebrow">عالم كامل من الحكايات</span><h1>${esc(heading)}</h1><p>${number(manifest.uniqueMovies)} فيلم و${number(manifest.uniqueSeries)} مسلسل، موزّعة حسب مزاجك.</p></div><a class="btn secondary small" href="#/search">بحث في كل المصادر</a></div>${collectionChips(manifest.collections,slug)}<div class="catalog-toolbar"><label class="field">ابحث داخل الكتالوج<input class="input" id="collection-query" type="search" placeholder="العنوان بالعربي أو الإنجليزي…"></label><p id="collection-count" class="muted" role="status"></p>${definition?'<button class="btn secondary small" id="collection-refresh">تحديث الكتالوج</button>':''}</div><div id="collection-status" role="status"></div><div class="grid" id="collection-grid"></div><div class="load-more"><button class="btn secondary" id="collection-more">عرض المزيد</button></div></div>`;
   function render(){
@@ -24,7 +25,7 @@ export function renderCollection({main,slug,manifest,featured,backup,remember,al
   async function loadMore(force=false){
     if(busy)return;busy=true;render();const next=force?0:skip;$('#collection-status').textContent='جارٍ تحديث الكتالوج…';
     try{
-      const incoming=await catalog(definition.type,definition.id,{...definition.extra,...(next?{skip:next}:{})},undefined,force);if(!alive())return;
+      const incoming=filterCollectionRows(await catalog(definition.type,definition.id,{...definition.extra,...(next?{skip:next}:{})},undefined,force),definition);if(!alive())return;
       const previous=rows.length;rows=dedupe(force?[...incoming,...rows]:[...rows,...incoming]);remember(rows);backup[definition.key]=rows;
       if(!force){skip+=100;visible+=48;ended=incoming.length===0;}else ended=false;
       $('#collection-status').textContent=rows.length>previous?'أُضيفت عناوين جديدة إلى الكتالوج.':incoming.length?'الكتالوج محدّث.':'وصلت إلى نهاية الكتالوج المتاح.';

@@ -4,6 +4,7 @@ import {$,esc,number,genreAR,title,year,genres,card,skeleton,empty,errorBox,toas
 import {openPlayer,trailer} from './js/player.js';
 import {renderCollection,collectionChips,dedupe} from './js/collections.js';
 import {initializeArabicSubtitles} from './js/subtitle-addon.js';
+import {filterCollectionRows} from './js/catalog-rules.js';
 
 const main=$('#main'),items=new Map();let featured=[],backup={},journeyBackup={},collections={collections:[]},stages=[],titles={},descriptions={},routeVersion=0,heroTimer,heroIndex=0,heroPaused=matchMedia('(prefers-reduced-motion: reduce)').matches,searchTimer,searchVersion=0,currentItem,libraryTab='later';
 const key=m=>`${m.type||'movie'}:${m.id}`;
@@ -44,7 +45,7 @@ function putShelf(id,list,message='') {const el=$('#'+id+' .shelf-content');if(!
 const shelfJobs=new Map();
 async function loadShelf(id,config,version,force=false){
   if(!$('#'+id))return;if(config.fallback?.length)putShelf(id,config.fallback);else $('#'+id+' .shelf-content').innerHTML=skeleton();
-  try{const list=await catalog(config.type,config.id,config.extra||{},config.manifest||CINEMETA,force);if(version!==routeVersion)return;putShelf(id,dedupe([...list,...(config.fallback||[])]));}
+  try{const list=await catalog(config.type,config.id,config.extra||{},config.manifest||CINEMETA,force);if(version!==routeVersion)return;const rows=config.manifest?list:filterCollectionRows(list,config);putShelf(id,dedupe([...rows,...(config.fallback||[])]));}
   catch(error){if(version!==routeVersion)return;putShelf(id,config.fallback||[],(config.fallback?.length?'نعرض النسخة المحفوظة. ':'')+error.message);}
 }
 function addonCatalogExtra(cat){const extras={};for(const field of cat.extra||[]){if(field.isRequired){if(field.options?.length)extras[field.name]=field.options[0];else return null;}}return extras;}
@@ -56,7 +57,7 @@ function home(version){
   const restShelves=shelves.filter(c=>!featuredSlugs.includes(c.slug));
   main.innerHTML=`<section class="hero" id="hero" aria-label="اختيار الليلة"></section><div class="container home-content"><a class="journey-banner" href="#/journey"><div class="journey-emblem">✧</div><div><h2>رحلتك الكبيرة تبدأ بحكاية</h2><p>المرحلة ${number(index+1)} · ${esc(s?.name||'إصدارات سحابة')}</p></div><div class="banner-progress"><small>${number(progress)} من ${number(s?.items.length||0)} حكاية</small><div class="track"><i style="width:${s?progress/s.items.length*100:0}%"></i></div></div><span class="text-button">اكتشف رحلتك ✧</span></a><section class="catalog-intro"><div class="section-title"><h2>عالمك السينمائي <span class="sub">${number(collections.uniqueMovies)} فيلم · ${number(collections.uniqueSeries)} مسلسل · ${number(shelves.length)} كتالوج</span></h2><a class="text-button" href="#/catalog/all">تصفّح كل الأفلام</a></div>${collectionChips(shelves)}</section>${shelfShell('shelf-featured','إصدارات سحابة','#/catalog/featured',featured.length)}${homeShelves.map(c=>shelfShell('shelf-'+c.slug,c.name,'#/catalog/'+c.slug,c.count)).join('')}${restShelves.length?`<section class="shelf" id="shelf-rest"><div class="section-title"><h2>مزيد من التصنيفات <span class="sub">${number(restShelves.length)} كتالوج</span></h2><div class="section-tools"><a class="text-button" href="#/catalog/all">تصفّح الكل</a></div></div><div class="collection-chips">${restShelves.map(c=>`<a class="chip" href="#/catalog/${esc(c.slug)}">${esc(c.name)} <b class="chip-count">${number(c.count)}</b></a>`).join('')}</div></section>`:''}<div id="addon-shelves"></div></div>`;
   renderHero();putShelf('shelf-featured',featured);shelfJobs.clear();
-  for(const c of homeShelves){const config={...c,fallback:backup[c.key]||[]};shelfJobs.set('shelf-'+c.slug,config);putShelf('shelf-'+c.slug,config.fallback);}
+  for(const c of homeShelves){const config={...c,fallback:filterCollectionRows(backup[c.key]||[],c)};shelfJobs.set('shelf-'+c.slug,config);putShelf('shelf-'+c.slug,config.fallback);}
   // تبقى الأرفف معبأة فوراً، ويُحدّث الرائج والمسلسلات فقط عند فتح الرئيسية.
   for(const slug of ['popular','series']){const config=shelfJobs.get('shelf-'+slug);if(config)void loadShelf('shelf-'+slug,config,version);}
   let count=0;

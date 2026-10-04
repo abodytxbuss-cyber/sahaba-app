@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
+import {matchesCollection} from '../js/catalog-rules.js';
 const read=async file=>JSON.parse(await readFile(new URL('../data/'+file+'.json',import.meta.url),'utf8'));
 test('الكتالوجات المعبأة غير فارغة وفريدة وتطابق أعداد العناوين',async()=>{
   const [manifest,catalogs,featured,titles]=await Promise.all(['collections','catalogs','movies','ar-titles'].map(read));
@@ -14,6 +15,13 @@ test('الكتالوجات المعبأة غير فارغة وفريدة وتط�
   assert.ok(translated.length/(movies.length+series.length)>=0.95,'تغطية الترجمة العربية أقل من 95%');
   assert.ok(movies.every(m=>m.year===null||(m.year>1880&&m.year<2100)),'السنة غير منطقية');
   assert.ok(movies.filter(m=>m.imdbRating!==undefined).every(m=>m.imdbRating===null||(m.imdbRating>0&&m.imdbRating<=10)),'التقييم خارج المدى');
+});
+test('كل كتالوج سنة أو نوع يحتوي العناوين المناسبة له فقط',async()=>{
+  const [manifest,catalogs]=await Promise.all(['collections','catalogs'].map(read));
+  for(const c of manifest.collections){
+    const rows=catalogs[c.key]||[];
+    assert.ok(rows.every(row=>matchesCollection(row,c)),c.slug);
+  }
 });
 test('رحلة المشاهدة محفوظة مستقلة عن تحديث الكتالوج',async()=>{
   const journey=await read('journey');

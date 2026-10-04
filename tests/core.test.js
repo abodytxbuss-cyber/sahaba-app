@@ -19,8 +19,9 @@ test('يحترم أنواع وبوادئ الموارد والتعطيل',()=>{
 });
 test('46 عنواناً فريداً مع نسخة احتياطية ومراحل من 10 إلى 15',async()=>{
   const movies=JSON.parse(await readFile(new URL('../data/movies.json',import.meta.url),'utf8'));
+  const descriptions=JSON.parse(await readFile(new URL('../data/ar-descriptions.json',import.meta.url),'utf8'));
   assert.equal(movies.length,46);assert.equal(new Set(movies.map(m=>m.id)).size,46);
-  assert.ok(movies.every(m=>/^tt\d+$/.test(m.id)&&m.descriptionAr&&m.name));
+  assert.ok(movies.every(m=>/^tt\d+$/.test(m.id)&&m.name&&descriptions[m.id]?.ar));
   assert.ok(partition(movies).every(s=>s.length>=10&&s.length<=15));
 });
 test('لا تتكرر نقاط المشاهدة وتفتح المرحلة التالية بعد اكتمال السابقة',()=>{
