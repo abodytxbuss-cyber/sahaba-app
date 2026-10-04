@@ -8,7 +8,6 @@ let generation=0,hlsPromise;
 const MEDIA=/\.(mp4|m4v|mkv|webm|mov|m3u8|mpd)(?:[?#]|$)/i;
 const streamURL=stream=>{const u=safeURL(stream&&stream.url);return u&&!stream.behaviorHints?.notWebReady&&(MEDIA.test(u)||/mpegurl/i.test(String(stream.mimeType||'')))?u:'';};
 const externalURL=stream=>{if(!stream||streamURL(stream))return '';return safeURL(stream.externalUrl)||safeURL(stream.url);};
-const openable=stream=>!!(streamURL(stream)||externalURL(stream));
 function loadHls(){
   if(window.Hls)return Promise.resolve(window.Hls);
   if(!hlsPromise)hlsPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='assets/hls.min.js';script.onload=()=>window.Hls?resolve(window.Hls):reject(Error());script.onerror=()=>reject(Error('تعذّر تحميل مشغل البث.'));document.head.append(script);}).catch(e=>{hlsPromise=null;throw e;});
@@ -34,34 +33,52 @@ export async function openPlayer(item,videoId,onComplete){
     if(!alive||token!==generation)return;
     if(!result.addons){$('#video-wrap').innerHTML=empty('أضف إضافة Stremio تحتوي مصادر مشاهدة لتبدأ.', '<button class="btn primary" id="go-addons">إضافة مصدر الآن</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status('المعلومات والملصقات تأتي من Cinemeta. روابط المشاهدة تأتي من إضافات Stremio التي تختارها.');return;}
     if(!result.streams.length){$('#video-wrap').innerHTML=empty('لا توجد مصادر متاحة لهذا العنوان من إضافاتك الحالية.', '<button class="btn primary" id="go-addons">إضافة مصدر آخر</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status(errorBox(result.failed?'لم تستجب بعض الإضافات.':'المصدر المجاني الرسمي يغطي أفلام الملكية العامة فقط. الأفلام الحديثة تحتاج إضافة Stremio مرخّصة أو مصدراً تملكه.','sources'));$('#source-status button').onclick=()=>fetchSources(true);return;}
-    status((result.failed?'تعذّر الوصول إلى '+result.failed+' من إضافاتك. ':'')+'اختر مصدراً. يشغّل الموقع الفيديو المباشر، ويفتح روابط المزوّدين الرسمية في تبويب جديد.');
+    status((result.failed?'تعذّر الوصول إلى '+result.failed+' من إضافاتك. ':'')+'اختر مصدراً. سيظهر الفيديو أو مشغل المصدر داخل المربع الأسود.');
     if(result.failed){const retry=document.createElement('button');retry.textContent='إعادة المحاولة';retry.className='text-button';retry.onclick=()=>fetchSources(true);$('#source-status').append(retry);}
     const list=$('#source-list');list.replaceChildren();
-    const ordered=[...result.streams].sort((a,b)=>Number(!!streamURL(b))-Number(!!streamURL(a))||Number(!!externalURL(b))-Number(!!externalURL(a))+(read('prefer-arabic',true)!==false?(Number(arabicAudio(b))-Number(arabicAudio(a)))*.5:0));
+    const ordered=[...result.streams].sort((a,b)=>Number(!!streamURL(b))-Number(!!streamURL(a))||Number(!!externalURL(b))-Number(!!externalURL(a))||(read('prefer-arabic',true)!==false?Number(arabicAudio(b))-Number(arabicAudio(a)):0));
+    let firstChoice=null;
     ordered.forEach((stream,i)=>{
       const url=streamURL(stream),external=externalURL(stream),copyURL=external||url,usable=!!url||!!external;
-      const row=document.createElement('div');row.className='source';row.dataset.source=i;row.setAttribute('role','button');row.tabIndex=usable?0:-1;
-      if(!usable)row.setAttribute('aria-disabled','true');
-      row.innerHTML=`<b>${esc(stream.name||stream.addon)}</b><span>${esc(stream.description||stream.title||(external?'رابط مزوّد رسمي':'مصدر مباشر'))}</span><span>${esc(stream.addon)}${arabicAudio(stream)?' · صوت عربي بحسب وصف المصدر':''}${!url&&external?' · يفتح خارج سحابة':!url?' · يحتاج مشغلاً خارجياً':''}</span>${copyURL?'<button class="text-button copy-source" type="button">نسخ الرابط</button>':''}`;
-      const activate=()=>{if(!usable)return;external&&!url?openExternal(stream):play(stream,row);};
+      const row=document.createElement('div');row.className='source';row.dataset.source=i;row.setAttribute('role','button');row.tabIndex=0;
+      row.innerHTML=`<b>${esc(stream.name||stream.addon)}</b><span>${esc(stream.description||stream.title||(external?'مشغل داخل الصفحة':'مصدر مباشر'))}</span><span>${esc(stream.addon)}${arabicAudio(stream)?' · صوت عربي بحسب وصف المصدر':''}${!url&&external?' · يعرض هنا داخل سحابة':!url?' · لا يرسل رابط فيديو مباشر':''}</span>${copyURL?'<button class="text-button copy-source" type="button">نسخ الرابط</button>':''}`;
+      const activate=()=>url?play(stream,row):external?openExternal(stream,row):showUnsupported(stream,row);
       row.onclick=activate;
       row.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();activate();}};
       const copyBtn=row.querySelector('.copy-source');
       if(copyBtn)copyBtn.onclick=e=>{e.stopPropagation();if(navigator.clipboard?.writeText)navigator.clipboard.writeText(copyURL).then(()=>toast('نُسخ الرابط.')).catch(()=>toast('تعذّر نسخ الرابط.'));else toast(copyURL);};
       list.append(row);
+      if(!firstChoice&&usable)firstChoice={stream,row,url,external};
     });
-    const playable=result.streams.some(s=>streamURL(s));
-    $('#video-wrap').innerHTML=empty(playable?'اختر جودة المشاهدة من المصادر أدناه.':result.streams.length?'كل المصادر تفتح داخل الصفحة — اضغط أي مصدر للمشاهدة، أو انسخ الرابط وافتحه على جهازك.':'لم نعثر على أي مصدر لهذا العنوان الآن. اضغط «تحديث المصادر» بالأعلى، أو أضف إضافة توفر MP4 أو HLS من الإضافات.');
+    if(firstChoice)firstChoice.url?play(firstChoice.stream,firstChoice.row):openExternal(firstChoice.stream,firstChoice.row);
+    else $('#video-wrap').innerHTML=empty('المصادر الموجودة لا ترسل رابط فيديو مباشر أو مشغل قابل للعرض داخل المتصفح. اختر إضافة توفر MP4 أو HLS أو مشغلاً قابلاً للتضمين.');
   }
-  function openExternal(stream){
+  function markActive(button){
+    $('#source-list').querySelectorAll('.source').forEach(b=>b.classList.toggle('active',b===button));
+  }
+  function clearCurrent(){
+    clearTimeout(stallTimer);storePosition();languages?.dispose();languages=null;hls?.destroy();hls=null;
+    if(video){video.pause();video.removeAttribute('src');video.load();video=null;}
+    $('#subtitle-area').replaceChildren();
+  }
+  function openExternal(stream,button){
     const url=externalURL(stream)||safeURL(stream.url);if(!url)return;
-    status('جارٍ فتح المشغل داخل سحابة…');
-    $('#video-wrap').innerHTML=`<div class="video-wrap" style="aspect-ratio:16/9"><iframe title="${esc(stream.name||'مشغل المصدر')}" src="${esc(url)}" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="no-referrer" loading="lazy"></iframe></div><p class="player-status">إذا لم يعمل المشغل داخل الصفحة، <a class="text-button" href="${esc(url)}" target="_blank" rel="noopener noreferrer">افتحه في تبويب جديد</a>.</p>`;
+    sourceGeneration++;selected={stream,button};clearCurrent();markActive(button);
+    status('يُعرض المصدر داخل المربع الأسود. إذا منع المزوّد التضمين استخدم زر الفتح الخارجي.');
+    const wrap=$('#video-wrap');wrap.style.position='relative';
+    const tools='position:absolute;top:12px;right:12px;left:12px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:9px 12px;border:1px solid #ffffff24;border-radius:10px;background:#080b12cc;backdrop-filter:blur(10px);font-size:.78rem;color:#d9dce7';
+    const link='background:#e3c17b;color:#17151b;border-radius:7px;padding:5px 10px;font-weight:700';
+    wrap.innerHTML=`<iframe title="${esc(stream.name||'مشغل المصدر')}" src="${esc(url)}" allow="autoplay; fullscreen; encrypted-media; picture-in-picture" allowfullscreen referrerpolicy="no-referrer" loading="eager"></iframe><div style="${tools}"><span>المصدر داخل سحابة</span><a class="text-button" style="${link}" href="${esc(url)}" target="_blank" rel="noopener noreferrer">فتح خارجي</a></div>`;
+  }
+  function showUnsupported(stream,button){
+    sourceGeneration++;selected={stream,button};clearCurrent();markActive(button);
+    $('#video-wrap').innerHTML=empty('هذا المصدر لا يرسل رابط فيديو مباشر للموقع. اختر مصدراً آخر من القائمة يوفر MP4 أو HLS أو مشغلاً قابلاً للتضمين.');
+    status('بعض إضافات Stremio ترسل بيانات تحتاج مشغلاً خارجياً، لذلك لا يمكن عرضها داخل المتصفح مباشرة.');
   }
   function playbackError(message){clearTimeout(stallTimer);status(errorBox(message,'playback'));const retry=$('#source-status button');if(retry)retry.onclick=()=>selected&&play(selected.stream,selected.button);}
   async function play(stream,button){
-    selected={stream,button};const session=++sourceGeneration;clearTimeout(stallTimer);storePosition();languages?.dispose();hls?.destroy();hls=null;if(video){video.pause();video.removeAttribute('src');video.load();}
-    $('#source-list').querySelectorAll('.source').forEach(b=>b.classList.toggle('active',b===button));$('#subtitle-area').replaceChildren();
+    selected={stream,button};const session=++sourceGeneration;clearCurrent();
+    markActive(button);
     $('#video-wrap').innerHTML='<video id="video" controls playsinline preload="metadata" aria-label="مشغل الفيديو"></video>';video=$('#video');status('جارٍ تجهيز المشاهدة…');
     languages=languageControls({video,root:$('#subtitle-area'),stream,fetchSubtitles:force=>subtitles(item,videoId,force)});
     const resume=library.positions[videoId]?.time||0;
