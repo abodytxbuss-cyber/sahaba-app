@@ -1,6 +1,6 @@
 import {$,esc,empty,errorBox,openModal,closeModal,toast,title} from './ui.js';
 import {sources,subtitles,safeURL} from './api.js';
-import {library,saveLibrary,read} from './store.js';
+import {library,saveLibrary,read,write} from './store.js';
 import {languageControls} from './player-languages.js';
 import {arabicAudio} from './languages.js';
 let generation=0,hlsPromise;
@@ -27,7 +27,7 @@ export async function openPlayer(item,videoId,onComplete){
     status('جارٍ تحميل المصادر…');
     const result=await sources(item,videoId,force);
     if(!alive||token!==generation)return;
-    if(!result.addons){$('#video-wrap').innerHTML=empty('أضف إضافة توفر مصادر مشاهدة لتبدأ.', '<button class="btn primary" id="go-addons">إضافة مصدر</button>');$('#go-addons').onclick=()=>{closeModal();location.hash='/addons';};status('المعلومات والملصقات تأتي من Cinemeta. مصادر المشاهدة تأتي من إضافاتك.');return;}
+    if(!result.addons){$('#video-wrap').innerHTML=empty('أضف إضافة Stremio تحتوي مصادر مشاهدة لتبدأ.', '<button class="btn primary" id="go-addons">إضافة مصدر الآن</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status('المعلومات والملصقات تأتي من Cinemeta. روابط المشاهدة تأتي من إضافات Stremio التي تختارها.');return;}
     if(!result.streams.length){$('#video-wrap').innerHTML=empty('لا توجد مصادر متاحة لهذا العنوان.');status(errorBox(result.failed?'لم تستجب بعض الإضافات.':'لم ترسل إضافاتك أي مصادر.','sources'));$('#source-status button').onclick=()=>fetchSources(true);return;}
     status((result.failed?'تعذّر الوصول إلى '+result.failed+' من إضافاتك. ':'')+'اختر مصدراً. يدعم المشغل الفيديو المباشر وHLS.');
     if(result.failed){const retry=document.createElement('button');retry.textContent='إعادة المحاولة';retry.className='text-button';retry.onclick=()=>fetchSources(true);$('#source-status').append(retry);}
