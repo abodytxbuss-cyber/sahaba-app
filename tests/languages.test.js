@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {isArabic,arabicAudio,rankSubtitles,toVtt,decodeSubtitle} from '../js/languages.js';
 import {initializeArabicSubtitles,ARABIC_SUBTITLE_ADDON} from '../js/subtitle-addon.js';
-import {initializeLegalStreams,PUBLIC_DOMAIN_MOVIES_ADDON} from '../js/source-addons.js';
+import {initializeLegalStreams,PUBLIC_DOMAIN_MOVIES_ADDON,WATCHHUB_ADDON} from '../js/source-addons.js';
 import {getAddons,saveAddons} from '../js/store.js';
 
 test('يميّز العربية الإقليمية والدبلجة عن الترجمة العربية فقط',()=>{
@@ -33,11 +33,11 @@ test('إضافة الترجمة لا تتكرر ولا تعود بعد الحذ�
   data.clear();saveAddons([{...ARABIC_SUBTITLE_ADDON,enabled:false}]);initializeArabicSubtitles();assert.equal(getAddons().length,1);assert.equal(getAddons()[0].enabled,false);
   delete globalThis.localStorage;
 });
-test('مصدر الأفلام المجانية الرسمي يضاف مرة واحدة ويحترم حذف المستخدم',()=>{
+test('مصادر المشاهدة الرسمية تضاف مرة واحدة وتحترم حذف المستخدم',()=>{
   const data=new Map();globalThis.localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)};
-  initializeLegalStreams();initializeLegalStreams();assert.equal(getAddons().length,1);
-  assert.equal(getAddons()[0].manifest.id,PUBLIC_DOMAIN_MOVIES_ADDON.manifest.id);
-  assert.equal(getAddons()[0].manifest.resources.includes('stream'),true);
+  initializeLegalStreams();initializeLegalStreams();assert.equal(getAddons().length,2);
+  assert.deepEqual(getAddons().map(a=>a.manifest.id),[WATCHHUB_ADDON.manifest.id,PUBLIC_DOMAIN_MOVIES_ADDON.manifest.id]);
+  assert.equal(getAddons().every(a=>a.manifest.resources.includes('stream')),true);
   saveAddons([]);initializeLegalStreams();assert.equal(getAddons().length,0);
   delete globalThis.localStorage;
 });

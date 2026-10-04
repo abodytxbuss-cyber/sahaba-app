@@ -4,6 +4,8 @@ import {library,saveLibrary,read,write} from './store.js';
 import {languageControls} from './player-languages.js';
 import {arabicAudio} from './languages.js';
 let generation=0,hlsPromise;
+const streamURL=stream=>safeURL(stream.url);
+const externalURL=stream=>safeURL(stream.externalUrl);
 function loadHls(){
   if(window.Hls)return Promise.resolve(window.Hls);
   if(!hlsPromise)hlsPromise=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='assets/hls.min.js';script.onload=()=>window.Hls?resolve(window.Hls):reject(Error());script.onerror=()=>reject(Error('تعذّر تحميل مشغل البث.'));document.head.append(script);}).catch(e=>{hlsPromise=null;throw e;});
@@ -29,16 +31,21 @@ export async function openPlayer(item,videoId,onComplete){
     if(!alive||token!==generation)return;
     if(!result.addons){$('#video-wrap').innerHTML=empty('أضف إضافة Stremio تحتوي مصادر مشاهدة لتبدأ.', '<button class="btn primary" id="go-addons">إضافة مصدر الآن</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status('المعلومات والملصقات تأتي من Cinemeta. روابط المشاهدة تأتي من إضافات Stremio التي تختارها.');return;}
     if(!result.streams.length){$('#video-wrap').innerHTML=empty('لا توجد مصادر متاحة لهذا العنوان من إضافاتك الحالية.', '<button class="btn primary" id="go-addons">إضافة مصدر آخر</button>');$('#go-addons').onclick=()=>{write('addon-return',location.hash);closeModal();location.hash='/addons?setup=streams';};status(errorBox(result.failed?'لم تستجب بعض الإضافات.':'المصدر المجاني الرسمي يغطي أفلام الملكية العامة فقط. الأفلام الحديثة تحتاج إضافة Stremio مرخّصة أو مصدراً تملكه.','sources'));$('#source-status button').onclick=()=>fetchSources(true);return;}
-    status((result.failed?'تعذّر الوصول إلى '+result.failed+' من إضافاتك. ':'')+'اختر مصدراً. يدعم المشغل الفيديو المباشر وHLS.');
+    status((result.failed?'تعذّر الوصول إلى '+result.failed+' من إضافاتك. ':'')+'اختر مصدراً. يشغّل الموقع الفيديو المباشر، ويفتح روابط المزوّدين الرسمية في تبويب جديد.');
     if(result.failed){const retry=document.createElement('button');retry.textContent='إعادة المحاولة';retry.className='text-button';retry.onclick=()=>fetchSources(true);$('#source-status').append(retry);}
     const list=$('#source-list');list.replaceChildren();
-    const ordered=[...result.streams].sort((a,b)=>Number(!!safeURL(b.url))-Number(!!safeURL(a.url))+(read('prefer-arabic',true)!==false?(Number(arabicAudio(b))-Number(arabicAudio(a)))*.5:0));
+    const ordered=[...result.streams].sort((a,b)=>Number(!!streamURL(b))-Number(!!streamURL(a))||Number(!!externalURL(b))-Number(!!externalURL(a))+(read('prefer-arabic',true)!==false?(Number(arabicAudio(b))-Number(arabicAudio(a)))*.5:0));
     ordered.forEach((stream,i)=>{
-      const url=safeURL(stream.url),button=document.createElement('button');button.className='source';button.dataset.source=i;
-      button.innerHTML=`<b>${esc(stream.name||stream.addon)}</b><span>${esc(stream.description||stream.title||'مصدر مباشر')}</span><span>${esc(stream.addon)}${arabicAudio(stream)?' · صوت عربي بحسب وصف المصدر':''}${!url?' · هذا المصدر يحتاج مشغلاً خارجياً':''}</span>`;
-      button.disabled=!url;button.onclick=()=>play(stream,button);list.append(button);
+      const url=streamURL(stream),external=externalURL(stream),button=document.createElement('button');button.className='source';button.dataset.source=i;
+      button.innerHTML=`<b>${esc(stream.name||stream.addon)}</b><span>${esc(stream.description||stream.title||(external?'رابط مزوّد رسمي':'مصدر مباشر'))}</span><span>${esc(stream.addon)}${arabicAudio(stream)?' · صوت عربي بحسب وصف المصدر':''}${!url&&external?' · يفتح خارج سحابة':!url?' · هذا المصدر يحتاج مشغلاً خارجياً':''}</span>`;
+      button.disabled=!url&&!external;button.onclick=()=>external&&!url?openExternal(stream):play(stream,button);list.append(button);
     });
-    $('#video-wrap').innerHTML=empty(result.streams.some(s=>safeURL(s.url))?'اختر جودة المشاهدة من المصادر أدناه.':'هذه المصادر ليست روابط فيديو مباشرة. أضف إضافة توفر MP4 أو HLS.');
+    $('#video-wrap').innerHTML=empty(result.streams.some(s=>streamURL(s))?'اختر جودة المشاهدة من المصادر أدناه.':'اختر رابط مزوّد رسمي من المصادر أدناه، أو أضف إضافة توفر MP4 أو HLS.');
+  }
+  function openExternal(stream){
+    const url=externalURL(stream);if(!url)return;
+    window.open(url,'_blank','noopener,noreferrer');
+    status('فتحنا رابط المزوّد الرسمي في تبويب جديد. إذا لم يفتح، اسمح بالنوافذ المنبثقة لهذا الموقع.');
   }
   function playbackError(message){clearTimeout(stallTimer);status(errorBox(message,'playback'));const retry=$('#source-status button');if(retry)retry.onclick=()=>selected&&play(selected.stream,selected.button);}
   async function play(stream,button){
